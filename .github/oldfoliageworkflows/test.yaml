@@ -1,0 +1,17 @@
+name: test
+
+on:
+  pull_request:
+    branches: [ source ]
+
+jobs:
+  generate: 
+    name: "Generate site"
+    runs-on: ubuntu-22.04
+    steps: 
+      - uses: actions/checkout@v2
+      - name: "Generate static HTML"
+        uses: Ducasse/foliage-action@main
+        with:
+          source: './site'
+          target: 'generated'

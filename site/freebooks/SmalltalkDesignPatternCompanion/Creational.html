@@ -1,0 +1,574 @@
+<HTML>
+<HEAD>
+  <!-- Created with AOLpress/2.0 -->
+  <TITLE>Creational Patterns</TITLE>
+</HEAD>
+<BODY>
+<H1>
+  Abstract Factory
+</H1>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeCar<BR>
+&nbsp;self subclassResponsibility</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeEngine<BR>
+&nbsp;self subclassResponsibility</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeBody<BR>
+&nbsp; self subclassResponsibility</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory&gt;&gt;makeCar<BR>
+&nbsp; ^FordCar new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory&gt;&gt;makeEngine<BR>
+&nbsp; ^FordEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory&gt;&gt;makeBody<BR>
+&nbsp;^FordBody new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaFactory&gt;&gt;makeCar<BR>
+&nbsp;^ToyotaCar new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaFactory&gt;&gt;makeEngine<BR>
+&nbsp;^ToyotaEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaFactory&gt;&gt;makeBody<BR>
+&nbsp;^ToyotaBody new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>Object subclass: #CarAssembler<BR>
+&nbsp;instanceVariableNames: 'factory'<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssembler&gt;&gt;factory: aCarPartFactory<BR>
+&nbsp;"Setter method"<BR>
+&nbsp;factory := aCarPartFactory</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssembler class&gt;&gt;using: aCarPartFactory<BR>
+&nbsp;"Instance creation method"<BR>
+&nbsp;^self new factory: aCarPartFactory</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssembler&gt;&gt;assembleCar<BR>
+| car |<BR>
+"Create the top-level part, the car object which <BR>
+starts out having no subcomponents, and add an <BR>
+engine, body, etc."</SMALL></CODE><BR>
+<CODE><SMALL>&nbsp;car := factory makeCar.<BR>
+&nbsp;car <BR>
+&nbsp; addEngine: factory makeEngine;<BR>
+&nbsp; addBody: factory makeBody.<BR>
+&nbsp;^car</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeCar<BR>
+&nbsp;^self carClass new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeEngine<BR>
+&nbsp;^self engineClass new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeBody<BR>
+&nbsp;^self bodyClass new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory&gt;&gt;carClass<BR>
+&nbsp;^FordCar</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory&gt;&gt;engineClass<BR>
+&nbsp;^FordEngine</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory&gt;&gt;bodyClass<BR>
+&nbsp; ^FordBody</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheFactory&gt;&gt;carClass<BR>
+&nbsp; ^PorscheCar</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheFactory&gt;&gt;engineClass<BR>
+&nbsp;^PorscheEngine</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheFactory&gt;&gt;bodyClass<BR>
+&nbsp;^PorscheBody</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>Object subclass: #CarPartFactory<BR>
+&nbsp;instanceVariableNames: 'partCatalog'<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory class&gt;&gt;new<BR>
+&nbsp;^self basicNew initialize</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;initialize<BR>
+&nbsp;partCatalog := Dictionary new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory&gt;&gt;initialize<BR>
+&nbsp;super initialize.<BR>
+&nbsp;partCatalog<BR>
+&nbsp; at: #car put: FordCar;<BR>
+&nbsp; at: #body put: FordBody;<BR>
+&nbsp; at: #engine put: FordEngine.<BR>
+^self</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheFactory&gt;&gt;initialize<BR>
+&nbsp;super initialize.<BR>
+&nbsp;partCatalog<BR>
+&nbsp; at: #car put: PorscheCar;<BR>
+&nbsp; at: #body put: PorscheBody;<BR>
+&nbsp; at: #engine put: PorscheEngine.<BR>
+^self</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;make: partType<BR>
+&nbsp;"Create a new part based on partType."<BR>
+&nbsp;| partClass |<BR>
+&nbsp;partClass := partCatalog at: partName ifAbsent: [^nil].<BR>
+&nbsp;^partClass new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>&#147;anAutoFactory make: #engine.<BR>
+anAutoFactory make: #body.&#148;</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>&#147;anAutoFactory makeEngine.<BR>
+anAutoFactory makeBody.&#148;</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>Object subclass: #CarPartFactory<BR>
+&nbsp;instanceVariableNames: ''<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory class<BR>
+&nbsp;instanceVariableNames: 'partCatalog'</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory class&gt;&gt;make: partType<BR>
+&nbsp;"We moved this method; it's a class method now."<BR>
+&nbsp;| partClass |<BR>
+&nbsp;partClass := partCatalog at: partType ifAbsent: [^nil].<BR>
+&nbsp;^partClass new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory class&gt;&gt;new<BR>
+&nbsp; partCatalog isNil ifTrue: [self initialize].<BR>
+&nbsp;^self basicNew</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory class&gt;&gt;initialize<BR>
+&nbsp;"Initialize the part catalog. This is now a class method."<BR>
+&nbsp; partCatalog := Dictionary new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordFactory class&gt;&gt;initialize<BR>
+&nbsp;"Initialize the *local* part catalog."<BR>
+&nbsp;super initialize.<BR>
+&nbsp;partCatalog<BR>
+&nbsp; at: #car put: FordCar;<BR>
+&nbsp; at: #body put: FordBody;<BR>
+&nbsp; at: #engine put: FordEngine.</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;make: partType<BR>
+&nbsp;"Create a new part based on partType."<BR>
+&nbsp;^self class make: partType</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory class&gt;&gt;fordFactory<BR>
+&nbsp;"Create and return a new Ford factory."<BR>
+&nbsp;| catalog |<BR>
+&nbsp;catalog := Dictionary new.<BR>
+&nbsp;catalog<BR>
+&nbsp; at: #car put: FordCar;<BR>
+&nbsp; at: #engine put: FordEngine.<BR>
+&nbsp;^self new partCatalog: catalog</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory class&gt;&gt;porscheFactory<BR>
+&nbsp;"Create and return a new Porsche factory."<BR>
+&nbsp;| catalog |<BR>
+&nbsp;catalog := Dictionary new.<BR>
+&nbsp;catalog<BR>
+&nbsp; &nbsp;at: #car put: PorscheCar;<BR>
+&nbsp; at: #engine put: PorscheEngine.<BR>
+&nbsp;^self new partCatalog: catalog</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>&#147;carFactory := CarPartFactory fordFactory.<BR>
+carFactory make: #engine.&#148;</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeCar: manufacturersName<BR>
+"manufacturersName is a Symbol, such as #Ford, #Toyota, <BR>
+or #Porsche."<BR>
+&nbsp;| carClass |<BR>
+&nbsp;carClass := Smalltalk<BR>
+&nbsp; at: (manufacturersName, #Car) asSymbol<BR>
+&nbsp; ifAbsent: [^nil].<BR>
+^carClass new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarPartFactory&gt;&gt;makeEngine: manufacturersName<BR>
+| engineClass |<BR>
+engineClass := Smalltalk<BR>
+&nbsp; at: (manufacturersName, #Engine) asSymbol<BR>
+&nbsp; ifAbsent: [^nil].<BR>
+^engineClass new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>&#147;carFactory := CarPartFactory new.<BR>
+car := carFactory makeCar: carCompany.<BR>
+car addEngine: (carFactory makeEngine: carCompany);&#148;</SMALL></CODE>
+<P>
+<H1>
+  Builder
+</H1>
+<P>
+<P>
+<CODE><SMALL>Object subclass: #CarBuilder<BR>
+&nbsp;instanceVariableNames: 'car'<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder class&gt;&gt;new<BR>
+&nbsp;^self basicNew initialize</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder&gt;&gt;car<BR>
+&nbsp;"getter method"<BR>
+&nbsp;^car</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder&gt;&gt;car: aCar<BR>
+&nbsp;"setter method"<BR>
+&nbsp;car := aCar</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder subclass: #FordBuilder<BR>
+&nbsp;instanceVariableNames: ''<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder subclass: #ToyotaBuilder<BR>
+&nbsp;instanceVariableNames: ''<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder subclass: #PorscheBuilder<BR>
+&nbsp;instanceVariableNames: ''<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordBuilder&gt;&gt;initialize<BR>
+&nbsp;self car: FordCar new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaBuilder&gt;&gt;initialize<BR>
+&nbsp;self car: ToyotaCar new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheBuilder&gt;&gt;initialize<BR>
+&nbsp;self car: PorscheCar new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder&gt;&gt;add4CylinderEngine<BR>
+&nbsp; "Do nothing. Subclasses will override."</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordBuilder&gt;&gt;add4CylinderEngine<BR>
+&nbsp;self car addEngine: Ford4CylinderEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaBuilder&gt;&gt;add4CylinderEngine<BR>
+&nbsp;self car addEngine: Toyota4CylinderEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheBuilder&gt;&gt;add4CylinderEngine<BR>
+&nbsp;self car addEngine: Porsche4CylinderEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder&gt;&gt;addStandard6CylinderEngine<BR>
+&nbsp;"Do nothing. Subclasses will override."</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordBuilder&gt;&gt;addStandard6CylinderEngine<BR>
+&nbsp;self car addEngine: FordStandard6CylinderEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaBuilder&gt;&gt;addStandard6CylinderEngine<BR>
+&nbsp;self car addEngine: ToyotaStandard6CylinderEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheBuilder&gt;&gt;addStandard6CylinderEngine<BR>
+&nbsp;self car addEngine: PorscheStandard6CylinderEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ViewManager subclass: #CarAssemblerUI<BR>
+&nbsp;instanceVariableNames: 'builder'<BR>
+&nbsp;classVariableNames: ''<BR>
+&nbsp;poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssemblerUI&gt;&gt;carMenu<BR>
+"Build the car-manufacturers menu."<BR>
+&nbsp;| menu |<BR>
+&nbsp;menu := Menu new<BR>
+&nbsp; title: 'Car';<BR>
+&nbsp; owner: self.<BR>
+&nbsp;CarBuilder subclasses do: [:aClass |<BR>
+&nbsp; menu<BR>
+&nbsp; &nbsp;appendItem: aClass manufacturer "the label"<BR>
+&nbsp; &nbsp;selector: (Message "the action"<BR>
+&nbsp; &nbsp;receiver: self<BR>
+&nbsp; &nbsp;selector: #userChoseBuilder:<BR>
+&nbsp; &nbsp;arguments: (Array with: aClass))].<BR>
+&nbsp;^menu</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssemblerUI&gt;&gt;userChoseBuilder: builderClass<BR>
+&nbsp;builder := builderClass new.</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder class&gt;&gt;manufacturer<BR>
+&nbsp;self implementedBySubclass</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordBuilder class&gt;&gt;manufacturer<BR>
+&nbsp;^'Ford'</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaBuilder class&gt;&gt;manufacturer<BR>
+&nbsp;^'Toyota'</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>PorscheBuilder class&gt;&gt;manufacturer<BR>
+&nbsp;^'Porsche'</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssemblerUI&gt;&gt;engineMenu<BR>
+&nbsp; ^Menu new<BR>
+&nbsp; &nbsp; title: 'Engine';<BR>
+&nbsp; &nbsp; owner: self;<BR>
+&nbsp; &nbsp;&nbsp;appendItem: '4-Cylinder'<BR>
+&nbsp; &nbsp; selector: #engineIs4Cylinder;<BR>
+&nbsp; &nbsp;&nbsp;appendItem: '6-Cylinder Standard' <BR>
+&nbsp; &nbsp; selector: #engineIsStandard6Cylinder;<BR>
+&nbsp; &nbsp;&nbsp;appendItem: '6-Cylinder Turbocharged'<BR>
+&nbsp; &nbsp;&nbsp;selector: #engineIsTurbocharged6Cylinder;<BR>
+&nbsp; yourself</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssemblerUI&gt;&gt;engineIs4Cylinder<BR>
+"The user has selected the '4-cylinder' menu item<BR>
+from the 'Engine' pulldown menu. Tell my Builder."<BR>
+&nbsp; self builder add4CylinderEngine</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssemblerUI&gt;&gt;engineIsStandard6Cylinder<BR>
+"The user has selected the 'Standard 6-cylinder'<BR>
+menu item from the 'Engine' pulldown menu."<BR>
+&nbsp;self builder addStandard6CylinderEngine</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssemblerUI&gt;&gt;engineIsTurbocharged6Cylinder<BR>
+"The user has selected the 'Turbocharged 6-cylinder'<BR>
+menu item from the 'Engine' pulldown menu."<BR>
+&nbsp;self builder addTurbocharged6CylinderEngine</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarAssemblerUI&gt;&gt;orderCar<BR>
+"The user has selected the 'Order' menu item, signaling<BR>
+all car/components selections have been made."<BR>
+&nbsp;| completeCar |<BR>
+&nbsp;"Get the assembled car from my Builder:"<BR>
+&nbsp; completeCar:= builder assembledCar.<BR>
+&nbsp;completeCar isNil ifTrue: [^MessageBox message:<BR>
+&nbsp; 'You haven''t finished assembling a complete car yet!'].<BR>
+&nbsp;"Assemble and print an invoice for the assembled car:"<BR>
+&nbsp; CarInvoiceMaker new printInvoiceFor: completeCar.</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>CarBuilder&gt;&gt;assembledCar<BR>
+&nbsp;"Return my final Product after verifying there's<BR>
+a completed Product to return."<BR>
+&nbsp;car isNil ifTrue: [^nil].<BR>
+&nbsp;car engine isNil ifTrue: [^nil].<BR>
+&nbsp;^car</SMALL></CODE>
+<P>
+<H1>
+  Factory Method
+</H1>
+<P>
+<P>
+<CODE><SMALL>FordBuilder&gt;&gt;add4CylinderEngine<BR>
+"Add a 4-cylinder engine; it is created by<BR>
+invoking a factory method."<BR>
+&nbsp;self car addEngine: self fourCylinderEngine</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaBuilder&gt;&gt;add4CylinderEngine<BR>
+&nbsp;self car addEngine: self fourCylinderEngine</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>FordBuilder&gt;&gt;fourCylinderEngine<BR>
+"The Ford 4-cylinder engine factory method."<BR>
+&nbsp;^Ford4CylinderEngine new</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>ToyotaBuilder&gt;&gt;fourCylinderEngine<BR>
+&nbsp;^Toyota4CylinderEngine new</SMALL></CODE>
+<P>
+<H1>
+  Prototype
+</H1>
+<P>
+<CODE><SMALL>&#147;Prototype Version&#148;</SMALL></CODE>
+<P>
+<CODE><SMALL>Object subclass: #Policy<BR>
+instanceVariableNames: 'policyNumber coverageStartDate<BR>
+lengthOfCoverage organization procedureRules'<BR>
+classVariableNames: ''<BR>
+poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>Policy&gt;&gt;postCopy<BR>
+&nbsp;"See general comments in superimplementor." <BR>
+&nbsp;"Make an independent copy of this Policy's attributes"<BR>
+&nbsp;| newDictionary |<BR>
+&nbsp;newDictionary := Dictionary new.<BR>
+&nbsp;procedureRules keysAndValuesDo:[:key :value | <BR>
+&nbsp; newDictionary at: key put: value copy].<BR>
+&nbsp;procedureRules := newDictionary.<BR>
+&nbsp;organization:= organization copy</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>&#147;Decorator Version&#148;</SMALL></CODE>
+<P>
+<CODE><SMALL><BR>
+Policy&gt;&gt;ruleAt: aProcedureCode<BR>
+&nbsp;^self procedureRules<BR>
+&nbsp; &nbsp;at: aProcedureCode<BR>
+&nbsp; &nbsp;ifAbsent: [self defaultRule]</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>Policy&gt;&gt;setRuleFor: aProcedureCode rule:
+aProcedureRule<BR>
+&nbsp;self procedureRules<BR>
+&nbsp; &nbsp;at: aProcedureCode<BR>
+&nbsp; &nbsp;put: aProcedureRule</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DecoratingPolicy&gt;&gt;ruleAt:
+aProcedureCode<BR>
+&nbsp;^self<BR>
+&nbsp; &nbsp;at: aProcedureCode<BR>
+&nbsp; &nbsp;ifAbsent: [self basePolicy ruleAt:
+aProcedureCode]</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>Policy&gt;&gt;lengthOfCoverage<BR>
+&nbsp;"Return the length of time, in years, this Policy<BR>
+&nbsp;is in effect."<BR>
+&nbsp;^lengthOfCoverage</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DecoratingPolicy&gt;&gt;lengthOfCoverage<BR>
+&nbsp;"See superimplementor."<BR>
+&nbsp;"If the value has not yet been set, return the <BR>
+&nbsp;base policy's value."<BR>
+&nbsp;^lengthOfCoverage isNil<BR>
+&nbsp; &nbsp;ifTrue: [self basePolicy lengthOfCoverage]<BR>
+&nbsp; &nbsp;ifFalse: [lengthOfCoverage]</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL> Policy&gt;&gt;derivedPolicy<BR>
+&nbsp;"Return a new Policy derived from this one."<BR>
+&nbsp;^DecoratingPolicy new basePolicy: self</SMALL></CODE>
+<P>
+<H1>
+  Singleton
+</H1>
+<P>
+<CODE><SMALL>Object subclass: #DatabaseAccessor<BR>
+instanceVariableNames: 'lock'<BR>
+classVariableNames: 'Instance'<BR>
+poolDictionaries: ''</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DatabaseAccessor class&gt;&gt;singleton<BR>
+&nbsp;Instance isNil<BR>
+&nbsp; ifTrue: [Instance := self basicNew initialize].<BR>
+&nbsp;^Instance</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DatabaseAccessor class&gt;&gt;new<BR>
+&nbsp;^self error: 'DatabaseAccessor has only one instance. ','To retrieve
+it, send "DatabaseAccessor singleton".'</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DatabaseAccessor&gt;&gt;initialize<BR>
+&nbsp;lock := false.<BR>
+"Open the file"</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DatabaseAccessor&gt;&gt;write: aDatabaseRecord<BR>
+&nbsp;"Set the lock and fork the 'real' write method."<BR>
+&nbsp;lock := true.<BR>
+&nbsp;[self writePrim: aDatabaseRecord] fork</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DatabaseAccessor&gt;&gt;writePrim:
+aDatabaseRecord<BR>
+&nbsp;"Write the record in aDatabaseRecord to the
+file."</SMALL></CODE><BR>
+&nbsp;&nbsp;<CODE><SMALL>"Now that the write is complete,
+unlock:"<BR>
+&nbsp;lock := false. </SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>DatabaseAccessor&gt;&gt;read: aKey<BR>
+&nbsp;"Return the DatabaseRecord keyed by aKey."<BR>
+&nbsp;| record |<BR>
+&nbsp;"Don't read while a write is in progress."<BR>
+&nbsp;[lock] whileTrue: [Processor yield].<BR>
+&nbsp;"Now, read the record:"<BR>
+&nbsp;record := DatabaseRecord new.<BR>
+&nbsp;"Modify the Record"<BR>
+&nbsp;^record</SMALL></CODE>
+<P>
+<P>
+<CODE><SMALL>&#147;DatabaseAccessor singleton read:
+aKey&#148;</SMALL></CODE>
+<P>
+<CODE><SMALL>&#147;DatabaseAccessor default.&#148;</SMALL></CODE>
+<P>
+<P>
+<P>
+</BODY></HTML>

@@ -1,0 +1,7 @@
+{
+	"baseUri" : "http://Ducasse.github.io",
+	"blogs" : [ 
+		"news" : "News", 
+		"topics" : "Some topics"
+	]
+}
