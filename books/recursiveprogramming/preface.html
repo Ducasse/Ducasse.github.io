@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3O//DTD W3 HTML 2.0//EN">
+<!Converted with LaTeX2HTML 95.1 (Fri Jan 20 1995) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds >
+<HEAD>
+<TITLE> Préface</TITLE>
+</HEAD>
+<BODY>
+<meta name="description" value=" Préface">
+<meta name="keywords" value="preface">
+<meta name="resource-type" value="document">
+<meta name="distribution" value="global">
+
+<H2>    <STRONG><CENTER>La programmation : une approche fonctionnelle et
+récursive avec Scheme</CENTER></STRONG></H2>
+<BR>
+
+<HR><H1>
+<A HREF="book.html"><IMG ALIGN="middle" SRC="microcouverture.gif"></A> Préface
+<BR></H1>
+La programmation est-elle un art, une science, ou un artisanat ? Un programme
+est-il une oeuvre littéraire, une formule mathématique, ou un objet
+fabriqué au même titre qu'un ouvrage d'ingénierie tel qu'un pont ou un avion ?
+La programmation est-elle une activité spécialisée réservée aux informaticiens
+professionnels, est-elle la &lt;&lt; règle de calcul &gt;&gt; universelle des ingénieurs
+de cette fin du 20ème siècle, ou bien est-elle une discipline générale dont la
+méthodologie doive s'enseigner dans les filières générales du lycée au même
+titre que les mathématiques et la physique ? Ou bien au contraire est-elle une
+technologie de bas niveau promise à l'obsolescence rapide, les
+&lt;&lt; programmes &gt;&gt; de demain étant produits mécaniquement à partir de
+descriptions de très haut niveau de leur cahier des charges ?
+<P>
+Il n'y a pas de réponse uniforme à ces questions : la programmation, c'est un
+peu tout ça. Se poser ces questions est important, pour le lycéen ou
+l'étudiant en sciences d'aujourd'hui, car il aura peu ou prou à confronter la
+programmation dans son activité professionnelle, dans quelque domaine que ce
+soit. Il doit savoir que l'informatique est une science très jeune et dont
+l'évolution est plus rapide que jamais, au gré de l'évolution de technologies
+imprévisibles au delà d'un horizon de 10 ans. Il doit donc se préparer à
+assimiler les fondements conceptuels de la discipline, susceptibles d'une
+évolution lente due à la progression continue, mais à l'échelle humaine, des
+connaissances théoriques en algorithmique et en logique, d'un état de l'art
+périssable et à l'évolution rapide due aux progrès technologiques en
+électronique et en télécommunications.
+<P>
+Il n'y a pas de programmation sans langage de programmation. Les ouvrages
+enseignant l'algorithmique en dehors de tout contexte précis d'environnement
+informatique, et définissant des algorithmes dans un pseudo-langage (tel que
+les &lt;&lt; pidgin-Pascal &gt;&gt; ou &lt;&lt; pidgin-C &gt;&gt;) nous laissent un peu perplexes. Si
+l'auteur du livre n'est pas allé jusqu'à l'écriture de programmes dans un
+dialecte bien précis d'un langage de programmation réel, n'est ce pas dans
+certains cas à cause de problèmes techniques qui risquent de compromettre lors
+de leur implantation effective les performances ou la qualité des algorithmes
+abstraits ? Ici les auteurs ont choisi d'aller jusqu'au bout avec des
+programmes réels écrits dans le langage Scheme, dialecte moderne de la famille
+LISP.
+<P>
+Né au MIT il y a presque 40 ans, LISP n'est pas un langage démodé, et son
+choix se justifie ici par le double fil conducteur de la programmation qu'ont
+choisi Laurent Arditi et Stéphane Ducasse : récursivité et fonctionnalité. En
+effet, LISP est né au croisement de deux préoccupations : d'une part la mise
+en oeuvre rigoureuse des notions fondamentales de la théorie des fonctions
+calculables, mises en évidence par les spécialistes de la logique mathématique
+dans les années 50, et d'autre part l'implantation d'une notation très souple
+permettant de faire des calculs symboliques et structurels très généraux, aux
+fins de prototypage rapide des méthodes expérimentales de l'intelligence
+artificielle. Absence de typage, interprète convivial, et gestion automatique
+de la mémoire dynamique par un ramasse-miettes, sont les solutions retenues
+pour le modèle d'exécution de LISP. Tout l'effort de recherche en intelligence
+artificielle, mais aussi en calcul symbolique, des années 70 et 80, s'est
+appuyé sur LISP. Le langage fut rajeuni au milieu des années 80, d'abord avec
+l'effort de standardisation Common LISP, puis avec l'effort de simplification
+Scheme. Le mode de liaison dynamique des variables fut remplacé par le mode de
+liaison statique, cohérent avec le formalisme théorique du lambda-calcul,
+mis en oeuvre par exemple dans les langages de la famille
+Algol/PASCAL/Modula. Ceci permit une explication plus simple des mécanismes
+fonctionnels, sans compromettre la facilité d'utilisation du langage. Le
+langage Scheme s'imposa alors à la fin des années 80 comme le meilleur
+compromis pour l'apprentissage de la programmation. Aujourd'hui, LISP est
+moins utilisé qu'autrefois pour les applications d'intelligence artificielle,
+où il a souvent été détrôné par C++. Mais son succès durable est attesté par
+des réalisations aussi admirables que l'éditeur plein écran Emacs, et le
+système de calcul formel Axiom, qui sont utilisés quotidiennement par des
+milliers d'ingénieurs.
+<P>
+Le cours d'initiation à la programmation développé ici va à l'essentiel, en
+privilégiant l'étude de la récursion et de l'utilisation de l'abstraction
+fonctionnelle. Les exemples d'applications développés dans la deuxième partie
+de l'ouvrage sont particulièrement bien choisis : optimisation statistique par
+l'utilisation d'arbres d'Huffman, montrant un exemple essentiel de structure
+fondée sur la théorie de l'information ; moteur d'inférence de système expert,
+noyau caractéristique d'une base de données déductive ; enfin embryon de
+système de calcul formel, avec un algorithme de calcul de dérivées de
+fonctions algébriques.
+<P>
+Aucune connaissance pointue n'est exigée du lecteur de cet ouvrage, le bagage
+mathématique d'un élève de première S étant tout à fait suffisant ; le lecteur
+pourra s'exercer par les nombreux exercices proposés. Il est bien sûr
+indispensable qu'il puisse disposer de l'accès à un interprète Scheme. Les
+auteurs donnent à cette fin des indications sur les implantations facilement
+disponibles.
+<P>
+Que le fil conducteur du lecteur s'initiant à la programmation soit avant tout
+le souci de qualité : un programme est une oeuvre personnelle, susceptible
+à la fois de jugement esthétique et d'évaluation technique rigoureuse.  Il ne
+suffit pas qu'il donne des réponses correctes ; il faut qu'il soit lisible
+agréablement, par l'usage de commentaires judicieux permettant éventuellement
+à un autre programmeur de le comprendre, de le maintenir, et parfois de
+l'améliorer.  &lt;&lt; Montre moi tes programmes et je te dirai qui tu es &gt;&gt;,
+pourrait-on dire pour paraphraser une formule fameuse. Développer le goût des
+solutions élégantes, tout en enseignant les mécanismes essentiels de la
+discipline, voilà le premier but d'un ouvrage pédagogique sur la
+programmation. Le livre de Laurent Arditi et Stéphane Ducasse me semble tout à
+fait remplir cet objectif pour une première approche de la programmation à
+l'usage des lycéens et des étudiants de premier cycle.
+<P>
+Gérard Huet<BR> 
+Correspondant de l'Institut
+<BR> <HR>
+</BODY>

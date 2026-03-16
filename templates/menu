@@ -1,0 +1,22 @@
+<div id="menu">
+	<div id="toc">
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/index.html">Home</a>
+		</div>
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/publications.html">Publications</a>
+		</div>	
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/aboutPharo.html">About Pharo</a>
+		</div>
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/software.html">Software</a>
+		</div>
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/news/index.html">News</a>
+		</div>
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/topics/index.html">Topics</a>
+		</div>
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/books.html">Books</a>
+		</div>
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/freebooks.html">Free Books</a>
+		</div>
+		<div id="tocItem"><a href="{{{webRootPrefix}}}/coordinates.html">Coordinates</a>
+		</div>
+	</div>
+</div>    <!--Closing menu -->

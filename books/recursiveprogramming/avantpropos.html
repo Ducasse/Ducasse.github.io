@@ -1,0 +1,292 @@
+<HEAD>
+<TITLE> Avant propos</TITLE>
+</HEAD>
+<BODY>
+<H2>    <STRONG><CENTER>La programmation : une approche fonctionnelle et
+récursive avec Scheme</CENTER></STRONG></H2>
+<BR>
+
+<HR><H1>
+<A HREF="book.html"><IMG ALIGN="middle" SRC="microcouverture.gif"></A> Avant propos
+<BR></H1>
+
+<P>
+Les deux principaux objectifs de ce livre sont de permettre au lecteur
+d'acquérir une première expérience en programmation fonctionnelle, et surtout
+d'appréhender la récursivité comme un mécanisme naturel et démystifié.
+Ainsi ce livre essaye de répondre, par l'exemple et l'exercice, aux problèmes 
+essentiels que pose la programmation récursive : la terminaison des
+programmes et la peur de l'auto-définition. De plus, le lecteur sera
+sensibilisé aux principes fondamentaux de la programmation ainsi qu'aux
+principales structures de données.
+<P>
+
+<P>
+ <H2> L'attrait de la récursivité</H2>
+<P>
+La pensée récursive consiste à énoncer une idée en ses propres termes. En
+Informatique comme en Mathématiques, la pensée récursive se matérialise au
+travers d'entités qui se définissent par elles-mêmes.
+<P>
+Aussi ce livre s'adresse d'abord à tous ceux qui, soit ont été intrigués
+ou choqués par l'élégance d'écriture de la programmation récursive, soit ont
+été charmé par les phénomènes récursifs naturels, la beauté des fractales ou
+les dessins récursifs d'Escher. Nous proposons une approche synthétique et
+systématique de la programmation fonctionnelle et récursive à l'issue de
+laquelle la récursivité ne sera plus un mystère.
+<P>
+Pour la plupart d'entre nous, notre première rencontre avec un mécanisme
+récursif remonte à nos années passées sur les bancs du lycée. En effet, lors
+ de l'étude des suites mathématiques, des définitions récursives
+et des preuves par récurrences nous ont été proposées. Mais illustrons plutôt
+!
+<P>
+La définition même de la suite mathématique <b>U</b> ci-dessous peut paraître
+choquante de part son caractère d'auto-définition. Cependant la deuxième
+partie de cette définition signifie simplement que la valeur d'un terme est
+obtenue en ajoutant deux au triple du terme précédent. D'autre part, sans la
+première égalité nous ne pourrions calculer aucune valeur de cette suite.
+<P>
+<PRE><EM> 
+         U0=1
+         Un=3*Un-1+2 si n&gt;0
+</EM></PRE>
+<P>
+De même, comme nous l'expliquerons par la suite, la définition, ci-après, de
+la fonction <tt> longueur</tt>, qui calcule le nombre d'éléments d'une liste, peut
+paraître déroutante. En effet, on peut se rendre compte que l'on utilisera
+(ligne 5) la fonction alors même que l'on est en train de la définir.
+<PRE><TT>
+1  (define longueur
+2    (lambda (L)     ; liste =&gt; nombre
+3      (if (null? L)
+4          0
+5          (+ 1 (longueur (cdr L))))))
+</TT></PRE>
+<P>
+Cet exemple met en avant le fort couplage qu'il existe entre une telle
+définition et notre choix délibéré pour une approche fonctionnelle de la
+programmation.
+<P>
+
+<P>
+ <H2> La programmation fonctionnelle</H2>
+<P>
+La programmation fonctionnelle repose sur la définition de fonctions et leurs
+applications. En cela, elle s'oppose à la programmation impérative qui, elle,
+est basée sur l'affectation et l'exécution séquentielle. En ce sens la
+programmation fonctionnelle est beaucoup plus proche des notations
+mathématiques et donc permet une expression plus naturelle de la récursivité.
+<P>
+Nous avons aussi été intéressés par la clarté, l'élégance et la propreté que
+procure une telle programmation. Ainsi le programmeur se concentre sur
+l'application de règles simples de programmation et sur l'essence de la
+récursivité.  De plus, au niveau pédagogique, une approche fonctionnelle et la
+mise à l'écart de l'affectation (des effets de bord) permet d'avoir un
+ensemble simple et homogène de concepts. Une fonction ne pourra en
+aucun cas produire un effet de bord comme il est possible de le faire dans un
+langage comme Pascal. Des aberrations sémantiques sont ainsi évitées et 
+l'apprenti programmeur n'a plus à choisir s'il doit définir une procédure ou
+une fonction.
+<P>
+Notre but n'est pas de présenter la programmation fonctionnelle  de façon
+exhaustive ; de nombreux ouvrages ont présenté ses avantages et mérites, en
+particulier [Rea89,CM95].
+<P>
+
+<P>
+ <H2> Le choix de Scheme</H2>
+<P>
+<A HREF="http://www-swiss.ai.mit.edu/scheme-home.html">Scheme</A> est un langage de programmation fonctionnelle
+de la famille de Lisp.
+[SG93] est un historique très intéressant de Lisp et de ses
+dialectes. Deux grandes tendances ont prévalu lors des dernières
+évolutions de Lisp : le gigantisme et le minimalisme.
+<P>
+Common Lisp [Ste90] qui a été le dialecte Lisp de
+référence jusqu'à ces dernières années, incarne cette croissance
+démesurée. Ainsi Common Lisp inclue le maximum de fonctionnalités, des plus
+usuelles aux plus pittoresques. Il existe par exemple une fonction de
+conversion des nombres en leurs représentations en chiffres romains !
+<P>
+Scheme a suivi une toute autre direction puisque ce langage a été défini dans
+un souci de minimalité. Ainsi seuls les concepts primordiaux de Lisp ont été
+conservés.
+<P>
+<PRE> 
+              &lt;&lt; Small is beautiful.
+                 Small is powerful.
+                 Small is easy to understand. &gt;&gt;<BR>
+                   (Préface de Guy L. Steele Jr. dans [Spr89])
+<P>
+</PRE>
+<P>
+Notre choix s'est porté sur le langage Scheme car la minimalité implique
+souvent la facilité de compréhension. De plus, l'aisance de sa mise en oeuvre
+permet une expérimentation à travers de nombreux exercices ce qui est pour
+nous le meilleur moyen de toucher du doigt les problèmes de conception des
+fonctions récursives. Ainsi, il nous fallait choisir un langage de support
+adapté à nos objectifs.
+<P>
+<UL><LI> Tout d'abord, la simplicité (très peu de sucre syntaxique) et
+l'uniformité de la syntaxe permet une manipulation et une élaboration rapide
+des fonctions. Au niveau syntaxique, le simple fait que les prédicats soient
+par convention postfixés par un point d'interrogation est par exemple
+pédagogiquement important.
+<P>
+<LI> La gestion transparente de la mémoire grâce à un <em> ramasse-miettes</em>
+permet à l'apprenti programmeur de se concentrer sur l'essence des
+algorithmes. Les fonctions ne sont alors plus parasitées de divers aspects
+annexes.
+<P>
+<LI> Une interaction simple et ludique entre le programmeur et Scheme nous
+paraît être un aspect non négligeable lors de l'acquisition de nouveaux
+schémas de pensée. Aussi l'utilisation d'un environnement d'expérimentation
+convivial lié à un évaluateur est important.
+<P>
+<LI> Scheme repose sur des bases théoriques très fortes : le lambda-calcul
+dû à Alonzo Church au milieu de ce siècle [Chu41].  De plus, ce
+langage est standardisé par la norme R4RS [R4R90]. Ainsi il y a très peu
+d'ambiguïtés : la sémantique du langage est clairement définie.
+</UL>
+<P>
+Cependant, notre objectif n'est pas l'apprentissage de Scheme dans sa
+totalité. Bien, au contraire, nous avons volontairement choisi de ne présenter
+que certaines fonctions et d'éliminer tous les aspects qui auraient
+pu disperser notre discours. Par contre, lorsque nous avons fait une
+approximation ou une omission volontaire le lecteur en sera toujours
+prévenu. Aussi un lecteur averti devra toujours tenir compte de cet aspect
+fondamental de cet ouvrage. Scheme n'est pour nous que la boîte de
+Lego avec laquelle nous allons construire des fonctions.
+<P>
+
+<P>
+ <H2> Les objectifs d'acquisition</H2>
+<P>
+Détaillons maintenant quels sont pour nous les objectifs d'acquisition de la
+part du lecteur.
+<P>
+<UL><LI> La première brique sur laquelle repose la compréhension de la
+programmation fonctionnelle est l'évaluation. Le premier chapitre met en avant
+ les mécanismes de l'évaluation après avoir présenté la syntaxe de Scheme.
+<P>
+<LI>  Bien que nous ayons choisi de limiter le nombre de fonctions utilisées
+dans ce livre, le lecteur doit savoir reconnaître et utiliser judicieusement
+les fonctions proposées dans les chapitres 1 et 2.
+<P>
+<LI> L'objectif principal de ce livre est abordé par l'écriture de fonctions
+récursives simples dès le troisième chapitre. Il s'agit là du premier niveau
+de récursivité.  Ainsi l'élaboration de fonctions mathématiques nous semble
+intéressante. Cependant, elles restent toujours très simples et le lecteur n'a
+besoin d'aucune base particulière en Mathématiques. En effet, il nous semble
+fondamental de montrer que certaines fonctions mathématiques s'expriment de
+manière récursives (et peuvent être programmées comme telles) mais nous
+pensons qu'il est aussi souhaitable de présenter des schémas récursifs en
+dehors de tout contexte mathématique.
+<P>
+<LI> L'écriture de fonctions récursives profondes et à parcours minimal est
+pour nous un deuxième niveau dans l'apprentissage de la récursivité. De telles
+fonctions mettent le lecteur face à une nouvelle complexité qui normalement
+doit l'amener à préciser sa compréhension des mécanismes acquis lors du niveau
+précédent. Ces points sont abordés dans le chapitre 4.
+<P>
+<LI> L'élaboration de fonctions d'ordre supérieur constitue le troisième
+niveau de difficulté. Ainsi le lecteur sera sensibilisé à l'abstraction des
+schémas récursifs. Il pourra reconsidérer ses propres fonctions avec l'apport
+de ces nouvelles possibilités lors de la lecture du chapitre 7.
+<P>
+<LI> De manière orthogonale aux premiers objectifs, nous pensons que la
+compréhension des structures de données simples que sont les listes et les
+arbres binaires est fondamentale pour la conception d'applications plus
+complexes. Ces structures de données sont ainsi de bonnes candidates à une
+abstraction des données comme dans les chapitres 5 et 6.
+<P>
+</UL>
+<P>
+Afin d'atteindre ces objectifs, le présent ouvrage est divisé en différentes parties.
+La première partie est constituée des <b> Cours et exercices</b>. Chaque
+&lt;&lt; cours &gt;&gt; est organisé de manière logique et met en avant un des aspects qui
+sera repris par les exercices. Afin que le lecteur puisse travailler de
+manière autonome tout exercice possède une correction (parfois même plusieurs
+quand la comparaison est intéressante). Les exercices sont très nombreux, tous
+sont importants mais certains se ressemblent ; ceux qui sont indiqués par une
+marque noire sont primordiaux.
+<P>
+Les concepts présentés dans le chapitre 8 dénotent par
+rapport à l'idée principale développée dans cet ouvrage car ils présentent les
+aspects non fonctionnels de Scheme. Cependant la lecture de ce chapitre n'est
+pas requise pour la compréhension de la suite du livre.
+<P>
+ Il nous a semblé très important que le lecteur de cet ouvrage prenne
+conscience que la programmation fonctionnelle récursive ne se limite pas à
+l'élaboration de simples petites fonctions mais permet aussi de programmer des
+problèmes complexes en les décomposant. La partie <b> Application</b> met donc
+en oeuvre les concepts vus dans la première partie, mais dans le contexte de
+problèmes plus conséquents. Ainsi nous présentons l'algorithme de
+codage/décodage d'Huffman, un petit système expert et un système de calcul
+formel.
+<P>
+En <b> Annexe</b>, nous avons regroupé les corrections des exercices et des
+applications ainsi qu'une liste des principaux interprètes de Scheme
+disponibles.
+<P>
+
+
+<P>
+ <H2>Remerciements</H2>
+<P>
+Nous exprimons tout d'abord notre gratitude à Gérard Huet, directeur de
+recherche à l'INRIA Rocquencourt et correspondant de l'Institut,
+de nous avoir fait l'honneur de <A HREF="preface.html">préfacer cet
+ouvrage</A>.
+<P>
+Ce livre est l'aboutissement d'un cours de programmation fonctionnelle et
+récursive en DEUG à l'<A HREF="http://www.unice.fr/">Université de Nice -- Sophia Antipolis</A>. C'est avec
+plaisir que nous remercions Yves Hervier, vice-président de l'Université de
+Nice -- Sophia Antipolis, responsable du MIPS et coordinateur des
+enseignements d'Informatique en DEUG, de la confiance qu'il nous a accordée et
+de son ouverture d'esprit. Sans la confiance et la liberté qu'il nous a
+offertes ce livre n'existerait pas.
+<P>
+Nous tenons à remercier Jacques Chazarain, Professeur à l'Université de
+Nice -- Sophia Antipolis, qui nous enseigna la programmation fonctionnelle et
+nous contamina avec le virus du Lisp, et André Hirschowitz, chercheur au CNRS,
+grâce à qui nous avons compris les mécanismes et les problèmes de la
+programmation récursive.
+<P>
+Nous voulons remercier Erick Gallésio pour nous avoir fait connaître Scheme
+ainsi que pour <A HREF="http://kaolin.unice.fr/html/STk.html">STk</A>, l'interprète Scheme qu'il développe
+au <A HREF="http://wwwi3s.unice.fr/">Laboratoire I3S</A> du
+CNRS et de l'Université de Nice -- Sophia Antipolis et avec lequel nous avons
+testé tous les exemples de ce livre.
+<P>
+Nous tenons aussi à remercier Martine Follen et Werner Keilholz qui, grâce à
+leur expérience des séances de travaux pratiques, nous ont fait de nombreuses
+remarques tant sur la forme que sur le fond de cet ouvrage. Nous remercions
+aussi Jean-Paul Roy pour ses précieuses remarques, Anne-Marie Dery pour sa
+patiente relecture et Hélène Collavizza ainsi que Mireille Fornarino pour leur
+enthousiasme.
+<P>
+Un grand merci à Hervé Flores pour la touche humoristique qu'il a apportée à
+cet ouvrage et pour sa recherche dans la compréhension des concepts que nous
+voulions illustrer. En effet, les illustrations de cet ouvrage ne sont pas
+simplement amusantes et sympathiques ; chacune d'entre elles possède une
+signification précise et représente un des points fondamentaux mis en avant
+dans chaque chapitre. Nous remercions aussi Sylvia Arditi qui nous a poussé à
+éditer ce livre et Florence Duriche pour son soutien quotidien.
+<P>
+Ce livre doit beaucoup aux étudiants de DEUG, dont les interrogations et les
+critiques ont fait progresser la formulation des aspects fondamentaux de cet
+ouvrage.
+Enfin que les lecteurs, qui voudront bien nous signaler des faiblesses, des
+erreurs (dont nous sommes les seuls responsables), formuler leurs remarques ou
+présenter leurs suggestions en soient vivement remerciés par avance. Les
+auteurs peuvent être joints par courrier électronique aux adresses suivantes :
+<A HREF="mailto:arditi@unice.fr">arditi@unice.fr</A> et
+<A HREF="mailto:ducasse@unice.fr">ducasse@unice.fr</A>.
+
+<P>
+ Nice, Février 1996.
+<P>
+Laurent Arditi et Stéphane Ducasse
+<P>

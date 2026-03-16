@@ -1,0 +1,377 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Internet Assistant for Microsoft Word 2.0z">
+  <TITLE>Structural Code</TITLE>
+</HEAD>
+<BODY>
+<H1>
+  Adapter
+</H1>
+<P>
+<BR>
+"Tailored Adapter" <BR>
+Shape subclass: #TextShape<BR>
+&nbsp;instanceVariableNames: 'textView' <BR>
+&nbsp;classVariableNames: '' <BR>
+&nbsp;poolDictionaries: ''
+<P>
+<BR>
+TextShape class&gt;&gt;new <BR>
+&nbsp;"Return a new instance of me pointing <BR>
+&nbsp;to an instance of TextView." <BR>
+&nbsp;^self basicNew textView: TextView new
+<P>
+<BR>
+TextShape&gt;&gt;textView <BR>
+&nbsp;"Return my Adaptee" <BR>
+&nbsp;^textView
+<P>
+<BR>
+TextShape&gt;&gt;textView: aTextView <BR>
+&nbsp;"Set my Adaptee" <BR>
+&nbsp;textView := aTextView
+<P>
+<BR>
+TextShape&gt;&gt;boundingBox <BR>
+"Translate and delegate this to my TextView object." <BR>
+^self textView getExtent
+<P>
+<BR>
+TextShape&gt;&gt;isEmpty <BR>
+^self textView isEmpty
+<P>
+<BR>
+"Message-based Pluggable Adapter" <BR>
+Object subclass: #MessageAdapter <BR>
+instanceVariableNames: 'adaptee getSelector setSelector' <BR>
+classVariableNames: '' <BR>
+poolDictionaries: ''
+<P>
+<BR>
+MessageAdapter class&gt;&gt;on: anAdaptee <BR>
+"Instance creation" <BR>
+^self new adaptee: anAdaptee
+<P>
+<BR>
+MessageAdapter&gt;&gt;adaptee: anObject <BR>
+adaptee := anObject
+<P>
+<BR>
+MessageAdapter&gt;&gt;adaptee <BR>
+^adaptee
+<P>
+<BR>
+MessageAdapter&gt;&gt;getSelector: aSymbol <BR>
+"Setup my getter message translation. <BR>
+aSymbol is the selector to send to my Adaptee <BR>
+when I receive the #value message" <BR>
+getSelector:= aSymbol
+<P>
+<BR>
+MessageAdapter&gt;&gt;setSelector: aSymbol <BR>
+"Setup my setter message translation. <BR>
+aSymbol is the selector to send to my Adaptee <BR>
+when I receive the #value: message" <BR>
+setSelector:= aSymbol
+<P>
+<BR>
+MessageAdapter&gt;&gt;onAspect: aspectSymbol <BR>
+"A handy method to set both setter and getter <BR>
+messages in one shot; assumes both have the same name, <BR>
+differing only by the ':' suffix for the setter." <BR>
+self <BR>
+getSelector: aspectSymbol; <BR>
+setSelector: (aspectSymbol, ':') asSymbol
+<P>
+<BR>
+MessageAdapter&gt;&gt;value <BR>
+"Return the aspect of my Adaptee specified by <BR>
+my getSelector" <BR>
+^adaptee perform: getSelector
+<P>
+<BR>
+MessageAdapter&gt;&gt;value: anObject <BR>
+"Set the aspect of my Adaptee specified by <BR>
+my setSelector" <BR>
+^adaptee perform: setSelector with: anObject 
+<P>
+<BR>
+"adapter := MessageAdapter on: myApplicationModel. <BR>
+adapter <BR>
+getSelector: #socialSecurity; <BR>
+setSelector: #socialSecurity:." <BR>
+"adapter onAspect: #socialSecurity."
+<H1>
+  <BR>
+  Bridge
+</H1>
+<P>
+<BR>
+"The bridge pattern code is directly taken from the VisualWorks image"
+<H1>
+  <BR>
+  Composite
+</H1>
+<P>
+<BR>
+Object subclass: #Asset <BR>
+instanceVariables: '' <BR>
+classVariables: '' <BR>
+poolVariables: ''
+<P>
+<BR>
+Asset&gt;&gt;value <BR>
+"Return the value of this Asset." <BR>
+^self subclassResponsibility
+<P>
+<BR>
+Asset&gt;&gt;containsSecurity: aSecurity <BR>
+"Answer whether this Asset contains aSecurity." <BR>
+^self subclassResponsibility
+<P>
+<BR>
+Asset subclass: #Security <BR>
+instanceVariables: 'value' <BR>
+classVariables: '' <BR>
+poolVariables: ''
+<P>
+<BR>
+Security&gt;&gt;value <BR>
+"See superimplementor." <BR>
+^value
+<P>
+<BR>
+Security&gt;&gt;containsSecurity: aSecurity <BR>
+"See superimplementor." <BR>
+"For a Leaf, we'll say it includes aSecurity <BR>
+if it is aSecurity." <BR>
+^self = aSecurity
+<P>
+<BR>
+Asset subclass: #CompositeAsset <BR>
+instanceVariables: 'assets' <BR>
+classVariables: '' <BR>
+poolVariables: ''
+<P>
+<BR>
+CompositeAsset&gt;&gt;assets <BR>
+"Return the list of assets." <BR>
+^assets
+<P>
+<BR>
+CompositeAsset&gt;&gt;value <BR>
+"See superimplementor." <BR>
+"Return the sum of the assets." <BR>
+^self assets <BR>
+inject: 0 <BR>
+into: [ :sum :asset | sum + asset value]
+<P>
+<BR>
+CompositeAsset&gt;&gt;containsSecurity: aSecurity <BR>
+"See superimplementor." <BR>
+"See if one of the assets is aSecutiry." <BR>
+^self assets includes: aSecurity
+<P>
+<BR>
+CompositeAsset&gt;&gt;containsSecurity: aSecurity <BR>
+"See superimplementor." <BR>
+"See if one of the assets is aSecutiry." <BR>
+self assets <BR>
+detect: [ :asset | asset containsSecurity: aSecurity] <BR>
+ifNone: [^false]. <BR>
+^true
+<H1>
+  <BR>
+  Decorator
+</H1>
+<P>
+<BR>
+Object subclass: #AbstractPolicy <BR>
+instanceVariables: '' <BR>
+classVariables: '' <BR>
+poolVariables: ''
+<P>
+<BR>
+AbstractPolicy&gt;&gt;reimbursementForClaim: aClaim <BR>
+"Calculate and return how much money <BR>
+the policy will pay for aClaim." <BR>
+^self subclassResponsibility
+<P>
+<BR>
+AbstractPolicy subclass: #Policy <BR>
+instanceVariables: '' "reimbursement variables" <BR>
+classVariables: '' <BR>
+poolVariables: ''
+<P>
+<BR>
+Policy&gt;&gt;reimbursementForClaim: aClaim <BR>
+"See superimplementor." <BR>
+"... code to calculate the reimbursement ..." 
+<P>
+<BR>
+AbstractPolicy subclass: #PolicyCap <BR>
+instanceVariables: 'policy capAmount' <BR>
+classVariables: '' <BR>
+poolVariables: ''
+<P>
+<BR>
+PolicyCap&gt;&gt;reimbursementForClaim: aClaim <BR>
+"See superimplementor." <BR>
+| uncappedAmount cappedAmount | <BR>
+uncappedAmount := self policy reimbursementForClaim: aClaim. <BR>
+cappedAmount := uncappedAmount min: self capAmount. <BR>
+^cappedAmount
+<P>
+<BR>
+The remainder of the code in Decorator is taken from the
+<A HREF="http://www.ksccary.com/Reader/readme.htm">KSC File Reader</A>.
+<P>
+<H1>
+  Facade
+</H1>
+<P>
+<BR>
+<BR>
+DatabaseBroker&gt;&gt;save: anObject <BR>
+"Save this object into the database." <BR>
+|columnMap statement| <BR>
+columnMap := anObject class columnMap. <BR>
+statement := (anObject isPersistent) <BR>
+ifTrue: [SQLUpdate new <BR>
+fromObject: anObject <BR>
+columnMap: columnMap] <BR>
+ifFalse: [SQLInsert new <BR>
+fromObject: anObject <BR>
+columnMap: columnMap]. <BR>
+self databaseConnection execute: statement
+<P>
+<BR>
+SQLInsert&gt;&gt;fromObject:object columnMap:columnMap <BR>
+"Create an insert statement from this object <BR>
+and its column map." <BR>
+| stream | <BR>
+stream := WriteStream on: String new. <BR>
+stream <BR>
+nextPutAll: 'INSERT INTO '; <BR>
+nextPutAll: columnMap tableName; <BR>
+nextPut: $(. <BR>
+columnMap columnNames do: <BR>
+[:name | <BR>
+stream <BR>
+nextPutAll: name; <BR>
+nextPut: $,]. <BR>
+"Eliminate the last comma:" <BR>
+stream position: stream position - 1. <BR>
+stream nextPutAll: ') VALUES ('. <BR>
+(columnMap valuesFrom: anObject) do: <BR>
+[:value | <BR>
+stream <BR>
+nextPutAll: value; <BR>
+nextPut: $,]. <BR>
+stream position: stream position - 1. <BR>
+stream nextPut: $). <BR>
+^stream contents
+<P>
+<BR>
+ColumnMap&gt;&gt;columnNames <BR>
+"Return the column names for my mapping." <BR>
+^columnMappings keys
+<P>
+<BR>
+ColumnMap&gt;&gt;valuesFrom: anObject <BR>
+"Return a collection of the values of the <BR>
+instance variables that correspond to my columns." <BR>
+^self columnNames collect: <BR>
+[:key | anObject perform: (columnMappings at: key)] <BR>
+<BR>
+<H1>
+  Flyweight
+</H1>
+<P>
+<BR>
+Image class&gt;&gt;initialize <BR>
+"Set the class' initial state." <BR>
+"[Image initialize]" <BR>
+Smalltalk <BR>
+at: #ImagePool <BR>
+put: IdentityDictionary new. <BR>
+^self
+<P>
+<BR>
+Image class&gt;&gt;release <BR>
+"Prepare the class to be deleted." <BR>
+"[Image release]" <BR>
+Smalltalk at: #ImagePool put: nil. <BR>
+Smalltalk removeKey: #ImagePool. <BR>
+^self
+<P>
+<BR>
+Image class&gt;&gt;imageCache <BR>
+"Return the Image caching dictionary." <BR>
+^ImagePool
+<P>
+<BR>
+Image class&gt;&gt;createSaveIcon <BR>
+"Create and return the Image for the Save icon." <BR>
+^MainMenUI createSaveIcon
+<P>
+<BR>
+Image class&gt;&gt;helpIcon <BR>
+"Return the Image for the Help icon." <BR>
+| cacheDictionary | <BR>
+cacheDictionary := self imageCache. <BR>
+^cacheDictionary <BR>
+at: #help <BR>
+ifAbsent: <BR>
+[cacheDictionary <BR>
+at: #help <BR>
+put: self createHelpIcon]
+<P>
+<BR>
+Image class&gt;&gt;saveIcon <BR>
+"Return the Image for the Save icon." <BR>
+| cacheDictionary | <BR>
+cacheDictionary := self imageCache. <BR>
+^cacheDictionary <BR>
+at: #save <BR>
+ifAbsent: <BR>
+[cacheDictionary <BR>
+at: #save <BR>
+put: self createSaveIcon]
+<P>
+<BR>
+Object subclass: #ImageFactory <BR>
+instanceVariableNames: 'imagePool ' <BR>
+classVariableNames: 'Singleton ' <BR>
+poolDictionaries: ''
+<P>
+<BR>
+ImageFactory class&gt;&gt;initialize <BR>
+"Set the class' initial state." <BR>
+"[ImageFactory initialize]" <BR>
+Singleton := self new. <BR>
+^self
+<P>
+<BR>
+ImageFactory class&gt;&gt;release <BR>
+"Prepare the class to be deleted." <BR>
+"[ImageFactory release]" <BR>
+Singleton := nil. <BR>
+^self
+<P>
+<BR>
+ImageFactory class&gt;&gt;default <BR>
+"Return the class' primary instance." <BR>
+^Singleton
+<P>
+<BR>
+ImageFactory&gt;&gt;initialize <BR>
+"Set the instance's initial state." <BR>
+imagePool := IdentityDictionary new. <BR>
+^self
+<P>
+<BR>
+ImageFactory class&gt;&gt;new <BR>
+"Create and return an instance of the class." <BR>
+^self basicNew initialize <BR>
+</BODY></HTML>
