@@ -1,11 +1,16 @@
-@article{Pima24a,
-author={Pim\'as, Javier E. and Stefan Marr and Diego Garbervetsky},
-title={Live Objects All The Way Down: Removing the Barriers between Applications and Virtual Machines},
-journal={The Art, Science, and Engineering of Programming},
-year = {2024},
-volume={8},
-issue = {2},
-doi = {10.22152/programming-journal.org/2024/8/5}
+@inproceedings{Giagn25a,
+author={A. Giagnorio and A. Martin-Lopez and G. Bavota},
+title={Enhancing code generation for low-resource languages: No silver bullet},
+booktitle={International Conference on Program Comprehension},
+year={2025}
+}
+
+@inproceedings{Cassa24a,
+author={F. Cassano and J. Gouwar and F. Lucchetti and C. Schlesinger and A. Freeman and C. J.
+Anderson and M. Q. Feldman and M. Greenberg and A. Jangda and A. Guha},
+title={Knowledge transfer from high-resource to low-resource programming languages for code {LLM}s},
+booktitle={Proceedings of the ACM on Programming Languages},
+year={2024}
 }
 
 @misc{AARE05a,
@@ -173,6 +178,16 @@ doi = {10.22152/programming-journal.org/2024/8/5}
   pages = {437-450},
   year = {2003},
   ee = {http://springerlink.metapress.com/openurl.asp?genre=article{\&}issn=0302-9743{\&}volume=2889{\&}spage=437}}
+
+@article{Aaro16a,
+  author = {Aaron, Sam},
+  title = {Sonic Pi--performance in education, technology and art},
+  journal = {International Journal of Performance Arts and Digital Media},
+  volume = {12},
+  pages = {171--178},
+  publisher = {Taylor \& Francis},
+  year = {2016},
+  number = {2}}
 
 @inproceedings{Aasa88a,
   author = {Annika Aasa and Kent Petersson and Dan Synek},
@@ -357,6 +372,12 @@ language including the type Dynamic.},
   keywords = {Analysis of variance, antipatterns, Antipatterns, blob, Blob, Empirical Software Engineering, Indexes, Java, Maintenance engineering, maintenance tasks, NASA, NASA task load index, object-oriented programming, object-oriented systems, program comprehension, Program Comprehension, Program Maintenance, Programming, recurring design problems, software maintenance, spaghetti code, Spaghetti Code, Time measurement},
   month = mar}
 
+@inproceedings{Abbo83a,
+  author = {Russel J.Abbott},
+  title = {Program design by informal English descriptions},
+  booktitle = {Communications of the ACM},
+  year = {1983}}
+
 @article{Abbo84a,
   author = {C. Abbott},
   title = {Intervention Schedules for Real-Time Programming},
@@ -452,6 +473,12 @@ detecting the lexicon bad smells.},
   address = {Little, France},
   month = oct}
 
+@inproceedings{Abeb10a,
+  author = {Surafel Lemma Abebe and Paolo Tonella},
+  title = {Natural Language Parsing of Program Element Names for Concept Extraction},
+  booktitle = {International Conference on Program Comprehension (ICPC)},
+  year = {2010}}
+
 @inproceedings{Abeb11a,
   author = {Abebe, S.L. and Haiduc, S. and Tonella, P. and Marcus, A.},
   title = {The Effect of Lexicon Bad Smells on Concept Location in Source Code},
@@ -511,6 +538,17 @@ techniques.},
   url = {http://mitpress.mit.edu/sicp/full-text/book/book.html},
   isbn = {0-262-01077-1},
   series = {MIT electrical engineering and computer science series}}
+
+@article{Abid20a,
+  author = {Abid, Chaima and Alizadeh, Vahid and Kessentini, Marouane and Ferreira, Thiago do Nascimento and Dig, Danny},
+  title = {30 Years of Software Refactoring Research: {A} Systematic Literature Review},
+  journal = {CoRR},
+  volume = {abs/2007.02194},
+  year = {2020},
+  url = {https://arxiv.org/abs/2007.02194},
+  eprinttype = {arXiv},
+  eprint = {2007.02194},
+  biburl = {https://dblp.org/rec/journals/corr/abs-2007-02194.bib}}
 
 @book{Abma03,
   author = {Abmann Uwe},
@@ -1083,6 +1121,13 @@ systems.},
   booktitle = {Proceedings of the California Software Symposium},
   year = {1998}}
 
+@book{Adel83a,
+  author = {Adele Goldberg and David Robson},
+  title = {Smalltalk-80: The Language and Its Implementation},
+  publisher = {Addison-Wesley},
+  year = {1983},
+  address = {Reading, MA}}
+
 @inproceedings{Ader90a,
   author = {Martin Ader and Oscar Nierstrasz and Stephen McMahon and Gerhard M{\"u}ller and Anna-Kristin Pr{\"o}frock},
   title = {The {ITHACA} Technology: {A} Landscape for Object-Oriented Application Development},
@@ -1256,12 +1301,12 @@ possible unfavorable dependencies in the system.},
   year = {2019},
   url = {https://doi.org/10.1145/3359789.3359823},
   doi = {10.1145/3359789.3359823},
-  abstract = {Developers today have access to an arsenal of toolkits and libraries for rapid application prototyping. However, when an application loads a library, the entirety of that library's code is mapped into the address space, even if only a single function is actually needed. The unused portion is bloat that can negatively impact software defenses by unnecessarily inflating their overhead or increasing their attack surface. Recent work has explored debloating as a way of alleviating the above problems, when source code is available. In this paper, we investigate whether debloating is possible and practical at the binary level. To this end, we present Nibbler: a system that identifies and erases unused functions within shared libraries. Nibbler works in tandem with defenses like continuous code re-randomization and control-flow integrity, enhancing them without incurring additional run-time overhead. We developed and tested a prototype of Nibbler on x86-64 Linux; Nibbler reduces the size of shared libraries and the number of available functions, for real-world binaries and the SPEC CINT2006 suite, by up to 56% and 82%, respectively. We also demonstrate that Nibbler benefits defenses by showing that: (i) it improves the deployability of a continuous re-randomization system for binaries, namely Shuffler, by increasing its efficiency by 20%, and (ii) it improves certain fast, but coarse and context-insensitive control-flow integrity schemes by reducing the number of gadgets reachable through returns and indirect calls by 75% and 49% on average.},
-  address = {New York, NY, USA},
   isbn = {9781450376280},
+  address = {New York, NY, USA},
+  abstract = {Developers today have access to an arsenal of toolkits and libraries for rapid application prototyping. However, when an application loads a library, the entirety of that library's code is mapped into the address space, even if only a single function is actually needed. The unused portion is bloat that can negatively impact software defenses by unnecessarily inflating their overhead or increasing their attack surface. Recent work has explored debloating as a way of alleviating the above problems, when source code is available. In this paper, we investigate whether debloating is possible and practical at the binary level. To this end, we present Nibbler: a system that identifies and erases unused functions within shared libraries. Nibbler works in tandem with defenses like continuous code re-randomization and control-flow integrity, enhancing them without incurring additional run-time overhead. We developed and tested a prototype of Nibbler on x86-64 Linux; Nibbler reduces the size of shared libraries and the number of available functions, for real-world binaries and the SPEC CINT2006 suite, by up to 56% and 82%, respectively. We also demonstrate that Nibbler benefits defenses by showing that: (i) it improves the deployability of a continuous re-randomization system for binaries, namely Shuffler, by increasing its efficiency by 20%, and (ii) it improves certain fast, but coarse and context-insensitive control-flow integrity schemes by reducing the number of gadgets reachable through returns and indirect calls by 75% and 49% on average.},
+  numpages = {14},
   keywords = {software security, code debloating, static binary analysis},
   location = {San Juan, Puerto Rico, USA},
-  numpages = {14},
   series = {ACSAC '19}}
 
 @inproceedings{Agad19a,
@@ -1273,13 +1318,19 @@ possible unfavorable dependencies in the system.},
   year = {2019},
   url = {https://doi.org/10.1145/3359789.3359823},
   doi = {10.1145/3359789.3359823},
-  isbn = {9781450376280},
-  address = {New York, NY, USA},
   abstract = {Developers today have access to an arsenal of toolkits and libraries for rapid application prototyping. However, when an application loads a library, the entirety of that library's code is mapped into the address space, even if only a single function is actually needed. The unused portion is bloat that can negatively impact software defenses by unnecessarily inflating their overhead or increasing their attack surface. Recent work has explored debloating as a way of alleviating the above problems, when source code is available. In this paper, we investigate whether debloating is possible and practical at the binary level. To this end, we present Nibbler: a system that identifies and erases unused functions within shared libraries. Nibbler works in tandem with defenses like continuous code re-randomization and control-flow integrity, enhancing them without incurring additional run-time overhead. We developed and tested a prototype of Nibbler on x86-64 Linux; Nibbler reduces the size of shared libraries and the number of available functions, for real-world binaries and the SPEC CINT2006 suite, by up to 56% and 82%, respectively. We also demonstrate that Nibbler benefits defenses by showing that: (i) it improves the deployability of a continuous re-randomization system for binaries, namely Shuffler, by increasing its efficiency by 20%, and (ii) it improves certain fast, but coarse and context-insensitive control-flow integrity schemes by reducing the number of gadgets reachable through returns and indirect calls by 75% and 49% on average.},
-  numpages = {14},
+  address = {New York, NY, USA},
+  isbn = {9781450376280},
   keywords = {software security, code debloating, static binary analysis},
   location = {San Juan, Puerto Rico, USA},
+  numpages = {14},
   series = {ACSAC '19}}
+
+@book{Agan02a,
+  author = {Agans, David J},
+  title = {Debugging: The 9 indispensable rules for finding even the most elusive software and hardware problems},
+  publisher = {Amacom},
+  year = {2002}}
 
 @book{Agan23,
   author = {Agans, David J},
@@ -1499,6 +1550,16 @@ expressions and configurations.},
   year = {1993},
   editor = {Gul Agha and Peter Wegner and Akinori Yonezawa},
   isbn = {0-262-01139-5}}
+
+@article{Agni20a,
+  author = {Agnihotri, Mansi and Chug, Anuradha},
+  title = {A Systematic Literature Survey of Software Metrics, Code Smells and Refactoring Techniques},
+  journal = {Journal of Information Processing Systems},
+  volume = {16},
+  pages = {915--934},
+  year = {2020},
+  doi = {10.3745/JIPS.04.0184},
+  number = {4}}
 
 @inproceedings{Agra03a,
   author = {Agrawal, Aditya and Karsai, Gabor and Ledeczi, Akos},
@@ -2422,6 +2483,17 @@ engineers to work on the modernized application.},
   publisher = {Oxford University Press},
   year = {1993}}
 
+@article{Alha24a,
+  author = {Alharbi, Maha and Alshayeb, Mohammad},
+  title = {A Comparative Study of Automated Refactoring Tools},
+  journal = {IEEE Access},
+  volume = {12},
+  pages = {18764-18781},
+  year = {2024},
+  doi = {10.1109/ACCESS.2024.3361314},
+  number = {},
+  keywords = {Codes;Feature extraction;Software;Source coding;Usability;Task analysis;Software quality;Comparative study;refactoring approaches;clustering-based;rule-based;search-based;text-based}}
+
 @inproceedings{Alia04a,
   author = {Mourad Alia and S{\'e}bastien Chassande-Barrioz and Pascal D{\'e}chamboux and Catherine Hamon and Alexandre Lefebvre},
   title = {A Middleware Framework for the Persistence and Querying of Java Objects},
@@ -2759,6 +2831,17 @@ engineers to work on the modernized application.},
   month = jun,
   series = {LNCS}}
 
+@article{Alom22a,
+  author = {Alomar, Eman Abdullah and Wang, Tianjia and Raut, Vaibhavi and Mkaouer, Mohamed Wiem and Newman, Christian and Ouni, Ali},
+  title = {Refactoring for Reuse: An Empirical Study},
+  journal = {Innovations in Systems and Software Engineering},
+  volume = {18},
+  pages = {105--135},
+  year = {2022},
+  doi = {10.1007/s11334-021-00422-6},
+  number = {1},
+  issn = {1614-5054}}
+
 @inproceedings{Alon08a,
   author = {Alonso, Omar and Devanbu, Premkumar T. and Gertz, Michael},
   title = {Expertise identification and visualization from {CVS}},
@@ -3087,6 +3170,12 @@ engineers to work on the modernized application.},
   issn = {1532-060X},
   number = {3}}
 
+@inproceedings{Amer19a,
+  author = {Amershi, Saleema and Weld, Dan and Vorvoreanu, Mihaela and Fourney, Adam and Nushi, Besmira and Collisson, Penny and Suh, Jina and Iqbal, Shamsi and Bennett, Paul N. and Inkpen, Kori and Teevan, Jaime and Kikin-Gil, Ruth and Horvitz, Eric},
+  title = {Guidelines for Human-AI Interaction},
+  booktitle = {Conference on Human Factors in Computing Systems},
+  year = {2019}}
+
 @techreport{Amer86a,
   author = {Pierre America},
   title = {Definition of the programming language {POOL}-{T}},
@@ -3244,6 +3333,13 @@ engineers to work on the modernized application.},
   articleno = {52},
   numpages = {33},
   keywords = {staging, reflection, interpreter, compiler, Scala, Lisp}}
+
+@article{Amiri19a,
+  author = {Javad Ebrahimian Amiri and Stephen Michael Blackburn and Antony Hosking and Michael Norrish},
+  title = {Designing a low-level virtual machine for implementing real-time managed languages},
+  journal = {Proceedings of the 11th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages},
+  year = {2019},
+  url = {https://api.semanticscholar.org/CorpusID:204714980}}
 
 @article{Ammo97a,
   author = {Ammons, Glenn and Ball, Thomas and Larus, James R},
@@ -3588,6 +3684,14 @@ engineers to work on the modernized application.},
   year = {1997},
   address = {Frankfurt}}
 
+@article{Andr01a,
+  author = {Kennedy, Andrew and Syme, Don},
+  title = {Design and Implementation of Generics for the .NET Common Language Runtime},
+  journal = {ACM SIGPLAN Notices},
+  volume = {36},
+  year = {2001},
+  doi = {10.1145/381694.378797}}
+
 @phdthesis{Andr02a,
   author = {Keith Andrews},
   title = {Visualizing Information Structures. Aspects of Information Visualization},
@@ -3901,6 +4005,12 @@ a promising direction of research.},
   numpages = {10},
   series = {SBCARS '18}}
 
+@inproceedings{Anh13a,
+  author = {Anh Tuan Nguyen and Tung Thanh Nguyen and Tien N. Nguyen},
+  title = {Lexical Statistical Machine Translation for Language Migration},
+  booktitle = {Foundations of Software Engineering},
+  year = {2013}}
+
 @article{Anku13a,
   author = {Dave, Ankur and Zaharia, Matei and Shenker, Scott and Stoica, Ion},
   title = {Arthur: Rich Post-Facto Debugging for Production Analytics Applications},
@@ -3930,6 +4040,12 @@ a promising direction of research.},
   pages = {1--10},
   year = {2013},
   organization = {IEEE}}
+
+@inproceedings{Anth21a,
+  author = {Anthony Peruma and Mohamed Wiem Mkaouer and Christian D. Newman and Foutse Khomh and Giuliano Antoniol},
+  title = {IDEAL: An Open-Source Identifier Name Appraisal Tool},
+  booktitle = {International Conference on Software Maintenance and Evolution (ICSME)},
+  year = {2021}}
 
 @inproceedings{Antk06a,
   author = {Michal Antkiewicz and Krzysztof Czarnecki},
@@ -4906,6 +5022,12 @@ engineering},
   numpages = {19},
   series = {OOPSLA '02}}
 
+@article{Arna16a,
+  author = {Arnaoudova, Venera and Di Penta, Massimiliano and Antoniol, Giuliano},
+  title = {Linguistic antipatterns: what they are and how developers perceive them},
+  journal = {Empirical Software Engineering},
+  year = {2016}}
+
 @phdthesis{Arno02a,
   author = {Matthew Arnold},
   title = {Online Profiling and Feedback-Directed Optimization of Java},
@@ -4946,6 +5068,15 @@ engineering},
   keywords = {Java, profiling, selective optimization, virtual machine},
   numpages = {15},
   series = {OOPSLA '05}}
+
+@inproceedings{Arno05d,
+  author = {Arnold, M. and Grove, D.},
+  title = {Collecting and exploiting high-accuracy call graph profiles in virtual machines},
+  booktitle = {International Symposium on Code Generation and Optimization},
+  pages = {51-62},
+  year = {2005},
+  doi = {10.1109/CGO.2005.9},
+  keywords = {Virtual machining;Optimizing compilers;System performance;Cost function;Frequency;Optimization methods;High performance computing;Object oriented programming;Degradation;Maintenance engineering}}
 
 @book{Arno92a,
   author = {Robert S. Arnold},
@@ -6706,6 +6837,16 @@ implementation language or environment).},
   month = oct,
   organization = {IEEE Computer Society}}
 
+@article{Bals19a,
+  author = {Balsini, Alessio and Pannocchi, Luigi and Cucinotta, Tommaso},
+  title = {Modeling and simulation of power consumption and execution times for real-time tasks on embedded heterogeneous architectures},
+  journal = {ACM SIGBED Review},
+  volume = {16},
+  pages = {51--56},
+  publisher = {ACM New York, NY, USA},
+  year = {2019},
+  number = {3}}
+
 @inproceedings{Bals93a,
   author = {Herman Balsters and Rolf A. de By and Roberto Zicari},
   title = {Typed Sets as a Basis for Object-Oriented Database Schemas},
@@ -7186,6 +7327,16 @@ object-oriented DBMS.},
 		 code).},
   month = jul,
   number = {7}}
+
+@article{Baro26a,
+  author = {Baron Perez, N. and Santaolaya Salgado, R. and Valenzuela Robles, B. D. and Rojas P\'{e}rez, J. C. and Fragoso Diaz, O. and Gonz\'{a}lez Serna, J. G.},
+  title = {Ordered sequencing of Refactorings based on Preconditions and Postconditions},
+  journal = {International Journal of Combinatorial Optimization Problems and Informatics},
+  volume = {17},
+  pages = {286-298},
+  year = {2026},
+  doi = {10.61467/2007.1558.2026.v17i1.1025},
+  issue = {1}}
 
 @article{Baro81a,
   author = {A.J. Baroody and D.J. De Witt},
@@ -7858,6 +8009,12 @@ behavioral specifications.},
   issn = {0164-1212},
   keywords = {Refactoring, Code smells, Empirical study},
   abstract = {Previous studies have investigated the reasons behind refactoring operations performed by developers, and proposed methods and tools to recommend refactorings based on quality metric profiles, or on the presence of poor design and implementation choices, i.e., code smells. Nevertheless, the existing literature lacks observations about the relations between metrics/code smells and refactoring activities performed by developers. In other words, the characteristics of code components increasing/decreasing their chances of being object of refactoring operations are still unknown. This paper aims at bridging this gap. Specifically, we mined the evolution history of three Java open source projects to investigate whether refactoring activities occur on code components for which certain indicators—such as quality metrics or the presence of smells as detected by tools—suggest there might be need for refactoring operations. Results indicate that, more often than not, quality metrics do not show a clear relationship with refactoring. In other words, refactoring operations are generally focused on code components for which quality metrics do not suggest there might be need for refactoring operations. Finally, 42% of refactoring operations are performed on code entities affected by code smells. However, only 7% of the performed operations actually remove the code smells from the affected class.}}
+
+@article{Bavo15b,
+  author = {Bavota, Gabriele and Qusef, Abdallah and Oliveto, Rocco and De Lucia, Andrea and Binkley, Dave},
+  title = {Are test smells really harmful? An empirical study},
+  journal = {Empirical Software Engineering},
+  year = {2015}}
 
 @inproceedings{Bawd99a,
   author = {Alan Bawden},
@@ -8612,6 +8769,15 @@ of knowledge about the development process.},
   journal = {arXiv preprint arXiv:1705.07962},
   year = {2017}}
 
+@article{Ben12a,
+  author = {Ben Asher, Yosi and Gal, Tomer and Haber, Gadi and Zalmanovici, Marcel},
+  title = {Refactoring techniques for aggressive object inlining in Java applications},
+  journal = {Automated Software Engineering},
+  volume = {19},
+  pages = {97--136},
+  publisher = {Springer},
+  year = {2012}}
+
 @book{Ben82a,
   author = {Ben-Ari},
   title = {Principles of Concurrent Programming},
@@ -8660,10 +8826,24 @@ of knowledge about the development process.},
   year = {2019},
   month = oct}
 
+@inproceedings{Bene19a,
+  author = {Benelallam, Amine and Harrand, Nicolas and Soto-Valero, C\'esar and Baudry, Benoit and Barais, Olivier},
+  title = {The Maven Dependency Graph: A Temporal Graph-Based Representation of Maven Central},
+  booktitle = {2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR)},
+  pages = {344-348},
+  year = {2019},
+  doi = {10.1109/MSR.2019.00060}}
+
 @misc{Beng00a,
   author = {PerOlof Bengtsson and Nico Lassing and Jan Bosch and Hans van Vliet},
   title = {Analyzing Software Architectures for Modifiability},
   year = {2000}}
+
+@inproceedings{Beni17a,
+  author = {Gal Beniamini and Sarah Gingichashvili and Alon Klein Orbach and Dror G. Feitelson},
+  title = {Meaningful Identifier Names: The Case of Single-Letter Variables},
+  booktitle = {International Conference on Program Comprehension (ICPC)},
+  year = {2017}}
 
 @article{Benj95a,
   author = {Benjamini, Yoav and Hochberg, Yosef},
@@ -10028,6 +10208,24 @@ member.},
   address = {Berlin, Heidelberg},
   isbn = {978-3-642-22655-7}}
 
+@article{Bhat12a,
+  author = {Bhat, Sajad and Singh, Jatinder},
+  title = {De-virtualizing virtual Function Calls using various Type Analysis Techniques in Object-Oriented Programming Languages.},
+  journal = {Journal of Computer Engineering},
+  volume = {5},
+  pages = {9},
+  year = {2012},
+  number = {4}}
+
+@article{Bhat12c,
+  author = {Bhat, Sajad and Singh, Jatinder},
+  title = {De-virtualizing virtual Function Calls using various Type Analysis Techniques in Object-Oriented Programming Languages.},
+  journal = {Journal of Computer Engineering},
+  volume = {5},
+  pages = {9},
+  year = {2012},
+  number = {4}}
+
 @inproceedings{Bi18a,
   author = {Bi, Xuan and Oliveira, Bruno C d S},
   title = {Typed First-Class Traits},
@@ -10069,6 +10267,17 @@ member.},
   pages = {298-308},
   year = {2021},
   doi = {10.1109/ICSME52107.2021.00033}}
+
+@article{Bibi23a,
+  author = {Bibiano, Ana Carla and Uch{\^o}a, Anderson Gon\c{c}alves and Assun\c{c}{\~a}o, Wesley Klewerton Guez and Oliveira, Daniel and Colanzi, Thelma Elita and Vergilio, Silvia Regina and Garcia, Alessandro F.},
+  title = {Composite refactoring: Representations, characteristics and effects on software projects},
+  journal = {Information and Software Technology},
+  volume = {156},
+  pages = {107134},
+  year = {2023},
+  url = {https://www.sciencedirect.com/science/article/pii/S0950584922002439},
+  doi = {https://doi.org/10.1016/j.infsof.2022.107134},
+  issn = {0950-5849}}
 
 @article{Bibl01a,
   author = {Bible, John and Rothermel, Gregg and Rosenblum, David},
@@ -10449,6 +10658,12 @@ presented.},
   month = {aug},
   number = {2},
   numpages = {7}}
+
+@article{Bink13a,
+  author = {David Binkley and Marcia Davis and Dawn Lawrie and Christopher Morrell},
+  title = {The Impact of Identifier Style on Effort and Comprehension},
+  journal = {Empirical Software Engineering},
+  year = {2013}}
 
 @article{Bink95a,
   author = {Binkley, David and Horwitz, Susan and Reps, Thomas},
@@ -12666,6 +12881,12 @@ out to be the key to composition-based reuse.},
   year = {1982},
   editor = {K. L. Clark and S.-A. Tarnlund}}
 
+@inproceedings{Bowm23a,
+  author = {Bowman Jr, Douglas and Manesh, Daniel and Lee, Sang Won},
+  title = {SHARP: Supporting Exploration and Rapid State Navigation in Live Coding Music.},
+  booktitle = {NIME},
+  year = {2023}}
+
 @inproceedings{Bowm98a,
   author = {I. T. Bowman and R. C.Holt},
   title = {Software Architecture Recovery Using Conway's Law},
@@ -14770,6 +14991,13 @@ performance.},
   pages = {1--16},
   year = {2019}}
 
+@inproceedings{Brun21a,
+  author = {Bruno, Rodrigo and Jovanovic, Vojin and Wimmer, Christian and Alonso, Gustavo},
+  title = {Compiler-assisted object inlining with value fields},
+  booktitle = {Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+  pages = {128--141},
+  year = {2021}}
+
 @book{Brun56a,
   author = {Jerome S. Bruner and Jacqueline J. Goodnow and George A. Austin},
   title = {A Study of Thinking},
@@ -15422,15 +15650,14 @@ entities.},
   year = {2024}}
 
 @article{Burc25a,
-  title={Divining Profiler Accuracy: An Approach to Approximate Profiler Accuracy Through Machine Code-Level Slowdown},
-  author={Burchell, Humphrey and Marr, Stefan},
-  journal={Proceedings of the ACM on Programming Languages},
-  volume={9},
-  number={OOPSLA2},
-  pages={3615--3641},
-  year={2025},
-  publisher={ACM New York, NY, USA}
-}
+  author = {Burchell, Humphrey and Marr, Stefan},
+  title = {Divining Profiler Accuracy: An Approach to Approximate Profiler Accuracy Through Machine Code-Level Slowdown},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume = {9},
+  pages = {3615--3641},
+  publisher = {ACM New York, NY, USA},
+  year = {2025},
+  number = {OOPSLA2}}
 
 @book{Burc98a,
   author = {H.W. Fowler and R. W. Burchfield},
@@ -16231,6 +16458,24 @@ mechanisms.},
   booktitle = {Mining Software Repositories International Conference (MSR'11)},
   year = {2011}}
 
+@article{Call11b,
+  author = {Callou, Gustavo and Maciel, Paulo and Tavares, Eduardo and Andrade, Ermeson and Nogueira, Bruno and Araujo, Carlos and Cunha, Paulo},
+  title = {Energy consumption and execution time estimation of embedded system applications},
+  journal = {Microprocessors and Microsystems},
+  volume = {35},
+  pages = {426--440},
+  publisher = {Elsevier},
+  year = {2011},
+  number = {4}}
+
+@article{Call17a,
+  author = {O'Callahan, Robert and Jones, Chris and Froyd, Nathan and Huey, Kyle and Noll, Albert and Partush, Nimrod},
+  title = {Engineering Record And Replay For Deployability: Extended Technical Report},
+  journal = {CoRR},
+  pages = {},
+  year = {2017},
+  doi = {10.48550/arXiv.1705.05937}}
+
 @inproceedings{Call87a,
   author = {Lisa A. Call and David L. Cohrs and Barton P. Miller},
   title = {{CLAM} --- an Open System for Graphical User Interfaces},
@@ -16688,6 +16933,12 @@ first and worst.},
   pages = {126--137},
   year = {1987},
   month = dec}
+
+@inproceedings{Capr00a,
+  author = {Bruno Caprile and Paolo Tonella},
+  title = {Restructuring Program Identifier Names},
+  booktitle = {International Conference on Software Maintenance (ICSM)},
+  year = {2000}}
 
 @inproceedings{Capr93a,
   author = {Bruno Caprile and Paolo Tonella},
@@ -17235,6 +17486,12 @@ that demonstrates its expressivity and simplicity.},
   address = {New York, NY, USA},
   isbn = {0-89791-428-7},
   location = {Toronto, Ontario, Canada}}
+
+@article{Carv15a,
+  author = {Nuno R. Carvalho and Jos{\'e} Jo{\~a}o Almeida and Pedro Rangel Henriques and Maria Jo{\~a}o Varanda Pereira},
+  title = {From Source Code Identifiers to Natural Language Terms},
+  journal = {Journal of Systems and Software},
+  year = {2015}}
 
 @inproceedings{Carz94a,
   author = {A. Carzaniga and G. P. Picco and G. Vigna},
@@ -18118,6 +18375,12 @@ context of the Cecil language.},
   year = {2001},
   number = {1}}
 
+@inproceedings{Chap12a,
+  author = {Chaparro, O. and Aponte, J. and Ortega, F. and Marcus, A.},
+  title = {Towards the automatic extraction of structural business rules from legacy databases},
+  booktitle = {19th Working Conference on Reverse Engineering},
+  year = {2012}}
+
 @article{Char06a,
   author = {Kaushal Chari and Alan Hevner},
   title = {System Test Planning of Software: An Optimization Approach},
@@ -18367,6 +18630,16 @@ context of the Cecil language.},
   location = {Gothenburg, Sweden},
   numpages = {12},
   series = {ICSE '18}}
+
+@article{Chen18b,
+  author = {Chen, Tsong and Kuo, Fei-Ching and Liu, Huai and Poon, Pak-Lok and Towey, Dave and Tse, T.H. and Zhou, Zhi Quan},
+  title = {Metamorphic Testing: A Review of Challenges and Opportunities},
+  journal = {ACM Computing Surveys},
+  volume = {51},
+  pages = {4:1-4:27},
+  year = {2018},
+  doi = {10.1145/3143561},
+  month = jan}
 
 @article{Chen19a,
   author = {Chen, Chunyang and Xing, Zhenchang and Liu, Yang and Ong, Kent Long Xiong},
@@ -18756,6 +19029,12 @@ directions for future research.},
   month = apr,
   number = {2}}
 
+@inproceedings{Chia06a,
+  author = {Chiang, C.-C.},
+  title = {Extracting business rules from legacy systems into reusable components},
+  booktitle = {IEEE/SMC International Conference on System of Systems Engineering},
+  year = {2006}}
+
 @inproceedings{Chib00,
   author = {Shigeru Chiba},
   title = {Load-Time Structural Reflection in {Java}},
@@ -19009,6 +19288,12 @@ further work},
   year = {2016},
   school = {University of Bern}}
 
+@inproceedings{Chit19a,
+  author = {Chittimalli, P. K. and Bhattacharyya, A.},
+  title = {{SBVR}-based business rule creation for legacy programs using variable provenance},
+  booktitle = {Proceedings of the 12th Innovations in Software Engineering Conference},
+  year = {2019}}
+
 @inproceedings{Chiu02a,
   author = {Kenneth Chiu and Madhusudhan Govindaraju and Randall Bramley},
   title = {Investigating the Limits of SOAP Performance for Scientific Computing},
@@ -19231,6 +19516,11 @@ The evaluation indicates that the proposed approach can enhance the quality of t
   title = {The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail},
   publisher = {Harvard Business Review Press},
   year = {1997}}
+
+@misc{ChromeDevTools,
+  author = {Google},
+  title = {Chrome Dev Tools},
+  howpublished = {\url{https://developer.chrome.com/devtools}}}
 
 @misc{Chromedbg,
   author = {Google},
@@ -20525,6 +20815,22 @@ processes engaged in communication.},
   address = {USA},
   month = jun}
 
+@inproceedings{Cole05a,
+  author = {Cole, Leonardo and Borba, Paulo},
+  title = {Deriving refactorings for AspectJ},
+  booktitle = {Proceedings of the 4th International Conference on Aspect-Oriented Software Development},
+  pages = {123-134},
+  publisher = {Association for Computing Machinery},
+  year = {2005},
+  url = {https://doi.org/10.1145/1052898.1052909},
+  doi = {10.1145/1052898.1052909},
+  isbn = {1595930426},
+  address = {New York, NY, USA},
+  numpages = {12},
+  keywords = {separation of concerns, refactoring, aspect-oriented programming, AspectJ},
+  location = {Chicago, Illinois},
+  series = {AOSD '05}}
+
 @book{Cole94a,
   author = {Derek Coleman and Patrick Arnold and Stephanie Bodoff and Chris Dollin and Helena Gilchrist and Fiona Hayes},
   title = {Object-Oriented Development: The Fusion Method},
@@ -20574,6 +20880,12 @@ processes engaged in communication.},
   publisher = {O'Reilly Media},
   year = {2009},
   month = jun}
+
+@article{Coll16a,
+  author = {Collberg, Christian and Proebsting, Todd A.},
+  title = {Repeatability in computer systems research},
+  journal = {Communications of the ACM},
+  year = {2016}}
 
 @article{Coll81a,
   author = {C.B. Collins and Ian P. Goulden and David M. Jackson and Oscar Nierstrasz},
@@ -21393,6 +21705,13 @@ applications.},
   doi = {10.7892/boris.94640},
   keywords = {debugging, breakpoint}}
 
+@inproceedings{Corr14a,
+  author = {Corral, Luis and Georgiev, Anton B and Sillitti, Alberto and Succi, Giancarlo},
+  title = {Can execution time describe accurately the energy consumption of mobile apps? An experiment in Android},
+  booktitle = {Proceedings of the 3rd International Workshop on Green and Sustainable Software},
+  pages = {31--37},
+  year = {2014}}
+
 @article{Cort06a,
   author = {Pier Francesco Cortese and Giuseppe Di Battista and Antonello Moneta and Maurizio Patrignani and Maurizio Pizzonia},
   title = {Topographic Visualization of Prefix Propagation in the Internet},
@@ -21429,6 +21748,12 @@ applications.},
   keywords = {Atlas Transformation Language, Business Rule, Java Application, Model Drive Engineer, Variable Declaration},
   language = {en},
   series = {Lecture Notes in Computer Science}}
+
+@inproceedings{Cose13a,
+  author = {Cosentino, V. and Cabot, J. and Albert, P. and Bauquel, P. and Perronnet, J.},
+  title = {Extracting business rules from {COBOL}: A model-based framework},
+  booktitle = {20th Working Conference on Reverse Engineering (WCRE)},
+  year = {2013}}
 
 @inproceedings{Coss10a,
   author = {Cossette, Brad and Walker, Robert J},
@@ -22948,6 +23273,17 @@ It would be beneficial to perform further studies that consider more refactoring
   shorttitle = {Identifying refactoring opportunities in object-oriented code},
   urldate = {2019-03-27}}
 
+@article{Dall18a,
+  author = {Al Dallal, Jehad and Abdin, Anas},
+  title = {Empirical Evaluation of the Impact of Object-Oriented Code Refactoring on Quality Attributes: A Systematic Literature Review},
+  journal = {IEEE Transactions on Software Engineering},
+  volume = {44},
+  pages = {44-69},
+  year = {2018},
+  doi = {10.1109/TSE.2017.2658573},
+  number = {1},
+  keywords = {Software quality;Systematics;Unified modeling language;Bibliographies;Libraries;Object oriented modeling;quality attribute;quality measure;refactoring scenario;systematic literature review}}
+
 @article{Dalo18a,
   author = {Daloze, Benoit and Tal, Arie and Marr, Stefan and M\"{o}ssenb\"{o}ck, Hanspeter and Petrank, Erez},
   title = {Parallelization of Dynamic Languages: Synchronizing Built-in Collections},
@@ -23049,6 +23385,12 @@ It would be beneficial to perform further studies that consider more refactoring
   pages = {126-136},
   year = {2016},
   url = {https://api.semanticscholar.org/CorpusID:12367713}}
+
+@article{Dame64a,
+  author = {Damerau, Fred J.},
+  title = {A technique for computer detection and correction of spelling errors},
+  journal = {Communications of the ACM},
+  year = {1964}}
 
 @techreport{Dami88a,
   author = {Laurent Dami and Eugene Fiume and Oscar Nierstrasz and Dennis Tsichritzis},
@@ -23307,6 +23649,23 @@ checking and concurrency.},
   language = {en},
   month = nov,
   urldate = {2021-07-10}}
+
+@inproceedings{Dani07a,
+  author = {Daniel, Brett and Dig, Danny and Garcia, Kely and Marinov, Darko},
+  title = {Automated testing of refactoring engines},
+  booktitle = {Proceedings of the the 6th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering},
+  pages = {185-194},
+  publisher = {Association for Computing Machinery},
+  year = {2007},
+  url = {https://doi.org/10.1145/1287624.1287651},
+  doi = {10.1145/1287624.1287651},
+  isbn = {9781595938114},
+  address = {New York, NY, USA},
+  abstract = {Refactorings are behavior-preserving program transformations that improve the design of a program. Refactoring engines are tools that automate the application of refactorings: first the user chooses a refactoring to apply, then the engine checks if the transformation is safe, and if so, transforms the program. Refactoring engines are a key component of modern IDEs, and programmers rely on them to perform refactorings. A bug in the refactoring engine can have severe consequences as it can erroneously change large bodies of source code.We present a technique for automated testing of refactoring engines. Test inputs for refactoring engines are programs. The core of our technique is a framework for iterative generation of structurally complex test inputs. We instantiate the framework to generate abstract syntax trees that represent Java programs. We also create several kinds of oracles to automatically check that the refactoring engine transformed the generated program correctly. We have applied our technique to testing Eclipse and NetBeans, two popular open-source IDEs for Java, and we have exposed 21 new bugs in Eclipse and 24 new bugs in NetBeans.},
+  numpages = {10},
+  keywords = {automated testing, bounded-exhaustive testing, imperative generators, refactoring engines, test data generation},
+  location = {Dubrovnik, Croatia},
+  series = {ESEC-FSE '07}}
 
 @inproceedings{Dani11a,
   author = {Daniel, Brett and Dig, Danny and Gvero, Tihomir and Jagannath, Vilas and Jiaa, Johnston and Mitchell, Damion and Nogiec, Jurand and Tan, Shin Hwei and Marinov, Darko},
@@ -25394,6 +25753,12 @@ assignment system.},
   year = {1998},
   address = {Singapore}}
 
+@article{Dian24a,
+  author = {Dianshu Liao and Shidong Pan and Qing Huang and Xiaoxue Ren and Zhenchang Xing and Huan Jin and Qinying Li},
+  title = {CodGen: A Repository-Level Code Generation Framework for Code Reuse With Local-Aware, Global-Aware, and Third-Party-Library-Aware},
+  journal = {Transactions on Software Engineering},
+  year = {2024}}
+
 @inproceedings{Dias20a,
   author = {Martin Dias and Diego Orellana and Santiago Vidal and Leonel Merino and Alexandre Bergel},
   title = {Evaluating a Visual Approach for Understanding JavaScript Source Code},
@@ -26174,6 +26539,13 @@ Smalltalk or ML, and that they are fairly small.},
   address = {Piscataway, NJ, USA},
   issn = {0098-5589},
   number = {7}}
+
+@inproceedings{Dolb00a,
+  author = {Dolby, Julian and Chien, Andrew},
+  title = {An automatic object inlining optimization and its evaluation},
+  booktitle = {Proceedings of the ACM SIGPLAN 2000 conference on Programming language design and implementation},
+  pages = {345--357},
+  year = {2000}}
 
 @misc{DolphinSmalltalk,
   author = {DolphinSmalltalk},
@@ -27477,6 +27849,15 @@ on GUPRO during the last seven years.},
   address = {New York, NY, USA},
   isbn = {978-1-59593-786-5},
   location = {Montreal, Quebec, Canada}}
+
+@article{Edwa24a,
+  author = {Edward, Estomii and Nyamawe, Ally S. and Elisa, Noe},
+  title = {A Survey on Secure Refactoring},
+  journal = {SN Computer Science},
+  volume = {5},
+  pages = {952},
+  year = {2024},
+  doi = {10.1007/s42979-024-03325-y}}
 
 @techreport{Edwa63a,
   author = {D. J. Edwards and M. L. Minsky},
@@ -29075,6 +29456,18 @@ previously uncovered functions in the LLVM codebase.},
   year = {1976},
   number = {3}}
 
+@inproceedings{Fage12a,
+  author = {Fagerholm, Fabian and M{\"u}nch, J{\"u}rgen},
+  title = {Developer Experience: Concept and Definition},
+  booktitle = {2012 International Conference on Software and System Process (ICSSP)},
+  pages = {73--77},
+  year = {2012},
+  doi = {10.1109/ICSSP.2012.6225984},
+  shorttitle = {Developer Experience},
+  month = jun,
+  urldate = {2026-04-13},
+  keywords = {rps anna}}
+
 @inproceedings{Fahn06a,
   author = {M. Fahndrich and M. Aiken and C. Hawblitzel and O. Hodson and G. Hunt and J. Larus and S. Levi},
   title = {Language Support for Fast and Reliable Message-based Communication in Singularity OS},
@@ -29122,6 +29515,12 @@ previously uncovered functions in the LLVM codebase.},
   url = {http://www.cs.unc.edu/~faith/faith-dsl-1997.ps},
   address = {Berkeley, CA, USA},
   location = {Santa Barbara, California}}
+
+@inproceedings{Fakh18a,
+  author = {Fakhoury, Sarah and Ma, Yuzhan and Arnaoudova, Venera and Adesope, Olusola},
+  title = {The effect of poor source code lexicon and readability on developers' cognitive load},
+  booktitle = {International Conference on Program Comprehension},
+  year = {2018}}
 
 @inproceedings{Fall08,
   author = {Falleri, Jean-R\'emy and Huchard, Marianne and Lafourcade, Mathieu and Nebut, Cl\'ementine},
@@ -29457,6 +29856,23 @@ demonstrate this approach.},
   keywords = {rps anna},
   issn = {0950-5849}}
 
+@inproceedings{Feld11a,
+  author = {Feldthaus, Asger and Millstein, Todd and M\o{}ller, Anders and Sch\"{a}fer, Max and Tip, Frank},
+  title = {Refactoring towards the good parts of javascript},
+  booktitle = {Proceedings of the ACM International Conference Companion on Object Oriented Programming Systems Languages and Applications Companion},
+  pages = {189-190},
+  publisher = {Association for Computing Machinery},
+  year = {2011},
+  url = {https://doi.org/10.1145/2048147.2048200},
+  doi = {10.1145/2048147.2048200},
+  isbn = {9781450309424},
+  address = {New York, NY, USA},
+  abstract = {JavaScript is one of the most widely used programming languages of the present day. While its flexibility is treasured by proponents, its lack of language support for encapsulation is an obstacle to writing maintainable programs. We propose refactorings for improving modularity, and discuss challenges arising in their implementation.},
+  numpages = {2},
+  keywords = {javascript, refactoring},
+  location = {Portland, Oregon, USA},
+  series = {OOPSLA '11}}
+
 @article{Feld79a,
   author = {J.A. Feldman},
   title = {High Level Programming for Distributed Computing},
@@ -29495,19 +29911,6 @@ demonstrate this approach.},
   numpages = {2},
   address = {New York, NY, USA}}
 
-@techreport{Feld95a,
-  author = {Feldman, Stuart I.},
-  title = {A {Fortran} to {C} converter},
-  pages = {27},
-  year = {1995},
-  url = {http://portal.acm.org/citation.cfm?doid=101363.101366},
-  abstract = {We describe f 2c, a program that translates Fortran 77 into C or C++. F2c lets one portably mix C and Fortran and makes a large body of well-tested Fortran source code available to C environments.},
-  institution = {AT\&T Bell Laboratories},
-  language = {en},
-  month = mar,
-  number = {149},
-  urldate = {2018-05-22}}
-
 @article{Feld91a,
   author = {Feldman, S. I. and Gay, D. M. and Maimone, M. W. and Schryer, N. L.},
   title = {Availability of {F}2C-a {Fortran} to {C} {Converter}},
@@ -29521,6 +29924,19 @@ demonstrate this approach.},
   issn = {1061-7264},
   month = jul,
   number = {2},
+  urldate = {2018-05-22}}
+
+@techreport{Feld95a,
+  author = {Feldman, Stuart I.},
+  title = {A {Fortran} to {C} converter},
+  pages = {27},
+  year = {1995},
+  url = {http://portal.acm.org/citation.cfm?doid=101363.101366},
+  abstract = {We describe f 2c, a program that translates Fortran 77 into C or C++. F2c lets one portably mix C and Fortran and makes a large body of well-tested Fortran source code available to C environments.},
+  institution = {AT\&T Bell Laboratories},
+  language = {en},
+  month = mar,
+  number = {149},
   urldate = {2018-05-22}}
 
 @book{Fell01a,
@@ -29758,6 +30174,16 @@ demonstrate this approach.},
   pages = {108--118},
   year = {2022},
   organization = {IEEE}}
+
+@article{Fern22b,
+  author = {Blanco, Alison Fernandez and Bergel, Alexandre and Alcocer, Juan Pablo Sandoval},
+  title = {Software visualizations to analyze memory consumption: A literature review},
+  journal = {ACM Computing Surveys (CSUR)},
+  volume = {55},
+  pages = {1--34},
+  publisher = {ACM New York, NY},
+  year = {2022},
+  number = {1}}
 
 @misc{Fern23a,
   author = {Fernandes, Sara and Aguiar, Ademar and Restivo, Andr\'e},
@@ -31016,6 +31442,21 @@ inheritance.},
   title = {Putting Metaclasses to Work: A New Dimension in Object-Oriented Programming},
   publisher = {Addison-Wesley},
   year = {1999}}
+
+@article{Forn81a,
+  author = {Fornell, Claes and Larcker, David F.},
+  title = {Evaluating Structural Equation Models with Unobservable Variables and Measurement Error},
+  journal = {Journal of Marketing Research},
+  volume = {18},
+  pages = {39--50},
+  publisher = {American Marketing Association},
+  year = {1981},
+  doi = {10.2307/3151312},
+  number = {1},
+  eprint = {3151312},
+  eprinttype = {jstor},
+  issn = {0022-2437},
+  keywords = {rps anna}}
 
 @article{Fors24a,
   author = {Forsgren, Nicole and Kalliamvakou, Eirini and Noda, Abi and Greiler, Michaela and Houck, Brian and Storey, Margaret-Anne},
@@ -32925,6 +33366,14 @@ comprehension and software reuse.}}
   publisher = {Technical University of Vienna --- Technical Report TUV-1841-99-13},
   year = {1999}}
 
+@inproceedings{Galus22a,
+  author = {Galustov, Artemiy and Borodin, Alexey and Belevantsev, Andrey},
+  title = {Devirtualization for static analysis with low level intermediate representation},
+  booktitle = {Ispras Open Conference (ISPRAS 22)},
+  pages = {18--23},
+  year = {2022},
+  doi = {10.1109/ISPRAS57371.2022.10076859}}
+
 @book{Gamm03a,
   author = {Erich Gamma and Kent Beck},
   title = {Contributing to Eclipse},
@@ -33028,6 +33477,12 @@ object-oriented systems.},
   location = {Pondicherry, India},
   numpages = {10},
   series = {ICIA-16}}
+
+@inproceedings{Gang09a,
+  author = {Gang, X.},
+  title = {Business rule extraction from legacy system using dependence-cache slicing},
+  booktitle = {The 1st International Conference on Information Science and Engineering},
+  year = {2009}}
 
 @inproceedings{Gang89a,
   author = {Dipayan Gangopadhyay and A. Richard Helm},
@@ -35623,6 +36078,12 @@ environments.},
   year = {1999},
   series = {The {Java} Series}}
 
+@article{Gonz01a,
+  author = {Gonzalo Navarro},
+  title = {A Guided Tour to Approximate String Matching},
+  journal = {ACM Computing Surveys},
+  year = {2001}}
+
 @inproceedings{Gonz07a,
   author = {Sebasti\'{a}n Gonz\'{a}lez and Kim Mens and Patrick Heymans},
   title = {Highly dynamic behaviour adaptability through prototypes with subjective multimethods},
@@ -36057,6 +36518,11 @@ environments.},
   pages = {5--67},
   year = {1992},
   number = {1}}
+
+@misc{Grasp,
+  author = {Zahariev, George},
+  title = {Grasp},
+  howpublished = {\url{http://www.graspjs.com/}}}
 
 @article{Grass59a,
   author = {P. Grasse},
@@ -36565,6 +37031,23 @@ effects.},
   year = {2000},
   note = {Special Issue on Information Science Research},
   number = {2}}
+
+@article{Grei23a,
+  author = {Greiler, Michaela and Storey, Margaret-Anne and Noda, Abi},
+  title = {An Actionable Framework for Understanding and Improving Developer Experience},
+  journal = {IEEE Transactions on Software Engineering},
+  volume = {49},
+  pages = {1411-1425},
+  year = {2023},
+  doi = {10.1109/TSE.2022.3175660},
+  number = {4},
+  keywords = {Productivity;Interviews;Software engineering;Codes;Task analysis;Shape;Industries;Developer experience;grounded theory;development practices;satisfaction;productivity}}
+
+@article{Gres23a,
+  author = {Roberta Gresta and Vinicius Durelli and Elder Cirilo},
+  title = {Naming Practices in Object-Oriented Programming: An Empirical Study},
+  journal = {Journal of Software Engineering Research and Development},
+  year = {2023}}
 
 @inproceedings{Grew24a,
   author = {Grewal, Balreet and Lu, Wentao and Nadi, Sarah and Bezemer, Cor-Paul},
@@ -38052,6 +38535,24 @@ agreement in the use of domain terms between any two software systems.},
   year = {1996},
   month = jun,
   number = {1-2}}
+
+@book{Hair18a,
+  author = {Hair, Joseph F. and Sarstedt, Marko and Ringle, Christian M. and Gudergan, Siegfried},
+  title = {Advanced Issues in Partial Least Squares Structural Equation Modeling},
+  publisher = {SAGE},
+  year = {2018},
+  address = {Los Angeles London New Delhi Singapore Washington DC Melbourne},
+  isbn = {978-1-4833-7739-1},
+  keywords = {rps anna}}
+
+@book{Hair22a,
+  author = {Hair, Joseph and Hult, G. Tomas M. and Ringle, Christian and Sarstedt, Marko},
+  title = {A Primer on Partial Least Squares Structural Equation Modeling (PLS-SEM)},
+  publisher = {SAGE},
+  year = {2022},
+  month = jan,
+  isbn = {978-1-5443-9640-8},
+  keywords = {rps anna}}
 
 @inproceedings{Haji05a,
   author = {Hajiyev, E. and Verbaere, M. and {de Moor}, O. and {De Volder}, K.},
@@ -39717,6 +40218,12 @@ heterogeneous software and databases.},
   publisher = {Addison Wesley},
   year = {1998}}
 
+@mastersthesis{Hende23a,
+  author = {Henderson, Nathan},
+  title = {On Policy Decisions of Polymorphic Inline Caches in Dynamically-Typed Language Implementations},
+  year = {2023},
+  school = {University of Alberta}}
+
 @inproceedings{Henk05a,
   author = {Johannes Henkel and Amer Diwan},
   title = {{CatchUp}!: capturing and replaying refactorings to support {{API}} evolution},
@@ -40462,6 +40969,19 @@ Publizierung im firmeneigenen Intranet.},
   ee = {10.1016/j.patcog.2005.01.003},
   number = {9}}
 
+@article{Hilg80a,
+  author = {Hilgard, Ernest R.},
+  title = {The Trilogy of Mind: Cognition, Affection, and Conation},
+  journal = {Journal of the History of the Behavioral Sciences},
+  volume = {16},
+  pages = {107--117},
+  year = {1980},
+  doi = {10.1002/1520-6696(198004)16:2<107::AID-JHBS2300160202>3.0.CO;2-Y},
+  shorttitle = {The Trilogy of Mind},
+  number = {2},
+  issn = {1520-6696},
+  keywords = {rps anna}}
+
 @inproceedings{Hill00a,
   author = {T. Hill and J. Noble and J. Potter},
   title = {Scalable Visualisations with Ownership Trees},
@@ -40914,6 +41434,13 @@ programming style.},
   booktitle = {USENIX Annual Technical Conference},
   volume = {98},
   year = {1998}}
+
+@inproceedings{Hlzl91a,
+  author = {Urs H{\"o}lzle and Craig Chambers and David M. Ungar},
+  title = {Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches},
+  booktitle = {European Conference on Object-Oriented Programming},
+  year = {1991},
+  url = {https://api.semanticscholar.org/CorpusID:2726876}}
 
 @article{Hoad03a,
   author = {Timothy C. Hoad and Justin Zobel},
@@ -42567,6 +43094,19 @@ automatically detect known and unknown patterns.},
   year = {2011},
   doi = {10.1109/ICCSN.2011.6014267}}
 
+@inproceedings{Huan23a,
+  author = {Huang, Claire and Blackburn, Stephen and Cai, Zixian},
+  title = {Improving garbage collection observability with performance tracing},
+  booktitle = {Proceedings of the 20th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes},
+  pages = {85--99},
+  year = {2023}}
+
+@inproceedings{Huan96a,
+  author = {Huang, H. and Tsai, W. T. and Bhattacharya, S. and Chen, X. P. and Wang, Y. and Sun, J.},
+  title = {Business rule extraction from legacy code},
+  booktitle = {Proceedings of the 20th International Computer Software and Applications Conference},
+  year = {1996}}
+
 @article{Huang13a,
   author = {Huang, Jeff and Zhang, Charles and Dolby, Julian},
   title = {Clap: Recording local executions to reproduce concurrency failures},
@@ -43495,6 +44035,14 @@ universal and (dependent) existential types.},
   key = {Imposter},
   note = {http://csoki.ki.iif.hu/$\sim$vitezg/impostor/}}
 
+@misc{InCode,
+  author = {inCode},
+  title = {{inCode} --- Eclipse plugin for code analysis},
+  year = {2009},
+  url = {http://www.intooitus.com/inCode.html},
+  key = {inCode},
+  note = {http://www.intooitus.com/inCode.html}}
+
 @article{Infa13a,
   author = {Infante, Alejandro and Sandoval, Juan Pablo and Bergel, Alexandre},
   title = {Identifying equivalent objects to reduce memory consumption},
@@ -43667,6 +44215,13 @@ universal and (dependent) existential types.},
   year = {1997},
   institution = {American National Standards Institute, Inc.}}
 
+@misc{IntelliJ,
+  author = {{JetBrains}},
+  title = {Code completion in IntelliJ IDEA},
+  year = {2026},
+  url = {https://www.jetbrains.com/help/idea/auto-completing-code.html},
+  note = {Accessed 2026-05-06}}
+
 @article{Inve91a,
   author = {Paola Inverardi and Corrado Priami},
   title = {Evaluation of Tools for the Analysis of Communicating Systems},
@@ -43740,6 +44295,13 @@ universal and (dependent) existential types.},
   publisher = {Prentice-Hall},
   year = {1997},
   isbn = {0-02-359852-2}}
+
+@inproceedings{Ishi00a,
+  author = {Ishizaki, Kazuaki and Kawahito, Motohiro and Yasue, Toshiaki and Komatsu, Hideaki and Nakatani, Toshio},
+  title = {A study of devirtualization techniques for a Java Just-In-Time compiler},
+  booktitle = {Proceedings of the 15th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications},
+  pages = {294--310},
+  year = {2000}}
 
 @inproceedings{Ishi86a,
   author = {Yutaka Ishikawa and Mario Tokoro},
@@ -44515,6 +45077,13 @@ code search engine, merobase.}}
   key = {JavaCC},
   note = {http://www.experimentalstuff.com/Technologies/JavaCC/}}
 
+@misc{JavaHotsopGCTuningGuide,
+  author = {{Oracle Corporation}},
+  title = {Factors Affecting Garbage Collection Performance},
+  year = {2023},
+  howpublished = {\url{https://docs.oracle.com/en/java/javase/21/gctuning/factors-affecting-garbage-collection-performance.html\#GUID-5508674B-F32D-4B02-9002-D0D8C7CDDC75}},
+  note = {Accessed: 2026-01-29}}
+
 @misc{JavaIDEAPI,
   title = {JSR 198: A Standard Extension {API} for Integrated Development Environments},
   url = {http://jcp.org/en/jsr/detail?id=198},
@@ -44537,14 +45106,6 @@ code search engine, merobase.}}
   title = {The Security Manager},
   year = {2013},
   howpublished = {\url{http://docs.oracle.com/javase/7/docs/technotes/guides/security/index.html}}}
-
-@misc{JavaHotsopGCTuningGuide,
-  author = {{Oracle Corporation}},
-  title = {Factors Affecting Garbage Collection Performance},
-  year = {2023},
-  howpublished = {\url{https://docs.oracle.com/en/java/javase/21/gctuning/factors-affecting-garbage-collection-performance.html\#GUID-5508674B-F32D-4B02-9002-D0D8C7CDDC75}},
-  note = {Accessed: 2026-01-29}
-}
 
 @inproceedings{Jave12a,
   author = {Muhammad Javed and Yalemisew Abgaz and Claus Pahl},
@@ -45492,6 +46053,16 @@ earlier papers.},
   url = {http://www.cs.kent.ac.uk/pubs/1996/13},
   isbn = {0--471--94148--4},
   month = jul}
+
+@article{Jone96b,
+  author = {Jones, Neil D},
+  title = {An introduction to partial evaluation},
+  journal = {ACM Computing Surveys (CSUR)},
+  volume = {28},
+  pages = {480--503},
+  publisher = {ACM New York, NY, USA},
+  year = {1996},
+  number = {3}}
 
 @inproceedings{Jone97a,
   author = {Mark P. Jones},
@@ -50601,6 +51172,14 @@ is defined in terms of interleaved execution.},
   pages = {30-41},
   year = {2019}}
 
+@inproceedings{Kubel18a,
+  author = {Kubelka, Juraj and Robbes, Romain and Bergel, Alexandre},
+  title = {The road to live programming: insights from the practice},
+  booktitle = {International Conference on Software Engineering (ICSE'18)},
+  year = {2018},
+  doi = {10.1145/3180155.3180200},
+  month = may}
+
 @misc{Kuce79,
   author = {Kucera, H and Francis, W},
   title = {A standard corpus of present-day edited american english, for use with digital computers (revised and amplified from 1967 version)},
@@ -51736,6 +52315,23 @@ ist das Projekt, welches hier dokumentiert wird.},
   url = {http://www.aclweb.org/anthology/E14-3011},
   address = {Gothenburg, Sweden},
   month = {apr}}
+
+@inproceedings{Laho12a,
+  author = {Lahoda, Jan and Be\v{c}i\v{c}ka, Jan and Ruijs, Ralph Benjamin},
+  title = {Custom declarative refactoring in NetBeans: tool demonstration},
+  booktitle = {Proceedings of the Fifth Workshop on Refactoring Tools},
+  pages = {63-64},
+  publisher = {Association for Computing Machinery},
+  year = {2012},
+  url = {https://doi.org/10.1145/2328876.2328886},
+  doi = {10.1145/2328876.2328886},
+  isbn = {9781450315005},
+  address = {New York, NY, USA},
+  abstract = {In this paper, we briefly describe NetBeans' custom refactoring feature, its history and possible evolution. We will also mention some of the pain points that we ran into while this feature and its parts have been developed and moved into the production.},
+  numpages = {2},
+  keywords = {transformation engine, refactoring, Java},
+  location = {Rapperswil, Switzerland},
+  series = {WRT '12}}
 
 @inproceedings{Lai91a,
   author = {K-Y. Lai and T.W. Malone},
@@ -52888,15 +53484,13 @@ hierarchical classification of the objects.},
   author = {Lawrie, Dawn and Feild, Henry and Binkley, David},
   title = {Quantifying identifier quality: an analysis of trends},
   journal = {Empirical Software Engineering},
-  volume = {12},
-  pages = {359--388},
-  year = {2007},
-  url = {https://doi.org/10.1007/s10664-006-9032-2},
-  doi = {10.1007/s10664-006-9032-2},
-  abstract = {Identifiers, which represent the defined concepts in a program, account for, by some measures, almost three quarters of source code. The makeup of identifiers plays a key role in how well they communicate these defined concepts. An empirical study of identifier quality based on almost 50 million lines of code, covering thirty years, four programming languages, and both open and proprietary source is presented. For the purposes of the study, identifier quality is conservatively defined as the possibility of constructing the identifier out of dictionary words or known abbreviations. Four hypotheses related to identifier quality are considered using linear mixed effect regression models. For example, the first hypothesis is that modern programs include higher quality identifiers than older ones. In this case, the results show that better programming practices are producing higher quality identifies. Results also confirm some commonly held beliefs, such as proprietary code having more acronyms than open source code.},
-  issn = {1573-7616},
-  month = aug,
-  number = {4}}
+  year = {2007}}
+
+@article{Lawr07b,
+  author = {Lawrie, Dawn and Morrell, Christopher and Feild, Henry and Binkley, David},
+  title = {Effective identifier names for comprehension and memory},
+  journal = {Innovations in Systems and Software Engineering},
+  year = {2007}}
 
 @inproceedings{Laym13,
   author = {Layman, Lucas and Diep, Madeline and Nagappan, Meiyappan and Singer, Janice and Deline, Robert and Venolia, Gina},
@@ -52999,6 +53593,24 @@ hierarchical classification of the objects.},
   pages = {212--223},
   year = {1990},
   month = oct}
+
+@misc{Lebe17a,
+  author = {LeBel, Etienne and Berger, Derek and Campbell, Lorne and Loving, Timothy},
+  title = {Falsifiability Is Not Optional},
+  year = {2017},
+  doi = {10.31234/osf.io/dv94b},
+  month = jan,
+  keywords = {rps anna}}
+
+@article{Lebe19a,
+  author = {LeBel, Etienne and Vanpaemel, Wolf and Cheung, Irene and Campbell, Lorne},
+  title = {A Brief Guide to Evaluate Replications},
+  journal = {Meta-Psychology},
+  volume = {3},
+  year = {2019},
+  doi = {10.15626/MP.2018.843},
+  month = jun,
+  keywords = {rps anna}}
 
 @phdthesis{Lebl00a,
   author = {Herv{\'e} Leblanc},
@@ -53144,6 +53756,25 @@ hierarchical classification of the objects.},
   location = {Szeged, Hungary},
   numpages = {11},
   series = {ESEC/FSE '11}}
+
+@inproceedings{Lee13a,
+  author = {Lee, Yun Young and Chen, Nicholas and Johnson, Ralph E.},
+  title = {Drag-and-drop refactoring: intuitive and efficient program transformation},
+  booktitle = {Proceedings of the 2013 International Conference on Software Engineering},
+  pages = {23-32},
+  publisher = {IEEE Press},
+  year = {2013},
+  isbn = {9781467330763},
+  abstract = {Refactoring is a disciplined technique for restructuring code to improve its readability and maintainability. Almost all modern integrated development environments (IDEs) offer built-in support for automated refactoring tools. However, the user interface for refactoring tools has remained largely unchanged from the menu and dialog approach introduced in the Smalltalk Refactoring Browser, the first automated refactoring tool, more than a decade ago. As the number of supported refactorings and their options increase, invoking and configuring these tools through the traditional methods have become increasingly unintuitive and inefficient. The contribution of this paper is a novel approach that eliminates the use of menus and dialogs altogether. We streamline the invocation and configuration process through direct manipulation of program elements via drag-and-drop. We implemented and evaluated this approach in our tool, Drag-and-Drop Refactoring (DNDRefactoring), which supports up to 12 of 23 refactorings in the Eclipse IDE. Empirical evaluation through surveys and controlled user studies demonstrates that our approach is intuitive, more efficient, and less error-prone compared to traditional methods available in IDEs today. Our results bolster the need for researchers and tool developers to rethink the design of future refactoring tools.},
+  numpages = {10},
+  location = {San Francisco, CA, USA},
+  series = {ICSE '13}}
+
+@inproceedings{Lee15a,
+  author = {Lee, Sang Won and Essl, Georg},
+  title = {Live writing: Asynchronous playback of live coding and writing},
+  booktitle = {Proceedings of the International Conference on Live Coding},
+  year = {2015}}
 
 @inproceedings{Lee22a,
   author = {Lee, Yunhyeok and Liu, Yi},
@@ -53313,6 +53944,13 @@ Business Class.},
   title = {Reactive object queries},
   booktitle = {Constrained and Reactive Objects Workshop (CROW)},
   year = {2016}}
+
+@inproceedings{Lehm19a,
+  author = {Lehmann, Daniel and Pradel, Michael},
+  title = {Wasabi: A framework for dynamically analyzing webassembly},
+  booktitle = {Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems},
+  pages = {1045--1058},
+  year = {2019}}
 
 @article{Lehm80a,
   author = {Manny Lehman},
@@ -53873,6 +54511,12 @@ and prove its correctness.},
   keywords = {rps anna},
   copyright = {arXiv.org perpetual, non-exclusive license}}
 
+@article{Leve66a,
+  author = {Vladimir I. Levenshtein},
+  title = {Binary Codes Capable of Correcting Deletions, Insertions, and Reversals},
+  journal = {Soviet Physics Doklady},
+  year = {1966}}
+
 @article{Leve93a,
   author = {Leveson, Nancy G and Turner, Clark S},
   title = {An investigation of the Therac-25 accidents},
@@ -54052,6 +54696,13 @@ and prove its correctness.},
   year = {1998},
   isbn = {0-201-57164-1}}
 
+@inproceedings{Lhot02a,
+  author = {Lhot{\'a}k, Ondrej and Hendren, Laurie},
+  title = {Run-time evaluation of opportunities for object inlining in Java},
+  booktitle = {Proceedings of the 2002 joint ACM-ISCOPE conference on Java Grande},
+  pages = {175--184},
+  year = {2002}}
+
 @inproceedings{Lhot03a,
   author = {Ond\v{r}ej Lhot\'ak and Laurie Hendren},
   title = {Scaling {Java} Points-to Analysis Using {Spark}},
@@ -54072,6 +54723,13 @@ and prove its correctness.},
   year = {2003},
   address = {Portland, Oregon},
   month = may}
+
+@inproceedings{Li03b,
+  author = {Li, Tao and John, Lizy Kurian},
+  title = {Run-time modeling and estimation of operating system power consumption},
+  booktitle = {Proceedings of the 2003 ACM SIGMETRICS international conference on Measurement and modeling of computer systems},
+  pages = {160--171},
+  year = {2003}}
 
 @inproceedings{Li05a,
   author = {Qingshan Li and Hua Chu and Shengming Hu and Ping Chen and Zhao Yun},
@@ -54330,6 +54988,13 @@ and prove its correctness.},
   title = {A{\textasciicircum}3 {CodGen}: A Repository Level Code Generation Framework for Code Reuse with Local Aware, Global Aware, and Third Party Library Aware},
   journal = {IEEE Transactions on Software Engineering},
   year = {2024}}
+
+@inproceedings{Libi14a,
+  author = {Libi{\v{c}}, Peter and Bulej, Lubom{\'\i}r and Horky, Vojt{\v{e}}ch and T{\={u}}ma, Petr},
+  title = {On the limits of modeling generational garbage collector performance},
+  booktitle = {Proceedings of the 5th ACM/SPEC international conference on Performance engineering},
+  pages = {15--26},
+  year = {2014}}
 
 @article{Libk16a,
   author = {Libkin, Leonid and Martens, Wim and Vrgo{\v{c}}, Domagoj},
@@ -55147,6 +55812,23 @@ source of hard-to-find bugs.},
   year = {2020},
   url = {http://arxiv.org/abs/2012.03759}}
 
+@article{Lims95a,
+  author = {Wong, Limsoon},
+  title = {An introduction to Remy's fast polymorphic record projection},
+  journal = {SIGMOD Rec.},
+  volume = {24},
+  publisher = {Association for Computing Machinery},
+  year = {1995},
+  url = {https://doi.org/10.1145/211990.212013},
+  doi = {10.1145/211990.212013},
+  issue_date = {Sept. 1995},
+  address = {New York, NY, USA},
+  number = {3},
+  issn = {0163-5808},
+  abstract = {Traditionally, a record projection is compiled when all fields of the record are known in advance. The need to know all fields in advance leads to very clumsy programs, especially for querying external data sources. In a paper that had not been widely circulated in the database community, Remy presented in programming language context a constant-time implementation of the record projection operation that does not have such a requirement. This paper introduces his technique and suggests an improvement to his technique in the context of database queries.},
+  month = sep,
+  numpages = {6}}
+
 @inproceedings{Lin04a,
   author = {Lin, Chin-Yew},
   title = {ROUGE: A Package for Automatic Evaluation of Summaries},
@@ -55275,6 +55957,12 @@ source of hard-to-find bugs.},
   address = {Boston, MA, USA},
   edition = {2nd},
   isbn = {0201432943}}
+
+@misc{LinfuProxies,
+  title = {LinFu Proxies Framework},
+  url = {http://www.codeproject.com/KB/cs/LinFuPart1.aspx},
+  howpublished = {\url{http://www.codeproject.com/KB/cs/LinFuPart1.aspx}},
+  key = {linfuProxies}}
 
 @inproceedings{Ling07a,
   author = {Lingampally, R. and Gupta, A. and Jalote, P.},
@@ -55922,6 +56610,20 @@ increased.},
   pages = {129--137},
   year = {1982}}
 
+@misc{Llvm25a,
+  title = {LLVM jump threading},
+  year = {2025},
+  howpublished = {\url{https://llvm.org/docs/Passes.html\#jump-threading-jump-threading}},
+  note = {Accessed: 2025-04-07},
+  key = {LLVM jump threading}}
+
+@misc{Llvm25b,
+  title = {LLVM predicate info},
+  year = {2025},
+  howpublished = {\url{https://llvm.org/doxygen/PredicateInfo_8h.html}},
+  note = {Accessed: 2025-04-07},
+  key = {LLVM predicate info}}
+
 @article{Loch83a,
   author = {Frederick H. Lochovsky},
   title = {A Knowledge-Based Approach to Supporting Office Work},
@@ -55940,11 +56642,31 @@ increased.},
   editor = {Fred H. Lochovsky},
   month = dec}
 
+@article{Lock02,
+  author = {Locke, Edwin and Latham, Gary},
+  title = {Building a Practically Useful Theory of Goal Setting and Task Motivation},
+  journal = {American Psychologist},
+  volume = {57},
+  pages = {705--717},
+  year = {2002},
+  doi = {10.1037/0003-066X.57.9.705},
+  month = sep,
+  keywords = {rps anna}}
+
 @book{Lock15a,
   author = {Lockhart, Josh},
   title = {Modern PHP: New features and good practices},
   publisher = {O'Reilly Media, Inc},
   year = {2015}}
+
+@article{Lock76,
+  author = {Locke, Edwin},
+  title = {The Nature and Causes of Job Satisfaction},
+  journal = {The handbook of industrial and organizational psychology},
+  volume = {31},
+  year = {1976},
+  month = jan,
+  keywords = {rps anna}}
 
 @inproceedings{Loeh92a,
   author = {Klaus-Peter L{\"o}hr},
@@ -57157,6 +57879,16 @@ improvements.},
   publisher = {O'Reilly \& Associates, Inc.},
   year = {1996},
   isbn = {1-56592-197-6}}
+
+@article{Lutze25a,
+  author = {Lutze, Matthew and Schuster, Philipp and Brachth{\"a}user, Jonathan Immanuel},
+  title = {The Simple Essence of Monomorphization},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume = {9},
+  pages = {1015--1041},
+  publisher = {ACM New York, NY, USA},
+  year = {2025},
+  number = {OOPSLA1}}
 
 @inproceedings{Luu15a,
   author = {Luu, Loi and Teutsch, Jason and Kulkarni, Raghav and Saxena, Prateek},
@@ -58621,6 +59353,18 @@ addressed in the future.},
   address = {Los Alamitos, CA, USA},
   issn = {1095-1350}}
 
+@article{Mari17b,
+  author = {Mariani, Thain{\'a} and Vergilio, Silvia Regina},
+  title = {A Systematic Review on Search-Based Refactoring},
+  journal = {Information and Software Technology},
+  volume = {83},
+  pages = {14--34},
+  year = {2017},
+  url = {https://www.sciencedirect.com/science/article/pii/S0950584916303779},
+  doi = {10.1016/j.infsof.2016.11.009},
+  issn = {0950-5849},
+  keywords = {Search-based software engineering, Refactoring, Evolutionary algorithms}}
+
 @book{Mari19a,
   author = {Mariano Mendez},
   title = {Fortran refactoring for legacy systems},
@@ -59271,6 +60015,21 @@ and acylclic dependencies principles.},
   address = {Washington, DC, USA},
   isbn = {0-7695-2015-4}}
 
+@inproceedings{Maru05a,
+  author = {Maruyama, Katsuhisa and Yamamoto, Shinichiro},
+  title = {Design and Implementation of an Extensible and Modifiable Refactoring Tool},
+  booktitle = {Proceedings of the 13th International Workshop on Program Comprehension},
+  pages = {195-204},
+  publisher = {IEEE Computer Society},
+  year = {2005},
+  url = {https://doi.org/10.1109/WPC.2005.17},
+  doi = {10.1109/WPC.2005.17},
+  isbn = {0769522548},
+  address = {USA},
+  abstract = {Refactoring is an essential and useful practice in developing and maintaining object-oriented software since it improves the design of existing code without changing its external behavior. Therefore, several refactoring tools tend to be integrated into contemporary IDEs. However, these tools represent source code as an abstract syntax tree (AST) and thus their implementations are hard to extend and modify. This paper presents Jrbx, a refactoring tool that uses a fine-grained XML representation of source code and supports stylized manipulations of the representation. Moreover, Jrbx aggressively exploits control flow graphs (CFGs) and program dependence graphs (PDGs) for both precondition checking and change creation. The use of the XML, CFG, and PDG representations makes the implementation of Jrbx more understandable and reusable, and thus facilitates tool developers creating new refactorings and modifying existing ones.},
+  numpages = {10},
+  series = {IWPC '05}}
+
 @inproceedings{Maru87a,
   author = {Takeo Maruichi and Tetsuya Uchiki and Mario Tokoro},
   title = {Behavioral Simulation Based on Knowledge Objects},
@@ -59626,6 +60385,17 @@ development, we achieve 19.2\% top-1 precision and
   year = {2023},
   doi = {10.1109/ICSME58846.2023.00045},
   keywords = {Industries;Software maintenance;Codes;Systematics;Bibliographies;Functional programming;refactoring;Elixir;functional programming}}
+
+@article{Matt25a,
+  author = {da Matta Vegi, Lucas Francisco and Valente, Marco Tulio},
+  title = {Understanding Refactorings in Elixir Functional Language},
+  journal = {Empirical Software Engineering},
+  volume = {30},
+  pages = {108},
+  year = {2025},
+  doi = {10.1007/s10664-025-10652-y},
+  number = {4},
+  issn = {1573-7616}}
 
 @inproceedings{Matt97a,
   author = {Michael Mattsson and Jan Bosch},
@@ -60225,6 +60995,13 @@ support concurrency.},
   date-added = {2025-05-13 07:54:25 +0200},
   date-modified = {2025-05-13 08:07:22 +0200}}
 
+@article{McLe15a,
+  author = {McLean, Alex and Magnusson, Thor and Ng, Kia and Knotts, Shelly and Armitage, Joanne},
+  title = {Proceedings of the First International Conference on Live Coding},
+  journal = {Proceedings of the International Conference on Live Coding},
+  publisher = {ICSRiM, University of Leeds},
+  year = {2015}}
+
 @article{McLe81a,
   author = {I.A. McLeod},
   title = {A Data Base Management System for Document Retrieval Applications},
@@ -60728,6 +61505,12 @@ for further investigation.},
   pages = {13--23},
   year = {2008},
   organization = {IEEE}}
+
+@mastersthesis{Melk24a,
+  author = {Yasser Melki},
+  title = {Computer Science Book Validation: a Structured Approach},
+  year = {2004},
+  school = {Ecole Superieure en Informatique - 08 Mai 1945 -  Sidi Bel Abbes, Algeria}}
 
 @book{Mell02a,
   author = {Stephen J. Mellor and Marc J. Balcer},
@@ -61648,6 +62431,14 @@ explicit synchronization code is ever used.},
   booktitle = {International Conference on Trust, Security and Privacy in Computing and Communications, TrustCom'20},
   pages = {1--11},
   year = {2020}}
+
+@inproceedings{Mess21a,
+  author = {Messina, Marcello and Aliel, Luzilei and Mej{\'\i}a, Carlos Mario G{\'o}mez and C{\'e}lio Filho, Marcos and de Melo, Marcos Thadeu Soares},
+  title = {Live coding on orca, the geopolitics of the English language and the limits of creative semantic anchoring: a preliminary hypothesis},
+  booktitle = {Proceedings of the 11th Workshop on Ubiquitous Music (UbiMus 2021)},
+  pages = {57--61},
+  year = {2021},
+  organization = {g-ubimus}}
 
 @inproceedings{Mesz03a,
   author = {G. Meszaros and S.M. Smith and J. Andrea},
@@ -63110,6 +63901,12 @@ these modular type systems sound.},
   publisher = {Cambridge University Press},
   year = {1999}}
 
+@inproceedings{Milo17a,
+  author = {Nevena Milojkovi{\'c} and Mohammad Ghafari and Oscar Nierstrasz},
+  title = {Exploiting Type Hints in Method Argument Names to Improve Lightweight Type Inference},
+  booktitle = {International Conference on Program Comprehension (ICPC)},
+  year = {2017}}
+
 @proceedings{Milo971a,
   title = {EDOC '97 Proceedings},
   publisher = {IEEE},
@@ -63372,8 +64169,16 @@ customers.},
 @inproceedings{Mira11a,
   author = {Eliot Miranda},
   title = {The Cog Smalltalk Virtual Machine},
-  booktitle = {Proceedings of VMIL 2011},
+  booktitle = {Proceedings of Workshop on Virtual Machines and Intermediate Language (VMIL'11)},
   year = {2011}}
+
+@inproceedings{Mira16a,
+  author = {Miraglia, Armando and Vogt, Dirk and Bos, Herbert and Tanenbaum, Andy and Giuffrida, Cristiano},
+  title = {Peeking into the past: Efficient checkpoint-assisted time-traveling debugging},
+  booktitle = {Proceedings of International Symposium on Software Reliability Engineering (ISSRE)},
+  pages = {455--466},
+  year = {2016},
+  organization = {IEEE}}
 
 @inproceedings{Mira18a,
   author = {Miranda, Eliot and B{\'e}ra, Cl{\'e}ment and Boix, Elisa Gonzalez and Ingalls, Dan},
@@ -63434,6 +64239,12 @@ customers.},
   booktitle = {Proc. Technology of Object-Oriented Languages and Systems ({T}{O}{O}{L}{S}-24)},
   publisher = {IEEE Computer Society Press},
   year = {1998}}
+
+@inproceedings{Misk23a,
+  author = {Miskell, C. and Diaz, R. and Ganeriwala, P. and Slhoub, K. and Nembhard, F.},
+  title = {Automated framework to extract software requirements from source code},
+  booktitle = {Proceedings of the 7th International Conference on Natural Language Processing and Information Retrieval},
+  year = {2023}}
 
 @article{Misr88a,
   author = {S.K. Misra and P.J. Jalic},
@@ -63779,6 +64590,17 @@ such environments.},
   year = {2018},
   number = {1}}
 
+@article{Moha18b,
+  author = {Mohan, Michael and Greer, Des},
+  title = {A Survey of Search-Based Refactoring for Software Maintenance},
+  journal = {Journal of Software Engineering Research and Development},
+  volume = {6},
+  pages = {3},
+  year = {2018},
+  doi = {10.1186/s40411-018-0046-4},
+  number = {1},
+  issn = {2195-1721}}
+
 @incollection{Mohn02a,
   author = {Markus Mohnen},
   title = {Interfaces with default implementations in {Java}},
@@ -64018,6 +64840,21 @@ of WooRKS.}}
   url = {http://www.wiresong.ca/Monticello},
   key = {Monticello},
   note = {http://www.wiresong.ca/Monticello}}
+
+@inproceedings{Mooi23a,
+  author = {de Mooij, Jan and Gaudet, Matthew and Ireland, Iain and Henderson, Nathan and Amaral, J. Nelson},
+  title = {CacheIR: The Benefits of a Structured Representation for Inline Caches},
+  booktitle = {Proceedings of the 20th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes},
+  publisher = {Association for Computing Machinery},
+  year = {2023},
+  url = {https://doi.org/10.1145/3617651.3622979},
+  doi = {10.1145/3617651.3622979},
+  isbn = {9798400703805},
+  address = {New York, NY, USA},
+  numpages = {13},
+  keywords = {just-in-time compilation, inline caching, dynamically-typed programming languages},
+  location = {Cascais, Portugal},
+  series = {MPLR 2023}}
 
 @inproceedings{Moon01a,
   author = {Leon Moonen},
@@ -64885,6 +65722,15 @@ Points approach.},
   location = {Montreal, Canada},
   month = oct}
 
+@inproceedings{Moto24a,
+  author = {Motogna, Simona and Berciu, Liviu-Marian and Moldovan, Vasilica-Andreea},
+  title = {Artificial Intelligence Methods in Software Refactoring: A Systematic Literature Review},
+  booktitle = {Proceedings of the 50th Euromicro Conference on Software Engineering and Advanced Applications (SEAA)},
+  pages = {309--316},
+  year = {2024},
+  doi = {10.1109/SEAA64295.2024.00055},
+  keywords = {Refactoring, Artificial Intelligence, Machine Learning, Systematic Literature Review}}
+
 @inproceedings{Mott06,
   author = {Jean-Marie Mottu and Benoit Baudry and Yves Le Traon},
   title = {Mutation Analysis Testing for Model Transformations},
@@ -64906,6 +65752,22 @@ Points approach.},
   pages = {233--242},
   year = {2007},
   organization = {IEEE}}
+
+@inproceedings{Moug03a,
+  author = {Mougin, Philippe and Ducasse, St\'{e}phane},
+  title = {OOPAL: integrating array programming in object-oriented programming},
+  booktitle = {Proceedings of the 18th Annual ACM SIGPLAN Conference on Object-Oriented Programing, Systems, Languages, and Applications},
+  publisher = {Association for Computing Machinery},
+  year = {2003},
+  url = {https://doi.org/10.1145/949305.949312},
+  doi = {10.1145/949305.949312},
+  isbn = {1581137125},
+  address = {New York, NY, USA},
+  abstract = {Array programming shines in its ability to express computations at a high-level of abstraction, allowing one to manipulate and query whole sets of data at once. This paper presents the OPA model that enhances object-oriented programming with array programming features. The goal of OPA is to determine a minimum set of modifications that must be made to the traditional object model in order to take advantage of the possibilities of array programming. It is based on a minimal extension of method invocation and the definition of a kernel of methods implementing fundamental array programming operations. The OPA model presents a generalization of traditional message passing in the sense that a message can be send to an entire set of objects. The model is validated in FS, a new scripting language.},
+  numpages = {13},
+  keywords = {array programming, f-script, high-level language, high-order messages, message pattern, smalltalk},
+  location = {Anaheim, California, USA},
+  series = {OOPSLA '03}}
 
 @phdthesis{Mour03a,
   author = {Paolo Moura},
@@ -65420,6 +66282,12 @@ benefits.},
   booktitle = {{ICSM}'98},
   pages = {24-34},
   year = {1998}}
+
+@article{Mur06a,
+  author = {Murphy, G.C. and Kersten, M. and Findlater, L.},
+  title = {How are Java software developers using the Eclipse IDE?},
+  journal = {IEEE Software},
+  year = {2006}}
 
 @inproceedings{Mura24a,
   author = {Murali, Vijayaraghavan and Maddila, Chandra and Ahmad, Imad and Bolin, Michael and Cheng, Daniel and Ghorbani, Negar and Fernandez, Renuka and Nagappan, Nachiappan and Rigby, Peter C.},
@@ -69656,6 +70524,18 @@ whether or not these conditions are satisfied.},
   doi = {10.1109/IWoR.2019.00010},
   keywords = {Tools;Companies;Standards;Gold;Usability;Prototypes;refactoring;batch refactoring;automated refactoring;customizing refactoring}}
 
+@inproceedings{Oliv25a,
+  author = {Oliveira, Jonhnanthan and Gheyi, Rohit and Ribeiro, M\'{a}rcio and Garcia, Alessandro},
+  title = {Bugs in the Shadows: Static Detection of Faulty Python Refactorings},
+  booktitle = {Anais do XXXIX Simp\'{o}sio Brasileiro de Engenharia de Software (SBES 2025)},
+  pages = {182-192},
+  publisher = {Sociedade Brasileira de Computa\c{c}\~{a}o},
+  year = {2025},
+  url = {http://dx.doi.org/10.5753/sbes.2025.9889},
+  doi = {10.5753/sbes.2025.9889},
+  month = sep,
+  collection = {SBES 2025}}
+
 @inproceedings{Oliv99a,
   author = {Alexandre Oliva and Luiz Eduardo Buzato},
   title = {The Design and Implementation of {Guarana}},
@@ -69873,6 +70753,13 @@ whether or not these conditions are satisfied.},
   month = apr,
   number = {no. 556)},
   type = {{Ph.D}. Thesis}}
+
+@article{Orla09a,
+  author = {Orlarey, Yann and Fober, Dominique and Letz, St{\'e}phane},
+  title = {Faust: an efficient functional approach to dsp programming},
+  journal = {New computational paradigms for computer music},
+  pages = {65--96},
+  year = {2009}}
 
 @inproceedings{Orso02a,
   author = {Orso, Alessandro and Rao, Anup and Harrold, Mary Jean},
@@ -70182,6 +71069,29 @@ experiments.},
   month = mar,
   number = {3}}
 
+@phdthesis{Over11a,
+  author = {Overbey, Jeffrey},
+  title = {A Toolkit for Constructing Refactoring Engines},
+  year = {2011},
+  school = {University of Illinois at Urbana-Champaign},
+  url = {http://hdl.handle.net/2142/29774},
+  type = {PhD dissertation},
+  advisor = {Johnson, Ralph E.}}
+
+@inproceedings{Over13a,
+  author = {Overbey, Jeffrey L.},
+  title = {Immutable source-mapped abstract syntax tree: a design pattern for refactoring engine APIs},
+  booktitle = {Proceedings of the 20th Conference on Pattern Languages of Programs},
+  publisher = {The Hillside Group},
+  year = {2013},
+  isbn = {9781941652008},
+  address = {USA},
+  articleno = {7},
+  numpages = {8},
+  keywords = {APIs, ASTs, abstract syntax trees, immutability, refactoring},
+  location = {Monticello, Illinois},
+  series = {PLoP '13}}
+
 @inproceedings{Over80a,
   author = {Overgaard, Mark},
   title = {UCSD Pascal: a portable software environment for small computers},
@@ -70311,6 +71221,18 @@ experiments.},
   pages = {47--62},
   publisher = {Elsevier},
   year = {2007}}
+
+@inproceedings{Padle17a,
+  author = {Padlewski, Piotr},
+  title = {Devirtualization in LLVM},
+  booktitle = {Proceedings Companion of the 2017 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity},
+  pages = {42--44},
+  publisher = {Association for Computing Machinery},
+  year = {2017},
+  doi = {10.1145/3135932.3135947},
+  isbn = {9781450355148},
+  address = {New York, NY, USA},
+  numpages = {3}}
 
 @article{Padu18a,
   author = {Paduraru, Ciprian and Melemciuc, Marius-Constantin},
@@ -71116,6 +72038,12 @@ temporal coordination.},
   year = {1995},
   isbn = {1-884842-05-4}}
 
+@inproceedings{Par11a,
+  author = {Parnin, Chris and Treude, Christoph},
+  title = {Measuring API documentation on the web},
+  booktitle = {International Workshop on Web 2.0 for Software Engineering},
+  year = {2011}}
+
 @misc{ParcPlace89,
   title = {ParcPlace Systems, Objectworks Reference Guide, Smalltalk-80, Version 2.5, Chapter 36},
   year = {1989},
@@ -71144,6 +72072,19 @@ temporal coordination.},
   year = {1994},
   editor = {E. Bertino and S. Urban},
   series = {LNCS}}
+
+@article{Park17,
+  author = {Parker, Sharon K. and Morgeson, Frederick P. and Johns, Gary},
+  title = {One Hundred Years of Work Design Research: Looking Back and Looking Forward.},
+  journal = {Journal of Applied Psychology},
+  volume = {102},
+  pages = {403--420},
+  year = {2017},
+  doi = {10.1037/apl0000106},
+  shorttitle = {One Hundred Years of Work Design Research},
+  number = {3},
+  issn = {1939-1854, 0021-9010},
+  keywords = {rps anna}}
 
 @inproceedings{Park20a,
   author = {Park, Taemin and Dhondt, Karel and Gens, David and Na, Yeoul and Volckaert, Stijn and Franz, Michael},
@@ -71702,6 +72643,24 @@ temporal coordination.},
   journal = {A transpiler from Java to JavaScript. EASYTRUST},
   volume = {16},
   year = {2015}}
+
+@article{Pawl16a,
+  author = {Pawlak, Renaud and Monperrus, Martin and Petitprez, Nicolas and Noguera, Carlos and Seinturier, Lionel},
+  title = {SPOON: A library for implementing analyses and transformations of Java source code},
+  journal = {Softw. Pract. Exper.},
+  volume = {46},
+  pages = {1155-1179},
+  publisher = {John Wiley \& Sons, Inc.},
+  year = {2016},
+  url = {https://doi.org/10.1002/spe.2346},
+  doi = {10.1002/spe.2346},
+  issue_date = {September 2016},
+  address = {USA},
+  number = {9},
+  issn = {0038-0644},
+  month = sep,
+  numpages = {25},
+  keywords = {source code transformation, source code analysis, metaprogramming}}
 
 @book{Paws02a,
   author = {Richard Pawson and Robert Matthews},
@@ -72271,6 +73230,12 @@ information in a repository are discussed.},
   doi = {10.1007/s10664-021-10045-x},
   number = {11}}
 
+@inproceedings{Peru21b,
+  author = {Peruma, Anthony and Arnaoudova, Venera and Newman, Christian D.},
+  title = {IDEAL An Open Source Identifier Name Appraisal Tool},
+  booktitle = {International Conference on Software Maintenance and Evolution},
+  year = {2021}}
+
 @article{Pete09a,
   author = {Peterson, Pearu},
   title = {F2PY: A Tool for Connecting Fortran and Python Programs},
@@ -72539,6 +73504,15 @@ any of these files onto the running Etoys images.},
   doi = {10.1109/{ICPC}.2006.20},
   address = {Washington, DC, USA},
   isbn = {0-7695-2601-2}}
+
+@inproceedings{Phil01a,
+  author = {Philipps, Jan and Rumpe, Bernhard},
+  title = {Roots of Refactoring},
+  booktitle = {Proceedings of the Tenth OOPSLA Workshop on Behavioral Semantics},
+  publisher = {Northeastern University},
+  year = {2001},
+  editor = {Kilov, Haim and Baclavski, Kweku},
+  address = {Tampa Bay, Florida, USA}}
 
 @inproceedings{Phil03a,
   author = {Ilka Philippow and Detlef Streitferdt and Matthias Riebisch},
@@ -72829,6 +73803,29 @@ any of these files onto the running Etoys images.},
   booktitle = {International Workshop on Smalltalk Technologies},
   year = {2014},
   series = {IWST'14}}
+
+@inproceedings{Pima14a,
+  author = {Pim{\'a}s, Javier and Burroni, Javier and Richarte, Gerardo},
+  title = {Design and implementation of Bee Smalltalk runtime},
+  booktitle = {International Workshop on Smalltalk Technologies, IWST},
+  volume = {14},
+  pages = {24},
+  year = {2014}}
+
+@article{Pima23a,
+  author = {Pim{\'a}s, Javier E and Marr, Stefan and Garbervetsky, Diego},
+  title = {Live Objects All The Way Down: Removing the Barriers between Applications and Virtual Machines},
+  journal = {arXiv preprint arXiv:2312.16973},
+  year = {2023}}
+
+@article{Pima24a,
+  author = {Pim\'as, Javier E. and Stefan Marr and Diego Garbervetsky},
+  title = {Live Objects All The Way Down: Removing the Barriers between Applications and Virtual Machines},
+  journal = {The Art, Science, and Engineering of Programming},
+  volume = {8},
+  year = {2024},
+  doi = {10.22152/programming-journal.org/2024/8/5},
+  issue = {2}}
 
 @techreport{Pina11a,
   author = {de, Lu\'is Gabriel Ganchinho and Cachopo, Joao},
@@ -73572,6 +74569,12 @@ used in the financial framework.},
   year = {2013},
   organization = {IEEE}}
 
+@misc{Polymath,
+  title = {PolyMath: Scientific Computing with Pharo},
+  url = {https://github.com/PolyMathOrg/PolyMath},
+  howpublished = {https://github.com/PolyMathOrg/PolyMath},
+  key = {polymath}}
+
 @inproceedings{Pomb94a,
   author = {G. Pomberger and W. Pree},
   title = {Quantitative and Qualitative Aspects of Object-Oriented Software Development},
@@ -73914,6 +74917,12 @@ zugeschnitten.},
   year = {2014},
   doi = {10.1109/ICSME.2014.31}}
 
+@article{Pote96a,
+  author = {Potel, Mike},
+  title = {MVP: Model-View-Presenter The Taligent Programming Model for C++ and Java},
+  journal = {Taligent Inc},
+  year = {1996}}
+
 @article{Poth07a,
   author = {Guillaume Pothier and \'Eric Tanter and Jos\'e Piquer},
   title = {Scalable Omniscient Debugging},
@@ -73960,6 +74969,23 @@ zugeschnitten.},
   pages = {558--582},
   year = {2011},
   organization = {Springer}}
+
+@article{Pott06a,
+  author = {Pottier, Fran{\c c}ois and Gauthier, Nadji},
+  title = {Polymorphic typed defunctionalization and concretization},
+  journal = {Higher-Order and Symbolic Computation},
+  volume = {19},
+  pages = {125--162},
+  year = {2006},
+  url = {https://doi.org/10.1007/s10990-006-8611-7},
+  doi = {10.1007/s10990-006-8611-7},
+  date = {2006/03/01},
+  date-added = {2026-01-22 16:32:34 +0100},
+  date-modified = {2026-01-22 16:32:34 +0100},
+  id = {Pottier2006},
+  isbn = {1573-0557},
+  number = {1},
+  bdsk-url-1 = {https://doi.org/10.1007/s10990-006-8611-7}}
 
 @article{Pott96a,
   author = {Colin Potts},
@@ -74020,6 +75046,12 @@ zugeschnitten.},
   publisher = {Addison Wesley},
   year = {1999},
   edition = {Second}}
+
+@inproceedings{Prak21a,
+  author = {Prakash, C. and Chittimalli, P. K. and Naik, R.},
+  title = {Open information extraction using dependency parser for business rule mining in SBVR format},
+  booktitle = {Proceedings of the 14th Innovations in Software Engineering Conference},
+  year = {2021}}
 
 @inproceedings{Pras90a,
   author = {Sanjiv Prasad and Alessandro Giacalone and Prateek Mishra},
@@ -75190,6 +76222,12 @@ activities.},
   year = {2020},
   school = {University OF Gothenburg},
   type = {Master thesis}}
+
+@mastersthesis{Rand26a,
+  author = {Randriamihajarivo, Fanirindrainy Emmanuelle},
+  title = {Sp\'ecification et support formel de r\`egles d'\'ecriture pour des documents structur\'es en Microdown: une impl\'ementation en Pharo},
+  year = {2026},
+  school = {EMIT Universit\'e de Fianarantsoa, Madagascar}}
 
 @inproceedings{Rang02a,
   author = {Ranganathan, Anand and Campbell, Roy H.},
@@ -79024,6 +80062,12 @@ support reuse.},
   pages = {150--158},
   year = {1991}}
 
+@article{Rozi23a,
+  author = {Roziere, Baptiste and Gehring, Jonas and Gloeckle, Fabian and Sootla, Sten and Gat, Itai and Tan, Xiaoqing Ellen and Adi, Yossi and Liu, Jingyu and Sauvestre, Romain and Remez, Tal and others},
+  title = {Code llama: Open foundation models for code},
+  journal = {arXiv},
+  year = {2023}}
+
 @article{Rubi86a,
   author = {R.V. Rubin},
   title = {Language Constructs for Programming by Example},
@@ -81019,6 +82063,12 @@ Squeak programming environment.},
   number = {6},
   keywords = {Java;Access control;Feature extraction;Reverse engineering;Object oriented programming;Shadow mapping;Program processors;Restructuring;reverse engineering;and reengineering;object-oriented languages;Java}}
 
+@inproceedings{Scha18a,
+  author = {Schankin, Andrea and Berger, Annika and Holt, Daniel V. and Hofmeister, Johannes C. and Riedel, Till and Beigl, Michael},
+  title = {Descriptive compound identifier names improve source code comprehension},
+  booktitle = {International Conference on Program Comprehension},
+  year = {2018}}
+
 @inproceedings{Scha86a,
   author = {Craig Schaffert and Topher Cooper and Bruce Bullis and Mike Killian and Carrie Wilpolt},
   title = {{An} {Introduction} to {Trellis}/{Owl}},
@@ -82337,6 +83387,17 @@ work.},
   posted-at = {2009-09-15 14:49:04},
   priority = {0}}
 
+@article{Segu16a,
+  author = {Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cortes, Antonio},
+  title = {A Survey on Metamorphic Testing},
+  journal = {IEEE Transactions on Software Engineering},
+  volume = {42},
+  pages = {805-824},
+  year = {2016},
+  doi = {10.1109/TSE.2016.2532875},
+  number = {9},
+  keywords = {Testing;Search engines;Google;Libraries;Concrete;Distance measurement;Web services;Metamorphic testing;oracle problem;survey}}
+
 @book{Seib05a,
   author = {Peter Seibel},
   title = {Practical Common Lisp},
@@ -82555,6 +83616,22 @@ work.},
   pages = {1--9},
   publisher = {IEEE},
   year = {2010}}
+
+@inproceedings{Sere24a,
+  author = {Seres, Bendeg\'{u}z and Horp\'{a}csi, D\'{a}niel and Thompson, Simon},
+  title = {Is This Really a Refactoring? Automated Equivalence Checking for Erlang Projects},
+  booktitle = {Proceedings of the 23rd ACM SIGPLAN International Workshop on Erlang},
+  pages = {55-66},
+  publisher = {Association for Computing Machinery},
+  year = {2024},
+  url = {https://doi.org/10.1145/3677995.3678194},
+  doi = {10.1145/3677995.3678194},
+  isbn = {9798400710988},
+  address = {New York, NY, USA},
+  numpages = {12},
+  keywords = {Checking, Equivalence, Erlang, Property-based, Refactoring, Testing},
+  location = {Milan, Italy},
+  series = {Erlang 2024}}
 
 @article{Serr02a,
   author = {Bernard Paul Serpette and Manuel Serrano},
@@ -82829,6 +83906,12 @@ and outline future research directions.},
   publisher = {Wiley Online Library},
   year = {1948},
   number = {3}}
+
+@article{Shan48a,
+  author = {Claude E. Shannon},
+  title = {A Mathematical Theory of Communication},
+  journal = {Bell System Technical Journal},
+  year = {1948}}
 
 @inproceedings{Shan89a,
   author = {Yen-Ping Shan},
@@ -83300,6 +84383,12 @@ and outline future research directions.},
   year = {1996},
   month = mar,
   publishr = {ACM}}
+
+@article{Shne20a,
+  author = {Ben Shneiderman},
+  title = {Human-Centered Artificial Intelligence: Reliable, Safe \& Trustworthy},
+  journal = {International Journal of Human Computer Interaction},
+  year = {2020}}
 
 @book{Shne80a,
   author = {Shneiderman},
@@ -84013,6 +85102,19 @@ concept lattice, and prove the algorithm correct.},
   publisher = {ACM New York, NY, USA},
   year = {2011},
   number = {11}}
+
+@article{Sing18a,
+  author = {Singh, Satwinder and Kaur, Sharanpreet},
+  title = {A Systematic Literature Review: Refactoring for Disclosing Code Smells in Object Oriented Software},
+  journal = {Ain Shams Engineering Journal},
+  volume = {9},
+  pages = {2129--2151},
+  year = {2018},
+  url = {https://www.sciencedirect.com/science/article/pii/S2090447917300412},
+  doi = {10.1016/j.asej.2017.03.002},
+  number = {4},
+  issn = {2090-4479},
+  keywords = {Code smells, Anti-patterns, Refactoring}}
 
 @article{Sing94a,
   author = {Singh, Ghan Bir},
@@ -84729,18 +85831,17 @@ systems within different domains.},
   year = {2011}}
 
 @article{Snee19a,
-title = {Re-implementing a legacy system},
-journal = {Journal of Systems and Software},
-volume = {155},
-pages = {162-184},
-year = {2019},
-issn = {0164-1212},
-doi = {https://doi.org/10.1016/j.jss.2019.05.012},
-url = {https://www.sciencedirect.com/science/article/pii/S0164121219301050},
-author = {Harry Sneed and Chris Verhoef},
-keywords = {Software migration, Reverse engineering, Software re--implementation, Code refactoring, Code rewriting, Data renaming},
-abstract = {Re--implementation is one of the alternatives to migrate a legacy software system next to conversion, wrapping and redevelopment. It is a compromise solution between automated conversion and complete redevelopment. The technical architecture can be revised and the code replaced, but the functional architecture - the use cases remains as it was. The challenge of this approach is to preserve the functionality while changing the technical implementation. This approach is taken when conversion is not feasible and redevelopment is too expensive or too great a risk. It entails more than a 1:1 transformation but less than a total rewrite. The same components remain with different contents. In this paper the case for reimplementation is presented and the process described. The tools required to support the process are identified and their use illustrated. Finally, two industrial case studies are presented, one with a VisualAge/ PL/I-DB2 system and one with a COBOL-IMS application.}
-}
+  author = {Harry Sneed and Chris Verhoef},
+  title = {Re-implementing a legacy system},
+  journal = {Journal of Systems and Software},
+  volume = {155},
+  pages = {162-184},
+  year = {2019},
+  url = {https://www.sciencedirect.com/science/article/pii/S0164121219301050},
+  doi = {https://doi.org/10.1016/j.jss.2019.05.012},
+  issn = {0164-1212},
+  keywords = {Software migration, Reverse engineering, Software re--implementation, Code refactoring, Code rewriting, Data renaming},
+  abstract = {Re--implementation is one of the alternatives to migrate a legacy software system next to conversion, wrapping and redevelopment. It is a compromise solution between automated conversion and complete redevelopment. The technical architecture can be revised and the code replaced, but the functional architecture - the use cases remains as it was. The challenge of this approach is to preserve the functionality while changing the technical implementation. This approach is taken when conversion is not feasible and redevelopment is too expensive or too great a risk. It entails more than a 1:1 transformation but less than a total rewrite. The same components remain with different contents. In this paper the case for reimplementation is presented and the process described. The tools required to support the process are identified and their use illustrated. Finally, two industrial case studies are presented, one with a VisualAge/ PL/I-DB2 system and one with a COBOL-IMS application.}}
 
 @article{Snee20a,
   author = {Sneed, Harry M and Verhoef, Chris},
@@ -84758,6 +85859,12 @@ abstract = {Re--implementation is one of the alternatives to migrate a legacy so
   publisher = {Springer},
   year = {2020}}
 
+@inproceedings{Snee21a,
+  author = {Sneed, H. M. and Verhoef, C.},
+  title = {Extracting business rules from a legacy {COBOL} application},
+  booktitle = {Integrating Research and Practice in Software Engineering},
+  year = {2021}}
+
 @inproceedings{Snee96,
   author = {Sneed, Harry M},
   title = {Object-oriented cobol recycling},
@@ -84765,6 +85872,12 @@ abstract = {Re--implementation is one of the alternatives to migrate a legacy so
   pages = {169--178},
   year = {1996},
   organization = {IEEE}}
+
+@inproceedings{Snee96a,
+  author = {Sneed, H. M. and Erdos, K.},
+  title = {Extracting business rules from source code},
+  booktitle = {Proceedings of the 4th Workshop on Program Comprehension},
+  year = {1996}}
 
 @inproceedings{Snee99a,
   author = {Harry M. Sneed},
@@ -86613,6 +87726,17 @@ all the tools for the visual construction of
   pages = {171--185},
   year = {1999}}
 
+@article{Store19a,
+  author = {Storey, Margaret-Anne and Zimmermann, Thomas and Bird, Christian and Czerwonka, Jacek and Murphy, Brendan and Kalliamvakou, Eirini},
+  title = {Towards a Theory of Software Developer Job Satisfaction and Perceived Productivity},
+  journal = {IEEE Transactions on Software Engineering},
+  volume = {47},
+  pages = {2125-2142},
+  year = {2021},
+  doi = {10.1109/TSE.2019.2944354},
+  number = {10},
+  keywords = {Productivity;Software;Companies;Software engineering;Complexity theory;Psychology;Measurement;Software engineering management;empirical studies;software companies;theory}}
+
 @book{Stoy77a,
   author = {Joseph E. Stoy},
   title = {Denotational Semantics: The Scott-Strachey Approach to Programming Language Theory},
@@ -87125,6 +88249,15 @@ case studies: ArgoUML and Squeak.}}
   number = {1},
   numpages = {19}}
 
+@article{Suga05a,
+  author = {Suganuma, Toshio and Yasue, Toshiaki and Kawahito, Motohiro and Komatsu, Hideaki and Nakatani, Toshio},
+  title = {Design and evaluation of dynamic optimizations for a Java Just-In-Time compiler},
+  journal = {ACM Trans. Program. Lang. Syst.},
+  volume = {27},
+  pages = {732-785},
+  year = {2005},
+  doi = {10.1145/1075382.1075386}}
+
 @article{Sugi81a,
   author = {K. Sugiyama and S. Tagawa and M. Toda},
   title = {Methods for Visual Understanding of Hierarchical System Structures},
@@ -87313,6 +88446,17 @@ case studies: ArgoUML and Squeak.}}
   doi = {10.1109/SIMSYM.2004.1299486},
   address = {Los Alamitos, CA, USA},
   issn = {1080-241X}}
+
+@inproceedings{Sunda00a,
+  author = {Sundaresan, Vijay and Hendren, Laurie and Razafimahefa, Chrislain and Vall\'{e}e-Rai, Raja and Lam, Patrick and Gagnon, Etienne and Godin, Charles},
+  title = {Practical virtual method call resolution for Java},
+  booktitle = {Proceedings of the Conference on Object-Oriented Programming, Systems, Languages, and Applications OOPSLA 2000},
+  pages = {264--280},
+  publisher = {Association for Computing Machinery},
+  year = {2000},
+  url = {https://doi.org/10.1145/353171.353189},
+  address = {New York, NY, USA},
+  numpages = {17}}
 
 @article{Sung02a,
   author = {Sung, Minyoung and Kim, Soyoung and Park, Sangsoo and Chang, Naehyuck and Shin, Heonshik},
@@ -87961,6 +89105,15 @@ show their usefulness with a Smalltalk case study.},
   year = {2015},
   organization = {IEEE}}
 
+@article{Tana18a,
+  author = {Tanaka, Akira and Affeldt, Reynald and Garrigue, Jacques},
+  title = {Safe low-level code generation in Coq using monomorphization and monadification},
+  journal = {Journal of Information Processing},
+  volume = {26},
+  pages = {54--72},
+  publisher = {Information Processing Society of Japan},
+  year = {2018}}
+
 @article{Tane85a,
   author = {A.S. Tanenbaum and R. Van Renesse},
   title = {Distributed Operating Systems},
@@ -88475,6 +89628,23 @@ show their usefulness with a Smalltalk case study.},
   pages = {336-345},
   year = {2010},
   doi = {10.1109/APSEC.2010.46}}
+
+@article{Temp17a,
+  author = {Tempero, Ewan and Gorschek, Tony and Angelis, Lefteris},
+  title = {Barriers to refactoring},
+  journal = {Commun. ACM},
+  volume = {60},
+  pages = {54-61},
+  publisher = {Association for Computing Machinery},
+  year = {2017},
+  url = {https://doi.org/10.1145/3131873},
+  doi = {10.1145/3131873},
+  issue_date = {October 2017},
+  address = {New York, NY, USA},
+  number = {10},
+  issn = {0001-0782},
+  month = sep,
+  numpages = {8}}
 
 @article{Tene00a,
   author = {Tenenbaum, Joshua B. and Silva, Vin and Langford, John C.},
@@ -89482,6 +90652,12 @@ Jav specific features.},
   url = {http://www.tinyos.net},
   key = {TinyOS},
   note = {http://www.tinyos.net}}
+
+@inproceedings{Tip00a,
+  author = {Tip, Frank and Palsberg, Jens},
+  title = {Scalable propagation-based call graph construction algorithms},
+  booktitle = {Proceedings of the Conference on Object Oriented Programming Systems, Languages, and Applications, OOPSLA 2000},
+  year = {2000}}
 
 @article{Tip03a,
   author = {Tip, Frank and Sweeney, Peter F. and Laffra, Chris},
@@ -92378,6 +93554,12 @@ extract the principal typing of a process.},
   publisher = {IEEE},
   year = {2011}}
 
+@article{Vass14a,
+  author = {Arnaoudova, Venera and Eshkevari, Laleh M. and Penta, Massimiliano Di and Oliveto, Rocco and Antoniol, Giuliano and Gueheneuc, Yann-Gael},
+  title = {REPENT: Analyzing the Nature of Identifier Renamings},
+  journal = {Transactions on Software Engineering},
+  year = {2014}}
+
 @mastersthesis{Vauc03a,
   author = {Sebastien Vauclair},
   title = {Extensible {Java} Profiler},
@@ -92940,6 +94122,12 @@ Smalltalk. In addition to simplifying the implementation
   year = {2023},
   howpublished = {\url{https://visualstudio.microsoft.com/vs/}}}
 
+@misc{Visualvm,
+  title = {VisualVM: All-in-One Java Troubleshooting Tool},
+  url = {https://visualvm.github.io/},
+  howpublished = {\url{https://visualvm.github.io/}},
+  key = {java}}
+
 @techreport{Vite90a,
   author = {Jan Vitek and Betty Junod and Oscar Nierstrasz and Serge Renfer and Claudia Werner},
   title = {Events and Sensors: Enhancing the Reusability of Objects},
@@ -93117,6 +94305,23 @@ applied.},
   year = {2007},
   number = {3}}
 
+@inproceedings{Voin22a,
+  author = {Voinov, Philippe and Rigger, Manuel and Su, Zhendong},
+  title = {Forest: Structural Code Editing with Multiple Cursors},
+  booktitle = {Proceedings of the 2022 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software},
+  pages = {137-152},
+  publisher = {Association for Computing Machinery},
+  year = {2022},
+  url = {https://doi.org/10.1145/3563835.3567663},
+  doi = {10.1145/3563835.3567663},
+  isbn = {9781450399098},
+  address = {New York, NY, USA},
+  abstract = {Software developers frequently refactor code.   Often, a single logical refactoring change involves changing multiple related components in a source base such as renaming each occurrence of a variable or function.   While many code editors can perform such common and generic refactorings, they do not support more complex refactorings or those that are specific to a given code base.  For those, as a flexible---albeit less interactive---alternative, developers can write refactoring scripts that can implement arbitrarily complex logic by manipulating the program's tree representation.   In this work, we present Forest, a structural code editor that aims to bridge the gap between the interactiveness of code editors and the expressiveness of refactoring scripts.   While structural editors have occupied a niche as general code editors, the key insight of this work is that they enable a novel structural multi-cursor design that allows Forest to reach a similar expressiveness as refactoring scripts; Forest allows to perform a single action simultaneously in multiple program locations and thus support complex refactorings.   To support interactivity, Forest provides features typical for text code editors such as writing and displaying the program through its textual representation.   Our evaluation demonstrates that Forest allows performing edits similar to those from refactoring scripts, while still being interactive.   We attempted to perform edits from 48 real-world refactoring scripts using Forest and found that 11 were possible, while another 17 would be possible with added features.  We believe that a multi-cursor setting plays to the strengths of structural editing, since it benefits from reliable and expressive commands. Our results suggest that multi-cursor structural editors could be practical for performing small-scale specialized refactorings.},
+  numpages = {16},
+  keywords = {refactoring, multi-cursor, Structural editing},
+  location = {Auckland, New Zealand},
+  series = {Onward! 2022}}
+
 @article{Vok04a,
   author = {Marek Vok},
   title = {Defect Frequency and Design Patterns: An Empirical Study of Industrial Code},
@@ -93228,6 +94433,21 @@ applied.},
   year = {2024},
   eprint = {2405.11294},
   archiveprefix = {arXiv}}
+
+@article{Wadd05a,
+  author = {Daniel G. Waddington and Bin Yao},
+  title = {High-Fidelity C/C++ Code Transformation},
+  journal = {Electronic Notes in Theoretical Computer Science},
+  volume = {141},
+  pages = {35-56},
+  year = {2005},
+  url = {https://www.sciencedirect.com/science/article/pii/S1571066105051741},
+  doi = {https://doi.org/10.1016/j.entcs.2005.04.037},
+  number = {4},
+  note = {Proceedings of the Fifth Workshop on Language Descriptions, Tools, and Applications (LDTA 2005)},
+  issn = {1571-0661},
+  keywords = {source transformation, high-fidelity, preprocessing},
+  abstract = {As software systems become increasingly massive, the advantages of automated transformation tools are clearly evident. These tools allow the machine to both reason about and manipulate high-level source code. They enable off-loading of mundane and laborious programming tasks from human developer to machine, thereby reducing cost and development timeframes. Although there has been much academic work in software transformation, there still exists many hurdles in realising this technology in a commercial domain. From our own experience, there are two significant problems that must be addressed before transformation technology can be usefully applied in a commercial setting. These are: 1.) avoiding disruption of style (i.e. layout and commenting) and the introduction of any undesired modifications which occur as a side effect of the transformation process. 2.) correct handling of C preprocessing and the presentation of a semantically correct view of the program during transformation. Many existing automated transformation tools inherently disrupt style through the use of pretty printing and the need to perform preprocessing before any transformation. Some also require source to be modified so that it conforms to a subset of the grammar. In this paper we describe our own C/C++ transformation system, Proteus, that is able to meet the stringent criteria laid out by Lucent's own software developers.}}
 
 @inproceedings{Wadl07a,
   author = {Philip Wadler and Robert Bruce Findler},
@@ -93707,10 +94927,28 @@ developer create new tests with a minimal effort.},
   booktitle = {ICMC},
   year = {2003}}
 
+@inproceedings{Wang04a,
+  author = {Wang, X. and Sun, J. and Yang, X. and He, Z. and Maddineni, S.},
+  title = {Business rules extraction from large legacy systems},
+  booktitle = {Proceedings of the 8th European Conference on Software Maintenance and Reengineering},
+  year = {2004}}
+
+@inproceedings{Wang04b,
+  author = {Wang, X. and Sun, J. and Yang, X. and He, Z. and Maddineni, S.},
+  title = {Application of information-flow relations algorithm on extracting business rules from legacy code},
+  booktitle = {Proceedings of the 5th World Congress on Intelligent Control and Automation},
+  year = {2004}}
+
 @book{Wang08a,
   author = {Wang, Ge},
   title = {The ChucK audio programming language."A strongly-timed and on-the-fly environ/mentality"},
   publisher = {Princeton University},
+  year = {2008}}
+
+@inproceedings{Wang08b,
+  author = {Wang, X. and Sun, J. and Yang, X. and He, Z. and Maddineni, S.},
+  title = {Extracting prime business rules from large legacy systems},
+  booktitle = {Proceedings of the International Conference on Computer Science and Software Engineering},
   year = {2008}}
 
 @inproceedings{Wang14a,
@@ -93811,13 +95049,6 @@ demonstrate its applicability with a realistic example.},
   booktitle = {European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)},
   year = {2023}}
 
-@misc{Wang24a,
-  author = {Wang, Haibo and Xu, Zhuolin and Zhang, Huaien and Tsantalis, Nikolaos and Tan, Shin Hwei},
-  title = {An Empirical Study of Refactoring Engine Bugs},
-  year = {2024},
-  url = {https://arxiv.org/abs/2409.14610},
-  note = {arXiv:2409.14610}}
-
 @article{Wang24b,
   author = {Wang, Chong and Zhang, Jian and Feng, Yebo and Li, Tianlin and Sun, Weisong and Liu, Yang and Peng, Xin},
   title = {Teaching Code {LLMs} to Use Autocompletion Tools in Repository-Level Code Generation},
@@ -93836,11 +95067,28 @@ demonstrate its applicability with a realistic example.},
   booktitle = {International Conference on Software Engineering (ICSE)},
   year = {2025}}
 
-@misc{Wang25c,
-  author = {Haibo Wang and Zhuolin Xu and Shin Hwei Tan},
+@inproceedings{Wang25c,
+  author = {Wang, Haibo and Xu, Zhuolin and Tan, Shin Hwei},
   title = {Testing Refactoring Engine via Historical Bug Report driven LLM},
+  booktitle = {2025 IEEE/ACM Second International Conference on AI Foundation Models and Software Engineering (FORGE)},
+  pages = {113--124},
+  publisher = {IEEE},
   year = {2025},
-  note = {arXiv:submit/6137167}}
+  url = {https://doi.org/10.1109/Forge66646.2025.00020},
+  doi = {10.1109/Forge66646.2025.00020}}
+
+@article{Wang26a,
+  author = {Wang, Haibo and Xu, Zhuolin and Zhang, Huaien and Tsantalis, Nikolaos and Tan, Shin Hwei},
+  title = {Towards Understanding Refactoring Engine Bugs},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  volume = {35},
+  pages = {1--55},
+  publisher = {Association for Computing Machinery},
+  year = {2026},
+  url = {https://doi.org/10.1145/3747289},
+  doi = {10.1145/3747289},
+  number = {5},
+  articleno = {138}}
 
 @inproceedings{Wang92a,
   author = {Michael F. Wangler and Peeter Hansen},
@@ -94382,6 +95630,12 @@ completely than mere algorithms.},
   url = {https://doi.org/10.1002/smr.2376},
   doi = {10.1002/smr.2376},
   number = {10}}
+
+@inproceedings{Wei22a,
+  author = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed H. and Le, Quoc V. and Zhou, Denny},
+  title = {Chain-of-thought prompting elicits reasoning in large language models},
+  booktitle = {International Conference on Neural Information Processing Systems},
+  year = {2022}}
 
 @article{Wei81a,
   author = {Weinreb, Daniel and Moon, David},
@@ -95388,6 +96642,16 @@ management of office data.},
   year = {1993},
   isbn = {0-201-56885-3}}
 
+@article{Wimm10a,
+  author = {Wimmer, Christian and M{\"o}ssenb{\"o}sck, Hanspeter},
+  title = {Automatic feedback-directed object fusing},
+  journal = {ACM Transactions on Architecture and Code Optimization (TACO)},
+  volume = {7},
+  pages = {1--35},
+  publisher = {ACM New York, NY, USA},
+  year = {2010},
+  number = {2}}
+
 @techreport{Wimm12,
   author = {Christian Wimmer and Michael Haupt and Michael L. Van De Vanter and Mick Jordan and Laurent Daynes and Douglas Simon},
   title = {{Maxine: An Approachable Virtual Machine For, and In, Java}},
@@ -96092,6 +97356,12 @@ We present a program analysis to identify committable changes that can be releas
   year = {2018},
   url = {https://ethereum.github.io/yellowpaper/paper.pdf},
   month = {jun}}
+
+@article{Wood20a,
+  author = {Wood, David},
+  title = {Polymorphisation: Improving Rust compilation times through intelligent monomorphisation},
+  journal = {M{\'e}m. de mast. University of Glasgow},
+  year = {2020}}
 
 @article{Wood99a,
   author = {Woods, Steven G. and Carri\`{e}re, S. Jeromy and Kazman, Rick},
@@ -96855,6 +98125,14 @@ system.},
   key = {{XQueryUF}},
   month = {mar},
   organization = {{W3C}}}
+
+@manual{Xslt99a,
+  author = {{W3C}},
+  title = {{XSL Transformations (XSLT) Version 1.0}},
+  year = {1999},
+  url = {http://www.w3.org/TR/xslt},
+  key = {{XSLT}},
+  month = nov}
 
 @inproceedings{Xu04a,
   author = {Xia Xu and Chung-Horng Lung and Maria Zaman and Anand Srinivasan},
@@ -98408,6 +99686,12 @@ support.},
   keywords = {interpreter, JIT compiler, performance evaluation, performance optimization, Python},
   number = {2}}
 
+@article{Zhan24c,
+  author = {Jipeng Zhang and Jianshu Zhang and Yuanzhe Li and Renjie Pi and Rui Pan and Runtao Liu and Ziqiang Zheng and Tong Zhang},
+  title = {Bridge-Coder: Unlocking LLMs' Potential to Overcome Language Gaps in Low-Resource Code},
+  journal = {{arXiv}},
+  year = {2024}}
+
 @article{Zhan25a,
   author = {Zhang, Hang and Yanxin, Shen and Wang, Lun and Shi, Chuanqi and Du, Shaoshuai and Tao, Yiyi and Shen, Yixian},
   title = {Comparative Analysis of Large Language Models for Context-Aware Code Completion using {SAFIM} Framework},
@@ -98498,6 +99782,12 @@ support.},
   numpages = {12},
   series = {OOPSLA '12}}
 
+@article{Zhao19,
+  author = {Zhao, Chunchun and Sahni, Sartaj},
+  title = {String correction using the Damerau-Levenshtein distance},
+  journal = {BMC Bioinformatics},
+  year = {2019}}
+
 @inproceedings{Zhao22a,
   author = {Zhao, Yingquan and Wang, Zan and Chen, Junjie and Liu, Mengdi and Wu, Mingyuan and Zhang, Yuqun and Zhang, Lingming},
   title = {{History-Driven Test Program Synthesis for JVM Testing}},
@@ -98520,6 +99810,15 @@ support.},
   title = {{CodeJudge}-Eval: Can Large Language Models be Good Judges in Code Understanding?},
   journal = {arxiv},
   year = {2024}}
+
+@article{Zhef20a,
+  author = {Zhefeng Wu and Zhe Sun and Kai Gong and Lingyun Chen and Bin Liao and Yihua Jin},
+  title = {Hidden inheritance: an inline caching design for TypeScript performance},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume = {4},
+  pages = {1 - 29},
+  year = {2020},
+  url = {https://api.semanticscholar.org/CorpusID:227040870}}
 
 @article{Zhen06a,
   author = {Zheng, Jiang and Williams, Laurie and Nagappan, Nachiappan and Snipes, Will and Hudepohl, John P. and Vouk, Mladen A.},
@@ -98605,6 +99904,13 @@ support.},
   title = {Mathematical Equations as Executable Models of Mechnical Systems},
   booktitle = {ICCPS'10: Proceedings of the 1st International Conference on Cyber-Physical Systems},
   year = {2010}}
+
+@inproceedings{Zhu21a,
+  author = {Zhu, Xiaogang and B{\"o}hme, Marcel},
+  title = {Regression greybox fuzzing},
+  booktitle = {SIGSAC Conference on Computer and Communications Security},
+  pages = {2169--2182},
+  year = {2021}}
 
 @inproceedings{Zhu22a,
   author = {Hanwen Zhu and Junyoung Jang and Xujie Si},
@@ -99014,45 +100320,11 @@ further research.},
   year = {1989},
   series = {LNCS}}
 
-@book{Agan02a,
-  author = {Agans, David J},
-  title = {Debugging: The 9 indispensable rules for finding even the most elusive software and hardware problems},
-  publisher = {Amacom},
-  year = {2002}}
-
-@article{Ben12a,
-  author = {Ben Asher, Yosi and Gal, Tomer and Haber, Gadi and Zalmanovici, Marcel},
-  title = {Refactoring techniques for aggressive object inlining in Java applications},
-  journal = {Automated Software Engineering},
-  volume = {19},
-  pages = {97--136},
-  publisher = {Springer},
-  year = {2012}}
-
-@inproceedings{Brun21a,
-  author = {Bruno, Rodrigo and Jovanovic, Vojin and Wimmer, Christian and Alonso, Gustavo},
-  title = {Compiler-assisted object inlining with value fields},
-  booktitle = {Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
-  pages = {128--141},
-  year = {2021}}
-
 @misc{cglib,
   title = {cglib Code Generation Library},
   url = {http://cglib.sourceforge.net/},
   howpublished = {\url{http://cglib.sourceforge.net}},
   key = {cglib}}
-
-@misc{ChromeDevTools,
-  author = {Google},
-  title = {Chrome Dev Tools},
-  howpublished = {\url{https://developer.chrome.com/devtools}}}
-
-@inproceedings{Dolb00a,
-  author = {Dolby, Julian and Chien, Andrew},
-  title = {An automatic object inlining optimization and its evaluation},
-  booktitle = {Proceedings of the ACM SIGPLAN 2000 conference on Programming language design and implementation},
-  pages = {345--357},
-  year = {2000}}
 
 @book{gdb03,
   author = {Richard Stallman, Roland Pesch, Stan Shebs},
@@ -99071,19 +100343,6 @@ further research.},
   url = {http://gemstone.com/products/gemstone},
   howpublished = {\url{http://gemstone.com/products/gemstone}},
   key = {gemstone}}
-
-@misc{Grasp,
-  author = {Zahariev, George},
-  title = {Grasp},
-  howpublished = {\url{http://www.graspjs.com/}}}
-
-@misc{InCode,
-  author = {inCode},
-  title = {{inCode} --- Eclipse plugin for code analysis},
-  year = {2009},
-  url = {http://www.intooitus.com/inCode.html},
-  key = {inCode},
-  note = {http://www.intooitus.com/inCode.html}}
 
 @misc{indicium,
   title = {Indicium: V8 runtime tracer tool},
@@ -99123,67 +100382,6 @@ further research.},
   key = {jetBrainsDeprecated},
   note = {Accessed: 2021-04-19}}
 
-@article{Jone96b,
-  author = {Jones, Neil D},
-  title = {An introduction to partial evaluation},
-  journal = {ACM Computing Surveys (CSUR)},
-  volume = {28},
-  pages = {480--503},
-  publisher = {ACM New York, NY, USA},
-  year = {1996},
-  number = {3}}
-
-@inproceedings{Lhot02a,
-  author = {Lhot{\'a}k, Ondrej and Hendren, Laurie},
-  title = {Run-time evaluation of opportunities for object inlining in Java},
-  booktitle = {Proceedings of the 2002 joint ACM-ISCOPE conference on Java Grande},
-  pages = {175--184},
-  year = {2002}}
-
-@misc{LinfuProxies,
-  title = {LinFu Proxies Framework},
-  url = {http://www.codeproject.com/KB/cs/LinFuPart1.aspx},
-  howpublished = {\url{http://www.codeproject.com/KB/cs/LinFuPart1.aspx}},
-  key = {linfuProxies}}
-
-@misc{Llvm25a,
-  title = {LLVM jump threading},
-  year = {2025},
-  howpublished = {\url{https://llvm.org/docs/Passes.html\#jump-threading-jump-threading}},
-  note = {Accessed: 2025-04-07},
-  key = {LLVM jump threading}}
-
-@misc{Llvm25b,
-  title = {LLVM predicate info},
-  year = {2025},
-  howpublished = {\url{https://llvm.org/doxygen/PredicateInfo_8h.html}},
-  note = {Accessed: 2025-04-07},
-  key = {LLVM predicate info}}
-
-@inproceedings{Mira16a,
-  author = {Miraglia, Armando and Vogt, Dirk and Bos, Herbert and Tanenbaum, Andy and Giuffrida, Cristiano},
-  title = {Peeking into the past: Efficient checkpoint-assisted time-traveling debugging},
-  booktitle = {Proceedings of International Symposium on Software Reliability Engineering (ISSRE)},
-  pages = {455--466},
-  year = {2016},
-  organization = {IEEE}}
-
-@inproceedings{Moug03a,
-  author = {Mougin, Philippe and Ducasse, St\'{e}phane},
-  title = {OOPAL: integrating array programming in object-oriented programming},
-  booktitle = {Proceedings of the 18th Annual ACM SIGPLAN Conference on Object-Oriented Programing, Systems, Languages, and Applications},
-  publisher = {Association for Computing Machinery},
-  year = {2003},
-  url = {https://doi.org/10.1145/949305.949312},
-  doi = {10.1145/949305.949312},
-  isbn = {1581137125},
-  address = {New York, NY, USA},
-  abstract = {Array programming shines in its ability to express computations at a high-level of abstraction, allowing one to manipulate and query whole sets of data at once. This paper presents the OPA model that enhances object-oriented programming with array programming features. The goal of OPA is to determine a minimum set of modifications that must be made to the traditional object model in order to take advantage of the possibilities of array programming. It is based on a minimal extension of method invocation and the definition of a kernel of methods implementing fundamental array programming operations. The OPA model presents a generalization of traditional message passing in the sense that a message can be send to an entire set of objects. The model is validated in FS, a new scripting language.},
-  numpages = {13},
-  keywords = {array programming, f-script, high-level language, high-order messages, message pattern, smalltalk},
-  location = {Anaheim, California, USA},
-  series = {OOPSLA '03}}
-
 @misc{netCLR,
   title = {.NET Common Language Runtime (CLR) overview},
   url = {https://docs.microsoft.com/en-us/dotnet/standard/clr},
@@ -99195,336 +100393,4 @@ further research.},
   title = {Nodemon},
   howpublished = {\url{https://github.com/remy/nodemon}}}
 
-@inproceedings{Pima14a,
-  author = {Pim{\'a}s, Javier and Burroni, Javier and Richarte, Gerardo},
-  title = {Design and implementation of Bee Smalltalk runtime},
-  booktitle = {International Workshop on Smalltalk Technologies, IWST},
-  volume = {14},
-  pages = {24},
-  year = {2014}}
 
-@article{Pima23a,
-  author = {Pim{\'a}s, Javier E and Marr, Stefan and Garbervetsky, Diego},
-  title = {Live Objects All The Way Down: Removing the Barriers between Applications and Virtual Machines},
-  journal = {arXiv preprint arXiv:2312.16973},
-  year = {2023}}
-
-@misc{Polymath,
-  title = {PolyMath: Scientific Computing with Pharo},
-  url = {https://github.com/PolyMathOrg/PolyMath},
-  howpublished = {https://github.com/PolyMathOrg/PolyMath},
-  key = {polymath}}
-
-@misc{Visualvm,
-  title = {VisualVM: All-in-One Java Troubleshooting Tool},
-  url = {https://visualvm.github.io/},
-  howpublished = {\url{https://visualvm.github.io/}},
-  key = {java}}
-
-@article{Wimm10a,
-  author = {Wimmer, Christian and M{\"o}ssenb{\"o}sck, Hanspeter},
-  title = {Automatic feedback-directed object fusing},
-  journal = {ACM Transactions on Architecture and Code Optimization (TACO)},
-  volume = {7},
-  pages = {1--35},
-  publisher = {ACM New York, NY, USA},
-  year = {2010},
-  number = {2}}
-
-@manual{Xslt99a,
-  author = {{W3C}},
-  title = {{XSL Transformations (XSLT) Version 1.0}},
-  year = {1999},
-  url = {http://www.w3.org/TR/xslt},
-  key = {{XSLT}},
-  month = nov}
-
-@inproceedings{Zhu21a,
-  author = {Zhu, Xiaogang and B{\"o}hme, Marcel},
-  title = {Regression greybox fuzzing},
-  booktitle = {SIGSAC Conference on Computer and Communications Security},
-  pages = {2169--2182},
-  year = {2021}}
-
-@article{Segu16a,
-  author={Segura, Sergio and Fraser, Gordon and Sanchez, Ana B. and Ruiz-Cortes, Antonio},
-  journal={IEEE Transactions on Software Engineering},
-  title={A Survey on Metamorphic Testing},
-  year={2016},
-  volume={42},
-  number={9},
-  pages={805-824},
-  keywords={Testing;Search engines;Google;Libraries;Concrete;Distance measurement;Web services;Metamorphic testing;oracle problem;survey},
-  doi={10.1109/TSE.2016.2532875}}
-
-  @inproceedings{Snee96a,
-  author    = {Sneed, H. M. and Erdos, K.},
-  title     = {Extracting business rules from source code},
-  booktitle = {Proceedings of the 4th Workshop on Program Comprehension},
-  year      = {1996}
-}
-
-@inproceedings{Huan96a,
-  author    = {Huang, H. and Tsai, W. T. and Bhattacharya, S. and Chen, X. P. and Wang, Y. and Sun, J.},
-  title     = {Business rule extraction from legacy code},
-  booktitle = {Proceedings of the 20th International Computer Software and Applications Conference},
-  year      = {1996}
-}
-
-@inproceedings{Wang04a,
-  author    = {Wang, X. and Sun, J. and Yang, X. and He, Z. and Maddineni, S.},
-  title     = {Business rules extraction from large legacy systems},
-  booktitle = {Proceedings of the 8th European Conference on Software Maintenance and Reengineering},
-  year      = {2004}
-}
-
-@inproceedings{Wang04b,
-  author    = {Wang, X. and Sun, J. and Yang, X. and He, Z. and Maddineni, S.},
-  title     = {Application of information-flow relations algorithm on extracting business rules from legacy code},
-  booktitle = {Proceedings of the 5th World Congress on Intelligent Control and Automation},
-  year      = {2004}
-}
-
-@inproceedings{Chia06a,
-  author    = {Chiang, C.-C.},
-  title     = {Extracting business rules from legacy systems into reusable components},
-  booktitle = {IEEE/SMC International Conference on System of Systems Engineering},
-  year      = {2006}
-}
-
-@inproceedings{Wang08b,
-  author    = {Wang, X. and Sun, J. and Yang, X. and He, Z. and Maddineni, S.},
-  title     = {Extracting prime business rules from large legacy systems},
-  booktitle = {Proceedings of the International Conference on Computer Science and Software Engineering},
-  year      = {2008}
-}
-
-@inproceedings{Gang09a,
-  author    = {Gang, X.},
-  title     = {Business rule extraction from legacy system using dependence-cache slicing},
-  booktitle = {The 1st International Conference on Information Science and Engineering},
-  year      = {2009}
-}
-
-@inproceedings{Chap12a,
-  author    = {Chaparro, O. and Aponte, J. and Ortega, F. and Marcus, A.},
-  title     = {Towards the automatic extraction of structural business rules from legacy databases},
-  booktitle = {19th Working Conference on Reverse Engineering},
-  year      = {2012}
-}
-
-@inproceedings{Cose13a,
-  author    = {Cosentino, V. and Cabot, J. and Albert, P. and Bauquel, P. and Perronnet, J.},
-  title     = {Extracting business rules from {COBOL}: A model-based framework},
-  booktitle = {20th Working Conference on Reverse Engineering (WCRE)},
-  year      = {2013}
-}
-
-@inproceedings{Chit19a,
-  author    = {Chittimalli, P. K. and Bhattacharyya, A.},
-  title     = {{SBVR}-based business rule creation for legacy programs using variable provenance},
-  booktitle = {Proceedings of the 12th Innovations in Software Engineering Conference},
-  year      = {2019}
-}
-
-@inproceedings{Snee21a,
-  author    = {Sneed, H. M. and Verhoef, C.},
-  title     = {Extracting business rules from a legacy {COBOL} application},
-  booktitle = {Integrating Research and Practice in Software Engineering},
-  year      = {2021}
-}
-
-@inproceedings{Prak21a,
-  author    = {Prakash, C. and Chittimalli, P. K. and Naik, R.},
-  title     = {Open information extraction using dependency parser for business rule mining in SBVR format},
-  booktitle = {Proceedings of the 14th Innovations in Software Engineering Conference},
-  year      = {2021}
-}
-
-@inproceedings{Misk23a,
-  author    = {Miskell, C. and Diaz, R. and Ganeriwala, P. and Slhoub, K. and Nembhard, F.},
-  title     = {Automated framework to extract software requirements from source code},
-  booktitle = {Proceedings of the 7th International Conference on Natural Language Processing and Information Retrieval},
-  year      = {2023}
-}
-
-@inproceedings{Abbo83a,
-  author    = {Russel J.Abbott},
-  title     = {Program design by informal English descriptions},
-  booktitle = {Communications of the ACM},
-  year      = {1983}
-}
-
-@article{Call17a,
-author = {O'Callahan, Robert and Jones, Chris and Froyd, Nathan and Huey, Kyle and Noll, Albert and Partush, Nimrod},
-year = {2017},
-pages = {},
-journal = {CoRR},
-title = {Engineering Record And Replay For Deployability: Extended Technical Report},
-doi = {10.48550/arXiv.1705.05937}
-}
-
-@article{Suga05a,
-author = {Suganuma, Toshio and Yasue, Toshiaki and Kawahito, Motohiro and Komatsu, Hideaki and Nakatani, Toshio},
-year = {2005},
-pages = {732-785},
-title = {Design and evaluation of dynamic optimizations for a Java Just-In-Time compiler},
-volume = {27},
-journal = {ACM Trans. Program. Lang. Syst.},
-doi = {10.1145/1075382.1075386}
-}
-
-@article{Amiri19a,
-  title={Designing a low-level virtual machine for implementing real-time managed languages},
-  author={Javad Ebrahimian Amiri and Stephen Michael Blackburn and Antony Hosking and Michael Norrish},
-  journal={Proceedings of the 11th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages},
-  year={2019},
-  url={https://api.semanticscholar.org/CorpusID:204714980}
-}
-
-@article{Zhef20a,
-  title={Hidden inheritance: an inline caching design for TypeScript performance},
-  author={Zhefeng Wu and Zhe Sun and Kai Gong and Lingyun Chen and Bin Liao and Yihua Jin},
-  journal={Proceedings of the ACM on Programming Languages},
-  year={2020},
-  volume={4},
-  pages={1 - 29},
-  url={https://api.semanticscholar.org/CorpusID:227040870}
-}
-
-@article{Lims95a,
-author = {Wong, Limsoon},
-title = {An introduction to Remy's fast polymorphic record projection},
-year = {1995},
-issue_date = {Sept. 1995},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {24},
-number = {3},
-issn = {0163-5808},
-url = {https://doi.org/10.1145/211990.212013},
-doi = {10.1145/211990.212013},
-abstract = {Traditionally, a record projection is compiled when all fields of the record are known in advance. The need to know all fields in advance leads to very clumsy programs, especially for querying external data sources. In a paper that had not been widely circulated in the database community, Remy presented in programming language context a constant-time implementation of the record projection operation that does not have such a requirement. This paper introduces his technique and suggests an improvement to his technique in the context of database queries.},
-journal = {SIGMOD Rec.},
-month = sep,
-numpages = {6}
-}
-
-@article{Andr01a,
-author = {Kennedy, Andrew and Syme, Don},
-year = {2001},
-title = {Design and Implementation of Generics for the .NET Common Language Runtime},
-volume = {36},
-journal = {ACM SIGPLAN Notices},
-doi = {10.1145/381694.378797}
-}
-
-@inproceedings{Mooi23a,
-author = {de Mooij, Jan and Gaudet, Matthew and Ireland, Iain and Henderson, Nathan and Amaral, J. Nelson},
-title = {CacheIR: The Benefits of a Structured Representation for Inline Caches},
-year = {2023},
-isbn = {9798400703805},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3617651.3622979},
-doi = {10.1145/3617651.3622979},
-booktitle = {Proceedings of the 20th ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes},
-numpages = {13},
-keywords = {just-in-time compilation, inline caching, dynamically-typed programming languages},
-location = {Cascais, Portugal},
-series = {MPLR 2023}
-}
-
-@inproceedings{Arno05d,
-  author={Arnold, M. and Grove, D.},
-  booktitle = {International Symposium on Code Generation and Optimization},
-  title = {Collecting and exploiting high-accuracy call graph profiles in virtual machines},
-  year={2005},
-  pages={51-62},
-  keywords={Virtual machining;Optimizing compilers;System performance;Cost function;Frequency;Optimization methods;High performance computing;Object oriented programming;Degradation;Maintenance engineering},
-  doi={10.1109/CGO.2005.9}}
-
-@article{Pott06a,
-	author = {Pottier, Fran{\c c}ois and Gauthier, Nadji},
-	date = {2006/03/01},
-	date-added = {2026-01-22 16:32:34 +0100},
-	date-modified = {2026-01-22 16:32:34 +0100},
-	doi = {10.1007/s10990-006-8611-7},
-	id = {Pottier2006},
-	isbn = {1573-0557},
-	journal = {Higher-Order and Symbolic Computation},
-	number = {1},
-	pages = {125--162},
-	title = {Polymorphic typed defunctionalization and concretization},
-	url = {https://doi.org/10.1007/s10990-006-8611-7},
-	volume = {19},
-	year = {2006},
-	bdsk-url-1 = {https://doi.org/10.1007/s10990-006-8611-7}}
-
-@article{Bhat12a,
-  title={De-virtualizing virtual Function Calls using various Type Analysis Techniques in Object-Oriented Programming Languages.},
-  author={Bhat, Sajad and Singh, Jatinder},
-  journal={Journal of Computer Engineering},
-  volume={5},
-  number={4},
-  pages={9},
-  year={2012}
-}
-
-@article{Tana18a,
-  title={Safe low-level code generation in Coq using monomorphization and monadification},
-  author={Tanaka, Akira and Affeldt, Reynald and Garrigue, Jacques},
-  journal={Journal of Information Processing},
-  volume={26},
-  pages={54--72},
-  year={2018},
-  publisher={Information Processing Society of Japan}
-}
-
-@article{Lutze25a,
-  title={The Simple Essence of Monomorphization},
-  author={Lutze, Matthew and Schuster, Philipp and Brachth{\"a}user, Jonathan Immanuel},
-  journal={Proceedings of the ACM on Programming Languages},
-  volume={9},
-  number={OOPSLA1},
-  pages={1015--1041},
-  year={2025},
-  publisher={ACM New York, NY, USA}
-}
-
-@inproceedings{Ishi00a,
-  title={A study of devirtualization techniques for a Java Just-In-Time compiler},
-  author={Ishizaki, Kazuaki and Kawahito, Motohiro and Yasue, Toshiaki and Komatsu, Hideaki and Nakatani, Toshio},
-  booktitle={Proceedings of the 15th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications},
-  pages={294--310},
-  year={2000}
-}
-
-@article{Wood20a,
-  title={Polymorphisation: Improving Rust compilation times through intelligent monomorphisation},
-  author={Wood, David},
-  journal={M{\'e}m. de mast. University of Glasgow},
-  year={2020}
-}
-
-@inproceedings{Galus22a,
-  author={Galustov, Artemiy and Borodin, Alexey and Belevantsev, Andrey},
-  booktitle={Ispras Open Conference (ISPRAS 22)},
-  title={Devirtualization for static analysis with low level intermediate representation},
-  year={2022},
-  pages={18--23},
-  doi={10.1109/ISPRAS57371.2022.10076859}
- }
-
- @inproceedings{Padle17a,
- author = {Padlewski, Piotr},
- title = {Devirtualization in LLVM},
- year = {2017},
- isbn = {9781450355148},
- publisher = {Association for Computing Machinery},
- address = {New York, NY, USA},
- doi = {10.1145/3135932.3135947},
- booktitle = {Proceedings Companion of the 2017 ACM SIGPLAN International Conference on Systems, Programming, Languages, and Applications: Software for Humanity},
- pages = {42--44},
- numpages = {3}
-}
