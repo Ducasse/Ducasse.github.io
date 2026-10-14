@@ -1,15 +1,13 @@
 {
-"title": "[Internship] Fast Announcements",
+"title": "[Internship] Fast Announcements for Pharo",
 "layout": "blogpost",
 "publishDate": "2026-10-14"
 }
 
 
-## Fast Announcements
-
 Keywords: Lookup, Benchmarks
 
-### Context
+## Context
 Announcements are often used to decouple parts of a subsystem. A part will notify other parts that registered interest. In Pharo, they are heavily used for system updates and UI events in forthcoming modern UI frameworks (Bloc and Toplo).
 
 ```
@@ -53,7 +51,7 @@ Behavior >> inheritsFrom: aClass
 
 We see that announcements are doing systematic class lookup. This lookup is costly.
 
-### Objectives
+## Objectives
 
 This raises the question of avoiding the cost of such lookup.
 
@@ -64,7 +62,7 @@ The intern will:
 - Two paths are possible: a kind of compilation process that would flatten such (often narrow) hierarchies into a flat structure or optimize the isKindOf: logic 
 - Implement an efficient isKindOf: mechanism using 'displays'
 
-### Refs
+## Refs
 
 - Rohan Padhye and Koushik Sen, Efficient Fail-Fast Dynamic Subtype Checking, VMIL 2019, https://rohan.padhye.org/files/failfast-vmil19.pdf
 

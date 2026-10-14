@@ -5,7 +5,7 @@
 }
 
 
-### Context
+## Context
 
 Typechecks are frequent in object-oriented programming, even if good design tends to avoid them. 
 In Pharo several reflective parts of the system are using them. For example, the announcements are heavily relying on them.
@@ -35,7 +35,7 @@ Behavior >> inheritsFrom: aClass
 	^false
 ```
 
-### Displays at work
+## Displays at work
 
 A solution is to cache some information about the superclass chain inside the class itself. 
 
@@ -70,7 +70,7 @@ Since the display can be of limited size we could check if
 A depth > display size and in such case do the slow lookup.
 
 
-### Objectives
+## Objectives
 
 The intern will:
 
@@ -79,7 +79,7 @@ The intern will:
 - Measure the improvement
 - Measure the memory cost of a display and find a good compromise (auto tuning of it).  
 
-### Refs
+## Refs
 
 - Rohan Padhye and Koushik Sen, Efficient Fail-Fast Dynamic Subtype Checking, VMIL 2019, https://rohan.padhye.org/files/failfast-vmil19.pdf
 
