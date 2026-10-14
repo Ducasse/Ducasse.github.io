@@ -41,7 +41,7 @@
 </div>    <!--Closing menu -->
 
                 <div id="mainContent">
-                    <h1><a href="/news/2026-10-14-AtomicCodeLoading.html">[Internship] Atomic code loading in a dynamic life programming environment</a></h1>
+                    <h1><a href="/topics/2026-10-14-AtomicCodeLoading.html">[Internship] Atomic code loading in a dynamic life programming environment</a></h1>
                     <p>Potential location:  Lille, France</p><p>Team: EVREF INRIA LILLE</p><p>Supervisor: Stéphane Ducasse stephane.ducasse@inria.fr (<a target="_blank" href="https://ducasse.github.io%29/">https://Ducasse.github.io)</a></p><h3>Presentation</h3><p>Updating applications during their execution is used both in production to minimize application downtime and in integrated development environments to provide live programming support. Nevertheless, these two scenarios present different challenges making Dynamic Software Update (DSU) solutions to be specifically designed for only one of these use cases.</p><p>We want to revisit gDSU the solution proposed by Dr. P. Tesone in his PhD.</p><p>The entry point of the gDSU engine is a patch. A patch is a collection of changes that describe the update to perform. It includes the changes to apply in the code, such as method and class modifications, and the corresponding<br>state migration logic. gDSU generates this patch semi-automatically by applying a version control system (VCS) version diﬀ or/and by recording code changes made in the IDE during a development session.</p><h3>Objectives</h3><p>The objectives are part of a larger project that is how to update the code update. We focus here on the first part: how to update the running software in an atomic manner.</p><p>The first part of the solution proposed by Tesone is a smart partial copy of the system to be updated, an update of this partial copy with modifications (additions, removals) and a bulk pointer swapping that literally swaps old classes/methods/instances with updated ones. Then he proposed a quiessence model where all the threads can be stopped and even programs on the execution stack can be updated.</p><p>The goal of the topic is to revisit such an approach in modern Pharo (<a target="_blank" href="https://www.pharo.org%29/">https://www.pharo.org)</a> versions.</p><ul><li>Design and perform a partial copy of the program to be updated based on the actual changes to be performed.</li><li>Use bulk pointer swapping to update the program.</li><li>Iterate to be able to update core libraries.</li></ul><h3>Refs:</h3><ul><li>Tesone Pablo, Mise à jour Dynamique pour Environnemts de Production et Programmation Interactive</li></ul><p><a target="_blank" href="https://theses.fr/2018MTLD0012">https://theses.fr/2018MTLD0012</a></p><ul><li>Chapter two of the PhD presents a state of the art of existing approaches</li></ul><h3>Quality of the students</h3><ul><li>learn fast, for example <a target="_blank" href="https://pharo.org/">https://pharo.org</a></li><li>open to alternative ways of looking at computation (swapping pointers under the feet of a program is a disruptive by efficient way but it requires thinking :).</li></ul>
 		<p>
                     <div class="date">14 October 2026</div>
@@ -61,11 +61,13 @@
 <div>
 		<div class="col-left" style="float: left">
 		
-		&lt;-- <a href="/news/2025-06-31-PharoPapersOnHal.html">Pharo papers on HAL</a>
+		&lt;-- <a href="/topics/2025-06-01-TestAnalysis.html">Test Analyses</a>
 		
 		</div>
 
 		<div class="col-right" style="float: right">
+		
+		<a href="/topics/2050-06-01-MoreToCome.html">More topics to come</a> --&gt;
 		
 		</div>
 		</div>
