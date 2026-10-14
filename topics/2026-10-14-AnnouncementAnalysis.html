@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+		<head>
+	    <meta charset="UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link rel="stylesheet" type="text/css" href="/files/newstef.css" /> 
+	    <title>S. Ducasse</title>
+	</head>
+	<body>
+		<div id="main">
+		<div id="header">
+	<div id="headerSiteTitle">
+	St&eacute;phane Ducasse
+	</div>
+
+	<div id="headerPageTitle"> <!--Empty for now it should be set using meta data and not hardcoded in the template -->
+	</div>
+</div>    <!--Closing header -->
+		<div id="menu">
+	<div id="toc">
+		<div id="tocItem"><a href="/index.html">Home</a>
+		</div>
+		<div id="tocItem"><a href="/publications.html">Publications</a>
+		</div>	
+		<div id="tocItem"><a href="/aboutPharo.html">About Pharo</a>
+		</div>
+		<div id="tocItem"><a href="/software.html">Software</a>
+		</div>
+		<div id="tocItem"><a href="/news/index.html">News</a>
+		</div>
+		<div id="tocItem"><a href="/topics/index.html">Topics</a>
+		</div>
+		<div id="tocItem"><a href="/books.html">Books</a>
+		</div>
+		<div id="tocItem"><a href="/freebooks.html">Free Books</a>
+		</div>
+		<div id="tocItem"><a href="/coordinates.html">Coordinates</a>
+		</div>
+	</div>
+</div>    <!--Closing menu -->
+
+                <div id="mainContent">
+                    <h1><a href="/topics/2026-10-14-AnnouncementAnalysis.html">[Internship] Fast Announcements</a></h1>
+                    <h2>Fast Announcements</h2><p>Keywords: Lookup, Benchmarks</p><h3>Context</h3><p>Announcements are often used to decouple parts of a subsystem. A part will notify other parts that registered interest. In Pharo, they are heavily used for system updates and UI events in forthcoming modern UI frameworks (Bloc and Toplo).</p><pre><code>anAnnouncer when: MouseOver do: aBlock</code></pre><p>However, announcements are often structured in terms of hierarchies; this implies a lookup to so that a registered action for a parent class actually works for the subclasses.</p><p>The following methods are the heart of the checks:</p><pre><code>SubscriptionRegistry>>handleSubscriberClass: eventClass	"Return true if the receiver has a callback subscribed for the event class"	^ subscriptions anySatisfy: [ :sub |			(sub subscriber class == eventClass) or:			[ sub subscriber class includesBehavior: eventClass ] ]Behavior >> includesBehavior: aClass	self isTrait ifTrue: [ ^false ].	^self == aClass or:[self inheritsFrom: aClass]Behavior >> isKindOf: aClass	"Answer whether the class, aClass, is a superclass or class of the receiver.	The current implementation allows for a Trait to be used as argument"	^ self class == aClass or: [ self class inheritsFrom: aClass ]</code></pre><p>We see that announcements are doing systematic class lookup. This lookup is costly.</p><h3>Objectives</h3><p>This raises the question of avoiding the cost of such lookup.</p><p>The intern will:</p><ul><li>Study subclasses of <code>Announcement</code> as well as the implementation.</li><li>Benchmark: we should analyse the cost of having hierarchies when dispatching announcements.</li><li>Two paths are possible: a kind of compilation process that would flatten such (often narrow) hierarchies into a flat structure or optimize the isKindOf: logic</li><li>Implement an efficient isKindOf: mechanism using 'displays'</li></ul><h3>Refs</h3><ul><li>Rohan Padhye and Koushik Sen, Efficient Fail-Fast Dynamic Subtype Checking, VMIL 2019, <a target="_blank" href="https://rohan.padhye.org/files/failfast-vmil19.pdf">https://rohan.padhye.org/files/failfast-vmil19.pdf</a></li><li>Cliff Click and John Rose, Fast subtype checking in the hotspot JVM article, JGI 2002</li></ul>
+		<p>
+                    <div class="date">14 October 2026</div>
+		</p>
+
+
+<style>
+  .col-left {
+     margin-bottom: 3cm;
+  }
+  .col-right {
+     margin-bottom: 3cm;
+  }
+</style>
+
+<p class="col-left">
+<div>
+		<div class="col-left" style="float: left">
+		
+		&lt;-- <a href="/topics/2025-06-01-TestAnalysis.html">Test Analyses</a>
+		
+		</div>
+
+		<div class="col-right" style="float: right">
+		
+		<a href="/topics/2026-10-14-AtomicCodeLoading.html">[Internship] Atomic code loading in a dynamic life programming environment</a> --&gt;
+		
+		</div>
+		</div>
+</div>
+</p>
+        </div>
+    </body>
+</html>
