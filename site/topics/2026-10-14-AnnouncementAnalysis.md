@@ -37,6 +37,18 @@ Behavior >> isKindOf: aClass
 	The current implementation allows for a Trait to be used as argument"
 
 	^ self class == aClass or: [ self class inheritsFrom: aClass ]
+
+Behavior >> inheritsFrom: aClass
+	"Answer whether the argument, aClass, is on the receiver's superclass
+	chain."
+	
+	| aSuperclass |
+	aSuperclass := self superclass.
+	[aSuperclass == nil]
+		whileFalse:
+			[aSuperclass == aClass ifTrue: [^true].
+			aSuperclass := aSuperclass superclass].
+	^false
 ```
 
 We see that announcements are doing systematic class lookup. This lookup is costly.
