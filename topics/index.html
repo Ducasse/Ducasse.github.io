@@ -47,20 +47,44 @@ I will write more internship, master topics in the future.Contact me if you wan
 
 <div class="date">1 June 2050</div>
 
+<h2><a href="/topics/2026-10-14-CoverageTool.html">[Internship] Branch Coverage Tool</a></h2>
+Pharo used to have a coverage tool. However it was not really robust.The objective of this internship to address this problem.Using MethodProxies defines a coverage tool that reports the number of executions of messages in a method.Using such information and some static analysis (visitor), devise a branch coverage tool.The intern will:Study method proxiesStudy the current implementation of co...
+
+
+<div class="date">15 October 2026</div>
+
 <h2><a href="/topics/2026-10-14-AnnouncementAnalysis.html">[Internship] Fast Announcements for Pharo</a></h2>
 Keywords: Lookup, BenchmarksAnnouncements are often used to decouple parts of a subsystem. A part will notify other parts that registered interest. In Pharo, they are heavily used for system updates and UI events in forthcoming modern UI frameworks (Bloc and Toplo).However, announcements are often structured in terms of hierarchies; this implies a lookup to so that a registered action for a par...
 
 
 <div class="date">14 October 2026</div>
 
-<h2><a href="/topics/2026-10-14-AtomicCodeLoading.html">[Internship] Atomic code loading in a dynamic life programming environment</a></h2>
-Potential location:  Lille, FranceTeam: EVREF INRIA LILLESupervisor: Stéphane Ducasse stephane.ducasse@inria.fr (https://Ducasse.github.io)Updating applications during their execution is used both in production to minimize application downtime and in integrated development environments to provide live programming support. Nevertheless, these two scenarios present different challenges making Dyn...
+<h2><a href="/topics/2026-10-14-Refactorings.html">[Internship] Refactorings for live objects</a></h2>
+An important activity of software evolution consists in applying refactorings to enhance the quality of the code without changing its behaviour. Having a proper refactoring tool is a must-to in any professional development environment. In addition, live programming allows faster development than the usual edit- compile-debug process.During live programming sessions, the developer can directly m...
 
 
 <div class="date">14 October 2026</div>
 
 <h2><a href="/topics/2026-10-14-FastTypeChecks.html">[Internship] Fast Typechecks for Pharo</a></h2>
 Typechecks are frequent in object-oriented programming, even if good design tends to avoid them.In Pharo several reflective parts of the system are using them. For example, the announcements are heavily relying on them.A solution is to cache some information about the superclass chain inside the class itself.Imagine the following hierarchyEach class gets a “display” that represents it supercla...
+
+
+<div class="date">14 October 2026</div>
+
+<h2><a href="/topics/2026-10-14-TestSuitesAnalysis.html">Test Suite Analyses</a></h2>
+Tests are code too and as such they exhibit specific problems. Several approaches propose test smells. The work we did in the past is a good start See Test Quality AssessmentWe would like to have a linter for test suite.Rule-based Assessment of Test Quality, S. Reichhart,T. Gırba, and S. Ducasse. https://rmod-files.lille.inria.fr/Team/Texts/Papers/Reic07aTestQualityAssessment.pdf
+
+
+<div class="date">14 October 2026</div>
+
+<h2><a href="/topics/2026-10-14-AccessorOnly.html">[Internship] Accessors all the way down</a></h2>
+By default pharo supports direct field accesses.Some languages like Self did the inverse: any direct accesseswere in fact accessors.Now since developers may have define accessors for their own classes, we cannot just generate accessors and replace direct accesses to them using a simple refactoring.The goal of this topic is togenerate hidden accessorschange the compiler to use such hidden acce...
+
+
+<div class="date">14 October 2026</div>
+
+<h2><a href="/topics/2026-10-14-AtomicCodeLoading.html">[Internship] Atomic code loading in a dynamic life programming environment</a></h2>
+Potential location:  Lille, FranceTeam: EVREF INRIA LILLESupervisor: Stéphane Ducasse stephane.ducasse@inria.fr (https://Ducasse.github.io)Updating applications during their execution is used both in production to minimize application downtime and in integrated development environments to provide live programming support. Nevertheless, these two scenarios present different challenges making Dyn...
 
 
 <div class="date">14 October 2026</div>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+		<head>
+	    <meta charset="UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link rel="stylesheet" type="text/css" href="/files/newstef.css" /> 
+	    <title>S. Ducasse</title>
+	</head>
+	<body>
+		<div id="main">
+		<div id="header">
+	<div id="headerSiteTitle">
+	St&eacute;phane Ducasse
+	</div>
+
+	<div id="headerPageTitle"> <!--Empty for now it should be set using meta data and not hardcoded in the template -->
+	</div>
+</div>    <!--Closing header -->
+		<div id="menu">
+	<div id="toc">
+		<div id="tocItem"><a href="/index.html">Home</a>
+		</div>
+		<div id="tocItem"><a href="/publications.html">Publications</a>
+		</div>	
+		<div id="tocItem"><a href="/aboutPharo.html">About Pharo</a>
+		</div>
+		<div id="tocItem"><a href="/software.html">Software</a>
+		</div>
+		<div id="tocItem"><a href="/news/index.html">News</a>
+		</div>
+		<div id="tocItem"><a href="/topics/index.html">Topics</a>
+		</div>
+		<div id="tocItem"><a href="/books.html">Books</a>
+		</div>
+		<div id="tocItem"><a href="/freebooks.html">Free Books</a>
+		</div>
+		<div id="tocItem"><a href="/coordinates.html">Coordinates</a>
+		</div>
+	</div>
+</div>    <!--Closing menu -->
+
+                <div id="mainContent">
+                    <h1><a href="/topics/2026-10-14-CoverageTool.html">[Internship] Branch Coverage Tool</a></h1>
+                    <h2>Context</h2><p>Pharo used to have a coverage tool. However it was not really robust.<br>The objective of this internship to address this problem.</p><p>Using MethodProxies defines a coverage tool that reports the number of executions of messages in a method.<br>Using such information and some static analysis (visitor), devise a branch coverage tool.</p><h2>Tasks</h2><p>The intern will:</p><ul><li>Study method proxies</li><li>Study the current implementation of coverage as available in the package Coverage and Coverage-Tests</li></ul><pre><code>| collector coverage |collector := CoverageCollector new. "Instantiate"collector methods: Point methods, Rectangle methods.  "Configure with the methods to watch."coverage := collector runOn: [ (1@1 corner: 2@2) center ].  "Setup, execute and teardown."(coverage methods includes: Point>>#x) >>> true.  "Inspect the results"(coverage nodes size > 10) >>> true. "Covered paths are also available"`</code></pre><h2>Refs</h2><p>Ref:<br>MethodProxies is a library that can annotate any messages send in Pharo (except optimized messages that are not message sent such as ifTrue:ifFalse:). <a target="_blank" href="https://github.com/pharo-contributions/MethodProxies">https://github.com/pharo-contributions/MethodProxies</a></p><ul><li><a target="_blank" href="https://github.com/pharo-contributions/MethodProxies">https://github.com/pharo-contributions/MethodProxies</a></li></ul><h2>For the students</h2><p>Interns should:</p><ul><li>learn fast, for example <a target="_blank" href="https://pharo.org/">https://pharo.org</a></li><li>open minded</li><li>working in an international settings</li></ul><p>Student benefits:</p><ul><li>work on a hot topic</li><li>be immersed in a core language</li><li>learn deep object-oriented design skills</li></ul>
+		<p>
+                    <div class="date">15 October 2026</div>
+		</p>
+
+
+<style>
+  .col-left {
+     margin-bottom: 3cm;
+  }
+  .col-right {
+     margin-bottom: 3cm;
+  }
+</style>
+
+<p class="col-left">
+<div>
+		<div class="col-left" style="float: left">
+		
+		&lt;-- <a href="/topics/2026-10-14-AtomicCodeLoading.html">[Internship] Atomic code loading in a dynamic life programming environment</a>
+		
+		</div>
+
+		<div class="col-right" style="float: right">
+		
+		<a href="/topics/2050-06-01-MoreToCome.html">More topics to come</a> --&gt;
+		
+		</div>
+		</div>
+</div>
+</p>
+        </div>
+    </body>
+</html>

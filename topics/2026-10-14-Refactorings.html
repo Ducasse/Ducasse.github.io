@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+		<head>
+	    <meta charset="UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link rel="stylesheet" type="text/css" href="/files/newstef.css" /> 
+	    <title>S. Ducasse</title>
+	</head>
+	<body>
+		<div id="main">
+		<div id="header">
+	<div id="headerSiteTitle">
+	St&eacute;phane Ducasse
+	</div>
+
+	<div id="headerPageTitle"> <!--Empty for now it should be set using meta data and not hardcoded in the template -->
+	</div>
+</div>    <!--Closing header -->
+		<div id="menu">
+	<div id="toc">
+		<div id="tocItem"><a href="/index.html">Home</a>
+		</div>
+		<div id="tocItem"><a href="/publications.html">Publications</a>
+		</div>	
+		<div id="tocItem"><a href="/aboutPharo.html">About Pharo</a>
+		</div>
+		<div id="tocItem"><a href="/software.html">Software</a>
+		</div>
+		<div id="tocItem"><a href="/news/index.html">News</a>
+		</div>
+		<div id="tocItem"><a href="/topics/index.html">Topics</a>
+		</div>
+		<div id="tocItem"><a href="/books.html">Books</a>
+		</div>
+		<div id="tocItem"><a href="/freebooks.html">Free Books</a>
+		</div>
+		<div id="tocItem"><a href="/coordinates.html">Coordinates</a>
+		</div>
+	</div>
+</div>    <!--Closing menu -->
+
+                <div id="mainContent">
+                    <h1><a href="/topics/2026-10-14-Refactorings.html">[Internship] Refactorings for live objects</a></h1>
+                    <h2>Context</h2><p>An important activity of software evolution consists in applying refactorings to enhance the quality of the code without changing its behaviour. Having a proper refactoring tool is a must-to in any professional development environment. In addition, live programming allows faster development than the usual edit- compile-debug process.</p><p>During live programming sessions, the developer can directly manipulate instances and modify the state of the running program. However, when a complex refactoring is performed, instances may be corrupted (i.e., their state is lost). For example, when pushing an instance variable to a superclass there is a moment where the superclass does not have yet acquired the new instance variable and the subclass does not have it any more. Itmeans that the value assigned to this instance variable in existing instances<br>is lost after the refactoring.</p><p>This problem is not anecdotal since 36% of the refactorings described in Fowler’s catalogue corrupt instances when used in a live programming context. There is a need to manually migrate, regenerate or reload instances from persistent sources. This manual fix lowers the usefulness of live programming.</p><h2>Objectives</h2><p>The goal of this project is to revisit the Pharo refactorings and introduce live migration support.</p><ul><li>Study refactorings that lose instance state</li><li>Extend refactorings with instance migration behavior</li></ul><h2>Refs</h2><ul><li>B Sarenac, N Anquetil, S Ducasse and P Tesone, A New Architecture Reconciling Refactorings and Transformations, Journal of Computer Languages, 101273, 2024</li><li>P Tesone , G Polito, L Fabresse, N Bouraqadi, S Ducasse, Preserving Instance State during Refactorings in Live Environments, Future Generation Computer Systems, 110, 1-17, Elsevier, 2020 <a target="_blank" href="https://rmod-files.lille.inria.fr/Team/Texts/Papers/Teso20a-FutureGeneration-PreservingInstance.pdf">https://rmod-files.lille.inria.fr/Team/Texts/Papers/Teso20a-FutureGeneration-PreservingInstance.pdf</a></li></ul><h2>For the students</h2><p>Interns should:</p><ul><li>learn fast, for example <a target="_blank" href="https://pharo.org/">https://pharo.org</a></li><li>open minded</li><li>working in an international settings</li></ul><p>Student benefits:</p><ul><li>work on a hot topic</li><li>be immersed in a core language</li><li>learn deep object-oriented design skills</li></ul>
+		<p>
+                    <div class="date">14 October 2026</div>
+		</p>
+
+
+<style>
+  .col-left {
+     margin-bottom: 3cm;
+  }
+  .col-right {
+     margin-bottom: 3cm;
+  }
+</style>
+
+<p class="col-left">
+<div>
+		<div class="col-left" style="float: left">
+		
+		&lt;-- <a href="/topics/2026-10-14-AnnouncementAnalysis.html">[Internship] Fast Announcements for Pharo</a>
+		
+		</div>
+
+		<div class="col-right" style="float: right">
+		
+		<a href="/topics/2026-10-14-FastTypeChecks.html">[Internship] Fast Typechecks for Pharo</a> --&gt;
+		
+		</div>
+		</div>
+</div>
+</p>
+        </div>
+    </body>
+</html>
