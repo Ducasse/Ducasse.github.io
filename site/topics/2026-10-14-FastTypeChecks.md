@@ -85,9 +85,9 @@ The intern will:
 
 - Cliff Click and John Rose, Fast subtype checking in the hotspot JVM article, JGI 2002
 
-## Quality of the students
+## For the students
 
-Intern should:
+Interns should:
 - learn fast, for example https://pharo.org
 - open minded
 - working in an international settings
@@ -96,4 +96,6 @@ Student benefits:
 - work on a hot topic
 - be immersed in a core language
 - learn deep object-oriented design skills 
+
+
 

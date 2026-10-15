@@ -28,9 +28,9 @@ The goal of this project is to revisit the Pharo refactorings and introduce live
 - P Tesone , G Polito, L Fabresse, N Bouraqadi, S Ducasse, Preserving Instance State during Refactorings in Live Environments, Future Generation Computer Systems, 110, 1-17, Elsevier, 2020 https://rmod-files.lille.inria.fr/Team/Texts/Papers/Teso20a-FutureGeneration-PreservingInstance.pdf
 
 
-## Quality of the students
+## For the students
 
-Intern should:
+Interns should:
 - learn fast, for example https://pharo.org
 - open minded
 - working in an international settings

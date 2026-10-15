@@ -40,13 +40,15 @@ The goal of the topic is to revisit such an approach in modern Pharo (https://ww
 https://theses.fr/2018MTLD0012
 - Chapter two of the PhD presents a state of the art of existing approaches
 
-## Quality of the students
+## For the students
 
-Intern should:
+Interns should:
 - learn fast, for example https://pharo.org
-- open to alternative ways of looking at computation (swapping pointers under the feet of a program is a disruptive by efficient way but it requires thinking :).
+- open minded
+- working in an international settings
 
 Student benefits: 
-- work on hot topic
+- work on a hot topic
 - be immersed in a core language
 - learn deep object-oriented design skills 
+
