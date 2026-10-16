@@ -41,10 +41,10 @@
 </div>    <!--Closing menu -->
 
                 <div id="mainContent">
-                    <h1><a href="/topics/2026-10-14-TestSuitesAnalysis.html">Test Suite Analyses</a></h1>
-                    <h2>Context</h2><p>Tests are code too and as such they exhibit specific problems. Several approaches propose test smells. The work we did in the past is a good start <a target="_blank" href="https://rmod-files.lille.inria.fr/Team/Texts/Papers/Reic07aTestQualityAssessment.pdf">See Test Quality Assessment</a></p><p>We would like to have a linter for test suite.</p><h2></h2><h2>Ref</h2><ul><li>Rule-based Assessment of Test Quality, S. Reichhart,T. Gırba, and S. Ducasse. <a target="_blank" href="https://rmod-files.lille.inria.fr/Team/Texts/Papers/Reic07aTestQualityAssessment.pdf">https://rmod-files.lille.inria.fr/Team/Texts/Papers/Reic07aTestQualityAssessment.pdf</a></li></ul>
+                    <h1><a href="/topics/2026-10-14-TestSuitesAnalysis.html">[Internship] Test Suite Analyses</a></h1>
+                    <h2>Context</h2><p>Tests are code too and as such they exhibit specific problems. Several approaches propose test smells. The work we did in the past is a good start  <a target="_blank" href="https://rmod-files.lille.inria.fr/Team/Texts/Papers/Reic07aTestQualityAssessment.pdf">See Test Quality Assessment</a> or [Rotten Green Tests] (<a target="_blank" href="https://rmod-files.lille.inria.fr/Team/Texts/Papers/Delp19a-RottenGreenTests-ICSE2019-v2.pdf).">https://rmod-files.lille.inria.fr/Team/Texts/Papers/Delp19a-RottenGreenTests-ICSE2019-v2.pdf).</a></p><h2>Objectives</h2><p>Now tests are often structured in test suites and we need to have better way to assess the quaity of the suite as a whole.</p><p>We would like to have a linter for test suite.<br>Here are some criterias to provide feedback on the suite:</p><ul><li>is the suite cohesive in the sense of fixture use</li><li>is the suite cohesive in the sense of references to external classes, e.g</li></ul><h2>Tasks</h2><p>The intern will:</p><ul><li>Read the Test Quality Assessment paper and master of the first author</li><li>Read the Rotten Green Test paper</li><li>Study the implementation of Rotten Green Test as available in Pharo</li><li>Study the implementation of <a target="_blank" href="https://github.com/Ducasse/pharo-test-analysis">https://github.com/Ducasse/pharo-test-analysis</a> and in particular the Smell Detector package and its tests</li><li>Implement a simple TEST smell in Smell Detector</li><li>Study ClapDbgBasicCommandsTest in Pharo 14 as an example of a suite that could be reorganized</li><li>Define a Suite detector that reports information about Suite.</li></ul><p>-- number of assertion/testcase<br>-- whether it is defining the same fixture multiple times without having a setUp method<br>-- cancelling and redefining the test fixture<br>-- whether the test methods use different groups of external project</p><h2>Refs</h2><ul><li>Rule-based Assessment of Test Quality, S. Reichhart,T. Gırba, and S. Ducasse. <a target="_blank" href="https://rmod-files.lille.inria.fr/Team/Texts/Papers/Reic07aTestQualityAssessment.pdf">https://rmod-files.lille.inria.fr/Team/Texts/Papers/Reic07aTestQualityAssessment.pdf</a></li><li>Rotten Green Tests <a target="_blank" href="https://rmod-files.lille.inria.fr/Team/Texts/Papers/Delp19a-RottenGreenTests-ICSE2019-v2.pdf">https://rmod-files.lille.inria.fr/Team/Texts/Papers/Delp19a-RottenGreenTests-ICSE2019-v2.pdf</a></li></ul><h2>For the students</h2><p>Interns should:</p><ul><li>learn fast, for example <a target="_blank" href="https://pharo.org/">https://pharo.org</a></li><li>open minded</li><li>working in an international settings</li></ul><p>Student benefits:</p><ul><li>work on a hot topic</li><li>be immersed in a core language</li><li>learn deep object-oriented design skills</li></ul>
 		<p>
-                    <div class="date">14 October 2026</div>
+                    <div class="date">15 October 2026</div>
 		</p>
 
 
@@ -61,13 +61,13 @@
 <div>
 		<div class="col-left" style="float: left">
 		
-		&lt;-- <a href="/topics/2026-10-14-FastTypeChecks.html">[Internship] Fast Typechecks for Pharo</a>
+		&lt;-- <a href="/topics/2026-10-14-CoverageTool.html">[Internship] Branch Coverage Tool</a>
 		
 		</div>
 
 		<div class="col-right" style="float: right">
 		
-		<a href="/topics/2026-10-14-AccessorOnly.html">[Internship] Accessors all the way down</a> --&gt;
+		<a href="/topics/2050-06-01-MoreToCome.html">More topics to come</a> --&gt;
 		
 		</div>
 		</div>
